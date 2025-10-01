@@ -1,0 +1,3 @@
+Build time: ${maven.build.timestamp}
+Project version: ${project.version}
+Maven opts: ${env.MAVEN_OPTS}
