@@ -8,6 +8,7 @@ import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
@@ -202,6 +203,23 @@ public class TidesTest {
 							}
 						}
 					});
+				}
+			}
+		}
+	}
+
+	@Test
+	public void getTideDateRange() throws Exception {
+		for (String station : List.of(ProvincetownLocation.TIDE_STATION_ID, WellfleetLocation.TIDE_STATION_ID)) {
+			for (int year = 2020; year <= 2029; year++) {
+				for (int month = 1; month <= 12; month++) {
+					LocalDate end_date = LocalDate.of(year, month, 1);
+					LocalDate start_date = end_date.minusDays(1);
+					if (start_date.getYear() == 2019)
+						continue;
+					List<Tide> tides = Tides.getTides(station, start_date, end_date, true);
+					assertTrue(tides.size() >= 12);
+					assertTrue(tides.size() <= 16);
 				}
 			}
 		}
