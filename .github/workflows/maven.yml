@@ -20,7 +20,16 @@ jobs:
         java-version: '21'
         distribution: 'temurin'
         cache: maven
+    - name: Maven Settings File
+      uses: whelk-io/maven-settings-xml-action@v22
+      with:
+        servers: >
+                 [
+                  {"id": "github-parent", "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"},
+                  {"id": "github-util",   "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"}
+                 ]
     - name: Build with Maven
       run: |
            mvn verify -B \
+               -Pgithub-repo \
                -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn

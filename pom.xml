@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>io.github.emays</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.4</version>
+		<version>0.0.5-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -41,7 +41,7 @@
 
 	<properties>
 		<!--io.github.emays:util-->
-		<util.version>0.0.3</util.version>
+		<util.version>0.0.4-SNAPSHOT</util.version>
 	</properties>
 
 	<dependencies>
@@ -103,7 +103,7 @@
 		<dependency>
 			<groupId>si.uom</groupId>
 			<artifactId>si-units</artifactId>
-			<version>2.2.2</version>
+			<version>2.2.3</version>
 		</dependency>
 		<dependency>
 			<groupId>systems.uom</groupId>
@@ -168,6 +168,33 @@
 					<url>https://maven.pkg.github.com/emays/tempest</url>
 				</repository>
 			</distributionManagement>
+		</profile>
+		<profile>
+			<id>github-repo</id>
+			<repositories>
+				<repository>
+					<id>github-parent</id>
+					<url>https://maven.pkg.github.com/emays/parent</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<!--<updatePolicy>always</updatePolicy>-->
+					</snapshots>
+				</repository>
+				<repository>
+					<id>github-util</id>
+					<url>https://maven.pkg.github.com/emays/util</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<!--<updatePolicy>always</updatePolicy>-->
+					</snapshots>
+				</repository>
+			</repositories>
 		</profile>
 	</profiles>
 </project>

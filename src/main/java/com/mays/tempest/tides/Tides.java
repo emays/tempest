@@ -10,18 +10,18 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import jakarta.ws.rs.client.Client;
-import jakarta.ws.rs.client.ClientBuilder;
-import jakarta.ws.rs.client.WebTarget;
-import jakarta.ws.rs.core.MediaType;
-import jakarta.ws.rs.core.Response;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
 
 public class Tides {
 
@@ -132,10 +132,9 @@ public class Tides {
 		ArrayList<Tide> tides = new ArrayList<>();
 		tides.addAll(getTides(station, start_date.getYear(), start_date.getMonthValue(), fme));
 		if (!start_date.withDayOfMonth(1).equals(end_date.withDayOfMonth(1))) {
-			getTides(station, end_date.getYear(), end_date.getMonthValue(), fme).forEach(x -> {
-				if (!x.getTime().isBefore(start_date.atStartOfDay()))
-					tides.add(x);
-			});
+			List<Tide> next_month_tides = getTides(station, end_date.getYear(), end_date.getMonthValue(), fme).stream()
+					.filter(x -> x.getTime().isAfter(tides.getLast().getTime())).toList();
+			tides.addAll(next_month_tides);
 		}
 		tides.removeIf(x -> x.getTime().isBefore(start_date.minusDays(1).atStartOfDay()));
 		tides.removeIf(x -> x.getTime().isAfter(end_date.plusDays(2).atStartOfDay().minusSeconds(1)));
@@ -223,21 +222,38 @@ public class Tides {
 				.collect(Collectors.toList());
 	}
 
-	public static List<DailyTide> getDailyTides(List<Tide> tides, int year, int month) {
-		List<DailyTide> ret = getDailyTides(getTides(tides, year, month));
-		for (DailyTide dt : ret) {
-			List<Tide> tide = dt.getTides();
-			int pi = tides.indexOf(tide.get(0)) - 1;
-			int ni = tides.indexOf(tide.get(tide.size() - 1)) + 1;
+	private static void setPriorNextDailyTides(List<DailyTide> daily_tides, List<Tide> tides) {
+		for (DailyTide dt : daily_tides) {
+			List<Tide> dt_tides = dt.getTides();
+			int pi = tides.indexOf(dt_tides.get(0)) - 1;
+			int ni = tides.indexOf(dt_tides.get(dt_tides.size() - 1)) + 1;
 			dt.setPrior(tides.get(pi));
 			dt.setNext(tides.get(ni));
 		}
+	}
+
+	public static List<DailyTide> getDailyTides(List<Tide> tides, int year, int month) {
+		List<DailyTide> ret = getDailyTides(getTides(tides, year, month));
+		setPriorNextDailyTides(ret, tides);
 		return ret;
 	}
 
 	public static List<DailyTide> getDailyTides(String station, int year, int month) throws Exception {
 		List<Tide> tides = getTides(station, year, month);
 		return getDailyTides(tides);
+	}
+
+	public static List<Tide> getTides(List<Tide> tides, LocalDate start_date, LocalDate end_date) {
+		return tides.stream() //
+				.filter(tide -> !tide.getTime().toLocalDate().isBefore(start_date)) //
+				.filter(tide -> !tide.getTime().toLocalDate().isAfter(end_date)) //
+				.toList();
+	}
+
+	public static List<DailyTide> getDailyTides(List<Tide> tides, LocalDate start_date, LocalDate end_date) {
+		List<DailyTide> ret = getDailyTides(getTides(tides, start_date, end_date));
+		setPriorNextDailyTides(ret, tides);
+		return ret;
 	}
 
 }
