@@ -23,7 +23,7 @@ jobs:
     - name: Maven Settings File
       uses: whelk-io/maven-settings-xml-action@v22
       with:
-		servers: >
+        servers: >
                  [
                   {"id": "github-parent", "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"},
                   {"id": "github-util",   "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"}
