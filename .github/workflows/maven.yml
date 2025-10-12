@@ -25,9 +25,9 @@ jobs:
       with:
 		servers: >
                  [
-				  {"id": "github-parent", "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"},
-				  {"id": "github-util",   "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"}
-		         ]
+                  {"id": "github-parent", "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"},
+                  {"id": "github-util",   "username": "emays", "password": "${{secrets.READ_PACKAGES_TOKEN}}"}
+                 ]
     - name: Build with Maven
       run: |
            mvn verify -B \
