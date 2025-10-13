@@ -142,13 +142,13 @@ public class TidesTest {
 	@Test
 	public void getDailyTides() throws Exception {
 		List<Tide> tides = Tides.getTidesFromJson(tidesJson);
-		List<DailyTide> dts = Tides.getDailyTides(tides);
+		List<DailyTide> dts = Tides.getDailyTides(tides, LocalDate.of(2021, 3, 2), LocalDate.of(2021, 3, 30));
 		if (trace) {
 			for (DailyTide dt : dts) {
 				logger.info(dt.toString());
 			}
 		}
-		assertEquals(31, dts.size());
+		assertEquals(29, dts.size());
 	}
 
 	@Test

@@ -183,7 +183,7 @@ public class Tides {
 		return getDatumsFromJson(json);
 	}
 
-	public static List<DailyTide> getDailyTides(List<Tide> tides) {
+	private static List<DailyTide> getDailyTides(List<Tide> tides) {
 		Collection<List<Tide>> days = tides.stream()
 				.collect(Collectors.groupingBy(tide -> tide.getTime().toLocalDate())).values();
 		ArrayList<DailyTide> dts = new ArrayList<>();
