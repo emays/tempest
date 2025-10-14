@@ -9,32 +9,18 @@ public class Tide {
 		High, Low;
 	}
 
+	private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+
 	private TideJson tideJson;
-
-//	private LocalDateTime time;
-
-//	private boolean dstAdjust = false;
 
 	public Tide(TideJson tideJson) {
 		super();
 		this.tideJson = tideJson;
-//		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
-//		time = LocalDateTime.parse(tideJson.getTime(), dtf);
-//		if (TimeUtil.isDstEnd(time.toLocalDate()) && time.getHour() < 2) {
-//			time = time.minusHours(1);
-//			dstAdjust = true;
-//		}
 	}
 
 	public LocalDateTime getTime() {
-//		return time;
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 		return LocalDateTime.parse(tideJson.getTime(), dtf);
 	}
-
-//	public boolean isDstAdjust() {
-//		return dstAdjust;
-//	}
 
 	public double getValue() {
 		return Double.parseDouble(tideJson.getValue());
@@ -52,6 +38,11 @@ public class Tide {
 
 	public String toString() {
 		return getTime() + " " + String.format("%.1f", getValue()) + " " + getType();
+	}
+
+	public TideJson toTideJson() {
+		return new TideJson(this.getType().toString().substring(0, 1), this.getTime().format(dtf),
+				String.format("%.1f", this.getValue()));
 	}
 
 }
