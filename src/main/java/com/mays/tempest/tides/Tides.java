@@ -183,6 +183,13 @@ public class Tides {
 		return getDatumsFromJson(json);
 	}
 
+	public static Datums getDatums(String station, boolean fme) throws Exception {
+		String json = TideDataAccess.getDatumsJsonString(station, fme);
+		if (json == null)
+			json = getDatumsJsonString(station);
+		return getDatumsFromJson(json);
+	}
+
 	private static List<DailyTide> getDailyTides(List<Tide> tides) {
 		Collection<List<Tide>> days = tides.stream()
 				.collect(Collectors.groupingBy(tide -> tide.getTime().toLocalDate())).values();
