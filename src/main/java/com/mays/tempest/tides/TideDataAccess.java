@@ -61,6 +61,11 @@ public class TideDataAccess {
 		Files.writeString(path, res);
 	}
 
+	private static Path getDatumsPath(String station) {
+		Path path = getPath(station).resolve("datums.json");
+		return path;
+	}
+
 	public static String getTidesJsonString(String station, int year, int month, boolean fme) throws Exception {
 		Path path = getPath(station, year, month);
 		if (Files.exists(path)) {
@@ -72,16 +77,39 @@ public class TideDataAccess {
 		return null;
 	}
 
+	public static void writeDatumsJsonString(String station) throws Exception {
+		Path path = getDatumsPath(station);
+		Files.createDirectories(path.getParent());
+		String res = Tides.getDatumsJsonString(station);
+		Files.writeString(path, res);
+	}
+
+	public static String getDatumsJsonString(String station, boolean fme) throws Exception {
+		Path path = getDatumsPath(station);
+		if (Files.exists(path)) {
+			String tides_json = Files.readString(path);
+			return tides_json;
+		}
+		if (fme)
+			throw new FileNotFoundException(path.toString());
+		return null;
+	}
+
+	private static Path getStartEndPath(String station) {
+		Path path = getPath(station).resolve("start-end.txt");
+		return path;
+	}
+
 	public static void writeStartEnd(String station, LocalDate start, LocalDate end) throws Exception {
 		List<String> lines = List.of(start.toString(), end.toString());
-		Files.write(getPath(station).resolve("start-end.txt"), lines);
+		Files.write(getStartEndPath(station), lines);
 	}
 
 	public record StartEnd(LocalDate start, LocalDate end) {
 	}
 
 	public static StartEnd getStartEnd(String station) throws Exception {
-		List<String> lines = Files.readAllLines(getPath(station).resolve("start-end.txt"));
+		List<String> lines = Files.readAllLines(getStartEndPath(station));
 		return new StartEnd(LocalDate.parse(lines.get(0)), LocalDate.parse(lines.get(1)));
 	}
 
