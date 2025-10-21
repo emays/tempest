@@ -88,6 +88,10 @@ public class Datums {
 		return getRawDatum(Datum.MHW) - getRawDatum(Datum.MLLW);
 	}
 
+	public double getMeanHigherHighWater() {
+		return getRawDatum(Datum.MHHW) - getRawDatum(Datum.MLLW);
+	}
+
 	public double getMeanLowWater() {
 		return getRawDatum(Datum.MLW) - getRawDatum(Datum.MLLW);
 	}
