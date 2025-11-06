@@ -15,6 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mays.util.html.ElementW;
+import com.mays.util.html.HtmlTag;
 import com.mays.util.xml.XmlUtil;
 
 public class Kml {
@@ -61,7 +62,7 @@ public class Kml {
 				ElementW description = placemark.addElement("description").addText(point.getKmlDescription());
 				if (point.getKmlUrl() != null) {
 					ElementW html = description.addElement("br");
-					html.addElement("a", "href", point.getKmlUrl()).addText(point.getKmlAnchorText());
+					html.addElement(HtmlTag.A, "href", point.getKmlUrl()).addText(point.getKmlAnchorText());
 					String html_str = html.getElement().asXML();
 					html.getElement().detach();
 					description.addCDATA(html_str);
