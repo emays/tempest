@@ -123,6 +123,19 @@ public class Tides {
 		return getTidesFromJson(json);
 	}
 
+	public static List<Tide> getTides(String station, int year, int month, boolean fme, boolean filter)
+			throws Exception {
+		String json = TideDataAccess.getTidesJsonString(station, year, month, fme);
+		if (json == null)
+			json = getTidesJsonString(station, year, month);
+		List<Tide> tides = getTidesFromJson(json);
+		if (filter)
+			tides = tides.stream()
+					.filter(tide -> tide.getTime().getYear() == year && tide.getTime().getMonthValue() == month)
+					.toList();
+		return tides;
+	}
+
 	public static List<Tide> getTides(String station, LocalDate start_date, LocalDate end_date) throws Exception {
 		return getTides(station, start_date, end_date, false);
 	}
@@ -188,6 +201,55 @@ public class Tides {
 		if (json == null)
 			json = getDatumsJsonString(station);
 		return getDatumsFromJson(json);
+	}
+
+	public static String getTidePredOffsetsJsonString(String station) throws Exception {
+		ClientBuilder builder = ClientBuilder.newBuilder();
+		Client client = builder.build();
+		// "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8446121/tidepredoffsets.json"
+		String uri = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations";
+		WebTarget target = client.target(uri);
+		target = target.path(station);
+		target = target.path("tidepredoffsets.json");
+		Response resp = target.request(MediaType.APPLICATION_JSON).get();
+		if (resp.getStatusInfo().getFamily() == Response.Status.Family.SUCCESSFUL) {
+			String json = resp.readEntity(String.class);
+			if (trace)
+				logger.info("\n" + json);
+			return json;
+		}
+		String message = resp.getStatus() + " " + resp.readEntity(String.class);
+		logger.error(message);
+		throw new Exception(message);
+	}
+	
+	public static TidePredOffsetsJson getTidePredOffsetsJsonFromJson(String json) throws Exception {
+		if (trace)
+			logger.info("\n" + json);
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode jsonNode = mapper.readTree(json);
+		String str = jsonNode.toString();
+		if (trace)
+			logger.info("\n" + str);
+		TidePredOffsetsJson ret = mapper.readValue(str, new TypeReference<TidePredOffsetsJson>() {
+		});
+		return ret;
+	}
+	
+	public static TidePredOffsets getTidePredOffsetsFromJson(String json) throws Exception {
+		return new TidePredOffsets(getTidePredOffsetsJsonFromJson(json));
+	}
+
+	public static TidePredOffsets getTidePredOffsets(String station) throws Exception {
+		String json = getTidePredOffsetsJsonString(station);
+		return getTidePredOffsetsFromJson(json);
+	}
+
+	public static TidePredOffsets getTidePredOffsets(String station, boolean fme) throws Exception {
+		String json = TideDataAccess.getTidePredOffsetsJsonString(station, fme);
+		if (json == null)
+			json = getTidePredOffsetsJsonString(station);
+		return getTidePredOffsetsFromJson(json);
 	}
 
 	private static List<DailyTide> getDailyTides(List<Tide> tides) {

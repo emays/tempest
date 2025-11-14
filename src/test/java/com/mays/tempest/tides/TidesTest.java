@@ -38,6 +38,8 @@ public class TidesTest {
 
 	private String datumsJson;
 
+	private String tidePredOffsetsJson;
+
 	private String tidesJson;
 
 	@BeforeAll
@@ -48,6 +50,7 @@ public class TidesTest {
 	@BeforeEach
 	public void before() throws Exception {
 		setupDatums();
+		setupTidePredOffsets();
 		setupTides();
 	}
 
@@ -65,6 +68,23 @@ public class TidesTest {
 			Files.writeString(path, res);
 		}
 		datumsJson = Files.readString(path);
+	}
+
+	public void setupTidePredOffsets() throws Exception {
+		if (tidePredOffsetsJson != null)
+			return;
+		Path path = Paths.get(cache_dir, "tidepredoffsets.json");
+		if (!Files.exists(path)) {
+			logger.info("setupTidePredOffsets");
+			if (resources_exception)
+				throw new Exception();
+			// Note Wellfleet, Provincetown is harmonic
+			String res = Tides.getTidePredOffsetsJsonString(WellfleetLocation.TIDE_STATION_ID);
+			if (trace)
+				logger.info(res);
+			Files.writeString(path, res);
+		}
+		tidePredOffsetsJson = Files.readString(path);
 	}
 
 	public void setupTides() throws Exception {
@@ -95,6 +115,17 @@ public class TidesTest {
 		Tide lat = datums.getLowestAstronomicalTide();
 		assertEquals(-2.09, lat.getValue(), 0.01);
 		assertEquals("2016-04-09T11:24", lat.getTime().toString());
+	}
+
+	@Test
+	public void getTidePredOffsets() throws Exception {
+		TidePredOffsets datums = Tides.getTidePredOffsetsFromJson(tidePredOffsetsJson);
+		assertEquals("S", datums.getType());
+		assertEquals(1.05, datums.getHeightOffsetHighTide(), 0.001);
+		assertEquals(1.05, datums.getHeightOffsetLowTide(), 0.001);
+		assertEquals(14, datums.getTimeOffsetHighTide());
+		assertEquals(30, datums.getTimeOffsetLowTide());
+		assertEquals("R", datums.getHeightAdjustedType());
 	}
 
 	@Test
