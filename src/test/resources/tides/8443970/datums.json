@@ -1,5 +1,5 @@
 {
-  "accepted": "Oct 19 2010",
+  "accepted": "Apr 17 2003",
   "superseded": "",
   "epoch": "1983-2001",
   "units": "feet",
@@ -13,89 +13,94 @@
     {
       "name": "MHHW",
       "description": "Mean Higher-High Water",
-      "value": 14.1
+      "value": 13.8
     },
     {
       "name": "MHW",
       "description": "Mean High Water",
-      "value": 13.64
+      "value": 13.35
     },
     {
       "name": "DTL",
       "description": "Mean Diurnal Tide Level",
-      "value": 9.06
+      "value": 8.66
     },
     {
       "name": "MTL",
       "description": "Mean Tide Level",
-      "value": 9.0
+      "value": 8.61
     },
     {
       "name": "MSL",
       "description": "Mean Sea Level",
-      "value": 9.05
+      "value": 8.73
     },
     {
       "name": "MLW",
       "description": "Mean Low Water",
-      "value": 4.35
+      "value": 3.86
     },
     {
       "name": "MLLW",
       "description": "Mean Lower-Low Water",
-      "value": 4.02
+      "value": 3.53
     },
     {
       "name": "GT",
       "description": "Great Diurnal Range",
-      "value": 10.08
+      "value": 10.27
     },
     {
       "name": "MN",
       "description": "Mean Range of Tide",
-      "value": 9.29
+      "value": 9.49
     },
     {
       "name": "DHQ",
       "description": "Mean Diurnal High Water Inequality",
-      "value": 0.46
+      "value": 0.44
     },
     {
       "name": "DLQ",
       "description": "Mean Diurnal Low Water Inequality",
-      "value": 0.33
+      "value": 0.34
     },
     {
       "name": "HWI",
       "description": "Greenwich High Water Interval (in hours)",
-      "value": 3.83
+      "value": 3.74
     },
     {
       "name": "LWI",
       "description": "Greenwich Low Water Interval (in hours)",
-      "value": 10.01
+      "value": 9.93
+    },
+    {
+      "name": "NAVD88",
+      "description": "North American Vertical Datum of 1988",
+      "value": 9.03
     }
   ],
-  "LAT": 1.926,
-  "LATdate": "20160409",
-  "LATtime": "11:24",
-  "HAT": 16.082,
-  "HATdate": "20340519",
-  "HATtime": "04:24",
-  "min": null,
-  "mindate": "",
-  "mintime": "",
-  "max": null,
-  "maxdate": "",
-  "maxtime": "",
+  "LAT": 1.403,
+  "LATdate": "20360114",
+  "LATtime": "22:54",
+  "HAT": 15.848,
+  "HATdate": "20161115",
+  "HATtime": "16:06",
+  "min": -0.2,
+  "mindate": "19400324",
+  "mintime": "00:00",
+  "max": 18.687,
+  "maxdate": "20180104",
+  "maxtime": "17:42",
   "disclaimers": {
     "disclaimers": [],
     "self": null
   },
   "DatumAnalysisPeriod": [
-    "04/01/2010 - 07/31/2010"
+    "01/01/1983 - 12/31/2001"
   ],
   "NGSLink": "",
-  "ctrlStation": "8443970 Boston, MA",
-  "self": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8446121/datums.json"
+  "ctrlStation": "",
+  "self": "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8443970/datums.json"
 }
