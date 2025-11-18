@@ -17,6 +17,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mays.tempest.BostonLocation;
 import com.mays.tempest.MyLocation;
 import com.mays.tempest.ProvincetownLocation;
 import com.mays.tempest.TestDataUtil;
@@ -38,14 +39,31 @@ public class TidesTest {
 	public void getDatums() throws Exception {
 		Datums datums = Tides.getDatums(ProvincetownLocation.TIDE_STATION_ID, true);
 		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
-		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
 		assertEquals(0.33, datums.getMeanLowWater(), 0.001);
+		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
+		assertEquals(10.08, datums.getMeanHigherHighWater(), 0.001);
 		Tide hat = datums.getHighestAstronomicalTide();
 		assertEquals(12.06, hat.getValue(), 0.01);
 		assertEquals("2034-05-19T04:24", hat.getTime().toString());
 		Tide lat = datums.getLowestAstronomicalTide();
 		assertEquals(-2.09, lat.getValue(), 0.01);
 		assertEquals("2034-04-20T11:06", lat.getTime().toString());
+	}
+
+	@Test
+	public void getDatumsSubordinate() throws Exception {
+		Datums ref_datums = Tides.getDatums(BostonLocation.TIDE_STATION_ID, true);
+		Datums datums = Tides.getDatums(WellfleetLocation.TIDE_STATION_ID, true);
+		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
+		assertEquals(ref_datums.getMeanLowWater() * 1.05, datums.getMeanLowWater(), 0.001);
+		assertEquals(ref_datums.getMeanHighWater() * 1.05, datums.getMeanHighWater(), 0.001);
+		assertEquals(ref_datums.getMeanHigherHighWater() * 1.05, datums.getMeanHigherHighWater(), 0.001);
+		Tide hat = datums.getHighestAstronomicalTide();
+		assertEquals(ref_datums.getHighestAstronomicalTide().getValue() * 1.05, hat.getValue(), 0.01);
+		assertEquals(ref_datums.getHighestAstronomicalTide().getTime().plusMinutes(14), hat.getTime());
+		Tide lat = datums.getLowestAstronomicalTide();
+		assertEquals(ref_datums.getLowestAstronomicalTide().getValue() * 1.05, lat.getValue(), 0.01);
+		assertEquals(ref_datums.getLowestAstronomicalTide().getTime().plusMinutes(30), lat.getTime());
 	}
 
 	@Test

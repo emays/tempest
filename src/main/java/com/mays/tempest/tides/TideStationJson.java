@@ -1,11 +1,16 @@
 package com.mays.tempest.tides;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TideStationJson {
 
 	private String state;
+
+	private String type;
+
+	private String reference;
 
 	private String id;
 
@@ -21,6 +26,23 @@ public class TideStationJson {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public String getReference() {
+		return reference;
+	}
+
+	@JsonSetter("reference_id")
+	public void setReference(String reference) {
+		this.reference = reference;
 	}
 
 	public String getId() {

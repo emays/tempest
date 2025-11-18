@@ -8,19 +8,40 @@ import com.mays.tempest.geo.KmlPointDisplay;
 
 public class TideStation implements KmlPointDisplay {
 
+	// state The state or region code that the station resides within.
+
 	private String state;
+
+	// type R for reference stations, S for subordinate stations.
+	
+	private String type;
+
+	// reference_id A unique alphanumeric ID referencing a subordinate
+	// station's reference station, if applicable
+	
+	private String reference;
+
+	// id A unique alphanumeric ID specific to this station.
 
 	private String id;
 
+	// name The name of the station
+
 	private String name;
 
+	// lat Latitude in decimal format
+
 	private double lat;
+
+	// lng Longitude in decimal format
 
 	private double lng;
 
 	public TideStation(TideStationJson sj) {
 		super();
 		this.state = sj.getState();
+		this.type = sj.getType();
+		this.reference = sj.getReference();
 		this.id = sj.getId();
 		this.name = sj.getName();
 		this.lat = sj.getLat();
@@ -29,6 +50,14 @@ public class TideStation implements KmlPointDisplay {
 
 	public String getState() {
 		return state;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public String getReference() {
+		return reference;
 	}
 
 	public String getId() {

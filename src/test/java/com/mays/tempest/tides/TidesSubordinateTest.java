@@ -52,16 +52,14 @@ public class TidesSubordinateTest {
 						Tides.getTides(WellfleetLocation.TIDE_STATION_ID, year, month, true, true));
 				// Boston is earlier than Wellfleet
 				if (bos_tides.getFirst().getType() != wf_tides.getFirst().getType()) {
-					logger.info("Drop first: " + bos_tides.getFirst() + " " + wf_tides.getFirst());
+//					logger.info("Drop first: " + bos_tides.getFirst() + " " + wf_tides.getFirst());
 					wf_tides.removeFirst();
 				}
 				assertEquals(bos_tides.getFirst().getType(), wf_tides.getFirst().getType());
 				if (bos_tides.size() != wf_tides.size()) {
-					logger.info("Drop last: " + bos_tides.getLast() + " " + wf_tides.getLast());
+//					logger.info("Drop last: " + bos_tides.getLast() + " " + wf_tides.getLast());
 					bos_tides.removeLast();
 				}
-//				logger.info("First: " + bos_tides.getFirst() + " " + wf_tides.getFirst());
-//				logger.info("Last: " + bos_tides.getLast() + " " + wf_tides.getLast());
 				assertEquals(bos_tides.size(), wf_tides.size());
 				for (int i = 0; i < bos_tides.size(); i++) {
 					Tide bos = bos_tides.get(i);
@@ -69,7 +67,7 @@ public class TidesSubordinateTest {
 					assertEquals(bos.getType(), wf.getType());
 					if (TimeUtil.isDstStart(bos.getTime().toLocalDate())
 							|| TimeUtil.isDstEnd(bos.getTime().toLocalDate())) {
-						logger.info("Tide: " + bos + " " + wf);
+//						logger.info("Tide: " + bos + " " + wf);
 						continue;
 					}
 					if (bos.getType() == Tide.Type.High) {

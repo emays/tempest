@@ -11,7 +11,10 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mays.tempest.BostonLocation;
 import com.mays.tempest.MyLocation;
+import com.mays.tempest.ProvincetownLocation;
+import com.mays.tempest.WellfleetLocation;
 import com.mays.tempest.geo.Kml;
 import com.mays.tempest.geo.KmlPointDisplay;
 
@@ -28,9 +31,19 @@ public class TideStationsTest {
 
 	@Test
 	public void getStation() throws Exception {
-		TideStation st = TideStations.getInstance().getStation(MyLocation.TIDE_STATION_ID);
+		TideStation st = TideStations.getInstance().getStation(ProvincetownLocation.TIDE_STATION_ID);
 		assertEquals("Provincetown", st.getName());
 		assertEquals("MA", st.getState());
+		assertEquals("R", st.getType());
+	}
+
+	@Test
+	public void getStationSubordinate() throws Exception {
+		TideStation st = TideStations.getInstance().getStation(WellfleetLocation.TIDE_STATION_ID);
+		assertEquals("Wellfleet", st.getName());
+		assertEquals("MA", st.getState());
+		assertEquals("S", st.getType());
+		assertEquals(BostonLocation.TIDE_STATION_ID, st.getReference());
 	}
 
 	@Test
