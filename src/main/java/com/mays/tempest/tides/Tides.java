@@ -1,6 +1,7 @@
 package com.mays.tempest.tides;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAdjusters;
 import java.util.ArrayList;
@@ -123,6 +124,19 @@ public class Tides {
 		return getTidesFromJson(json);
 	}
 
+	public static List<Tide> getTides(String station, int year, int month, boolean fme, boolean filter)
+			throws Exception {
+		String json = TideDataAccess.getTidesJsonString(station, year, month, fme);
+		if (json == null)
+			json = getTidesJsonString(station, year, month);
+		List<Tide> tides = getTidesFromJson(json);
+		if (filter)
+			tides = tides.stream()
+					.filter(tide -> tide.getTime().getYear() == year && tide.getTime().getMonthValue() == month)
+					.toList();
+		return tides;
+	}
+
 	public static List<Tide> getTides(String station, LocalDate start_date, LocalDate end_date) throws Exception {
 		return getTides(station, start_date, end_date, false);
 	}
@@ -187,7 +201,100 @@ public class Tides {
 		String json = TideDataAccess.getDatumsJsonString(station, fme);
 		if (json == null)
 			json = getDatumsJsonString(station);
-		return getDatumsFromJson(json);
+		Datums datums = getDatumsFromJson(json);
+		if (datums.isEmpty()) {
+			TidePredOffsets offsets = getTidePredOffsets(station, fme);
+			TideStation station_obj = TideStations.getInstance().getStation(station);
+			if (!station_obj.getType().equals("S"))
+				throw new IllegalStateException("For " + station + "  type, expecting S. Was " + station_obj.getType());
+			if (station.equals(station_obj.getReference()))
+				throw new IllegalStateException("For " + station + ", same as reference");
+			String ref_json = TideDataAccess.getDatumsJsonString(station_obj.getReference(), fme);
+			DatumsJson ref_datums_json = getDatumsJsonFromJson(ref_json);
+			DatumsJson new_datums_json = new DatumsJson();
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMdd HH:mm");
+			new_datums_json.setLat(ref_datums_json.getLat() * offsets.getHeightOffsetLowTide());
+			String new_lat_dt = LocalDateTime
+					.parse(ref_datums_json.getLatDate() + " " + ref_datums_json.getLatTime(), dtf)
+					.plusMinutes(offsets.getTimeOffsetLowTide()).format(dtf);
+			new_datums_json.setLatDate(new_lat_dt.split(" ")[0]);
+			new_datums_json.setLatTime(new_lat_dt.split(" ")[1]);
+			new_datums_json.setHat(ref_datums_json.getHat() * offsets.getHeightOffsetHighTide());
+			String new_hat_dt = LocalDateTime
+					.parse(ref_datums_json.getHatDate() + " " + ref_datums_json.getHatTime(), dtf)
+					.plusMinutes(offsets.getTimeOffsetHighTide()).format(dtf);
+			new_datums_json.setHatDate(new_hat_dt.split(" ")[0]);
+			new_datums_json.setHatTime(new_hat_dt.split(" ")[1]);
+			List<DatumJson> new_djs = new ArrayList<>();
+			for (DatumJson dj : ref_datums_json.getDatums()) {
+				DatumJson new_dj = new DatumJson();
+				new_dj.setName(dj.getName());
+				new_dj.setDescription(dj.getDescription());
+				new_dj.setValue(dj.getValue());
+				switch (dj.getName()) {
+				case "MLW", "MLLW" -> {
+					new_dj.setValue(new_dj.getValue() * offsets.getHeightOffsetLowTide());
+					new_djs.add(new_dj);
+				}
+				case "MHW", "MHHW" -> {
+					new_dj.setValue(new_dj.getValue() * offsets.getHeightOffsetHighTide());
+					new_djs.add(new_dj);
+				}
+				}
+			}
+			new_datums_json.setDatums(new_djs);
+			datums = new Datums(new_datums_json);
+		}
+		return datums;
+	}
+
+	public static String getTidePredOffsetsJsonString(String station) throws Exception {
+		ClientBuilder builder = ClientBuilder.newBuilder();
+		Client client = builder.build();
+		// "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations/8446121/tidepredoffsets.json"
+		String uri = "https://api.tidesandcurrents.noaa.gov/mdapi/prod/webapi/stations";
+		WebTarget target = client.target(uri);
+		target = target.path(station);
+		target = target.path("tidepredoffsets.json");
+		Response resp = target.request(MediaType.APPLICATION_JSON).get();
+		if (resp.getStatusInfo().getFamily() == Response.Status.Family.SUCCESSFUL) {
+			String json = resp.readEntity(String.class);
+			if (trace)
+				logger.info("\n" + json);
+			return json;
+		}
+		String message = resp.getStatus() + " " + resp.readEntity(String.class);
+		logger.error(message);
+		throw new Exception(message);
+	}
+
+	public static TidePredOffsetsJson getTidePredOffsetsJsonFromJson(String json) throws Exception {
+		if (trace)
+			logger.info("\n" + json);
+		ObjectMapper mapper = new ObjectMapper();
+		JsonNode jsonNode = mapper.readTree(json);
+		String str = jsonNode.toString();
+		if (trace)
+			logger.info("\n" + str);
+		TidePredOffsetsJson ret = mapper.readValue(str, new TypeReference<TidePredOffsetsJson>() {
+		});
+		return ret;
+	}
+
+	public static TidePredOffsets getTidePredOffsetsFromJson(String json) throws Exception {
+		return new TidePredOffsets(getTidePredOffsetsJsonFromJson(json));
+	}
+
+	public static TidePredOffsets getTidePredOffsets(String station) throws Exception {
+		String json = getTidePredOffsetsJsonString(station);
+		return getTidePredOffsetsFromJson(json);
+	}
+
+	public static TidePredOffsets getTidePredOffsets(String station, boolean fme) throws Exception {
+		String json = TideDataAccess.getTidePredOffsetsJsonString(station, fme);
+		if (json == null)
+			json = getTidePredOffsetsJsonString(station);
+		return getTidePredOffsetsFromJson(json);
 	}
 
 	private static List<DailyTide> getDailyTides(List<Tide> tides) {

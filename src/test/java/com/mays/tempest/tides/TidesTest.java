@@ -5,8 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.io.FileNotFoundException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,11 +13,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.mays.tempest.BostonLocation;
 import com.mays.tempest.MyLocation;
 import com.mays.tempest.ProvincetownLocation;
 import com.mays.tempest.TestDataUtil;
@@ -32,69 +30,51 @@ public class TidesTest {
 
 	private static final boolean trace = false;
 
-	private final String cache_dir = "src/test/resources/tides";
-
-	private boolean resources_exception = true;
-
-	private String datumsJson;
-
-	private String tidesJson;
-
 	@BeforeAll
 	public static void setTest() {
 		TideDataAccess.setTest();
 	}
 
-	@BeforeEach
-	public void before() throws Exception {
-		setupDatums();
-		setupTides();
-	}
-
-	public void setupDatums() throws Exception {
-		if (datumsJson != null)
-			return;
-		Path path = Paths.get(cache_dir, "datums.json");
-		if (!Files.exists(path)) {
-			logger.info("setupDatums");
-			if (resources_exception)
-				throw new Exception();
-			String res = Tides.getDatumsJsonString(MyLocation.TIDE_STATION_ID);
-			if (trace)
-				logger.info(res);
-			Files.writeString(path, res);
-		}
-		datumsJson = Files.readString(path);
-	}
-
-	public void setupTides() throws Exception {
-		if (tidesJson != null)
-			return;
-		Path path = Paths.get(cache_dir, "tides.json");
-		if (!Files.exists(path)) {
-			logger.info("setupTides");
-			if (resources_exception)
-				throw new Exception();
-			String res = Tides.getTidesJsonString(MyLocation.TIDE_STATION_ID, "20210301", "20210331");
-			if (trace)
-				logger.info(res);
-			Files.writeString(path, res);
-		}
-		tidesJson = Files.readString(path);
-	}
-
 	@Test
 	public void getDatums() throws Exception {
-		Datums datums = Tides.getDatumsFromJson(datumsJson);
+		Datums datums = Tides.getDatums(ProvincetownLocation.TIDE_STATION_ID, true);
 		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
-		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
 		assertEquals(0.33, datums.getMeanLowWater(), 0.001);
+		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
+		assertEquals(10.08, datums.getMeanHigherHighWater(), 0.001);
 		Tide hat = datums.getHighestAstronomicalTide();
 		assertEquals(12.06, hat.getValue(), 0.01);
 		assertEquals("2034-05-19T04:24", hat.getTime().toString());
 		Tide lat = datums.getLowestAstronomicalTide();
 		assertEquals(-2.09, lat.getValue(), 0.01);
-		assertEquals("2016-04-09T11:24", lat.getTime().toString());
+		assertEquals("2034-04-20T11:06", lat.getTime().toString());
+	}
+
+	@Test
+	public void getDatumsSubordinate() throws Exception {
+		Datums ref_datums = Tides.getDatums(BostonLocation.TIDE_STATION_ID, true);
+		Datums datums = Tides.getDatums(WellfleetLocation.TIDE_STATION_ID, true);
+		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
+		assertEquals(ref_datums.getMeanLowWater() * 1.05, datums.getMeanLowWater(), 0.001);
+		assertEquals(ref_datums.getMeanHighWater() * 1.05, datums.getMeanHighWater(), 0.001);
+		assertEquals(ref_datums.getMeanHigherHighWater() * 1.05, datums.getMeanHigherHighWater(), 0.001);
+		Tide hat = datums.getHighestAstronomicalTide();
+		assertEquals(ref_datums.getHighestAstronomicalTide().getValue() * 1.05, hat.getValue(), 0.01);
+		assertEquals(ref_datums.getHighestAstronomicalTide().getTime().plusMinutes(14), hat.getTime());
+		Tide lat = datums.getLowestAstronomicalTide();
+		assertEquals(ref_datums.getLowestAstronomicalTide().getValue() * 1.05, lat.getValue(), 0.01);
+		assertEquals(ref_datums.getLowestAstronomicalTide().getTime().plusMinutes(30), lat.getTime());
+	}
+
+	@Test
+	public void getTidePredOffsets() throws Exception {
+		TidePredOffsets datums = Tides.getTidePredOffsets(WellfleetLocation.TIDE_STATION_ID, true);
+		assertEquals("S", datums.getType());
+		assertEquals(1.05, datums.getHeightOffsetHighTide(), 0.001);
+		assertEquals(1.05, datums.getHeightOffsetLowTide(), 0.001);
+		assertEquals(14, datums.getTimeOffsetHighTide());
+		assertEquals(30, datums.getTimeOffsetLowTide());
+		assertEquals("R", datums.getHeightAdjustedType());
 	}
 
 	@Test
@@ -133,15 +113,17 @@ public class TidesTest {
 
 	@Test
 	public void getTides() throws Exception {
-		List<Tide> tides = Tides.getTidesFromJson(tidesJson);
+		List<Tide> tides = Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, LocalDate.of(2021, 3, 1),
+				LocalDate.of(2021, 3, 31), true);
 		if (trace)
 			tides.forEach(x -> logger.info(x.toString()));
-		assertEquals(120, tides.size());
+		assertEquals(127, tides.size());
 	}
 
 	@Test
 	public void getDailyTides() throws Exception {
-		List<Tide> tides = Tides.getTidesFromJson(tidesJson);
+		List<Tide> tides = Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, LocalDate.of(2021, 3, 1),
+				LocalDate.of(2021, 3, 31), true);
 		List<DailyTide> dts = Tides.getDailyTides(tides, LocalDate.of(2021, 3, 2), LocalDate.of(2021, 3, 30));
 		if (trace) {
 			for (DailyTide dt : dts) {
@@ -173,11 +155,13 @@ public class TidesTest {
 		assertNull(TideDataAccess.getTidesJsonString(MyLocation.TIDE_STATION_ID, 1990, 1, false));
 		String msg = null;
 		try {
-			Tides.getTides(MyLocation.TIDE_STATION_ID, 1990, 1, true);
+			Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, 1990, 1, true);
 		} catch (FileNotFoundException ex) {
 			msg = ex.getMessage();
 		}
-		assertEquals(Paths.get(cache_dir, MyLocation.TIDE_STATION_ID, "199001.json").toString(), msg);
+		assertEquals(
+				Paths.get("src/test/resources/tides", ProvincetownLocation.TIDE_STATION_ID, "199001.json").toString(),
+				msg);
 	}
 
 	@Test

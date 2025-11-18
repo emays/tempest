@@ -55,21 +55,22 @@ public class Datums {
 
 	private Tide lowestAstronomicalTide;
 
-	public Datums(List<DatumJson> datums) {
-		super();
-		this.datums = datums;
+	public Datums(DatumsJson datums) {
+		this.datums = datums.getDatums();
+		if (this.datums != null) {
+			this.highestAstronomicalTide = toTide("H", datums.getHatDate(), datums.getHatTime(), datums.getHat());
+			this.lowestAstronomicalTide = toTide("L", datums.getLatDate(), datums.getLatTime(), datums.getLat());
+		}
+	}
+
+	public boolean isEmpty() {
+		return datums == null;
 	}
 
 	private Tide toTide(String hl, String date, String time, double value) {
 		return new Tide(new TideJson(hl,
 				date.substring(0, 4) + "-" + date.substring(4, 6) + "-" + date.substring(6) + " " + time,
 				Double.toString(value - getRawDatum(Datum.MLLW))));
-	}
-
-	public Datums(DatumsJson datums) {
-		this.datums = datums.getDatums();
-		this.highestAstronomicalTide = toTide("H", datums.getHatDate(), datums.getHatTime(), datums.getHat());
-		this.lowestAstronomicalTide = toTide("L", datums.getLatDate(), datums.getLatTime(), datums.getLat());
 	}
 
 	private double getRawDatum(String datum) {
