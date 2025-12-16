@@ -1,5 +1,6 @@
 package com.mays.tempest.sunmoon;
 
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Arrays;
@@ -12,14 +13,21 @@ import org.shredzone.commons.suncalc.MoonTimes;
 
 public class Moon {
 
+	private ZonedDateTime rise;
+
+	private ZonedDateTime set;
+
 	private MoonTimes moonTimes;
 
 	private MoonIllumination moonIllumination;
 
 	private MoonPosition moonPosition;
 
-	private Moon(MoonTimes moonTimes, MoonIllumination moonIllumination, MoonPosition moonPosition) {
+	private Moon(ZonedDateTime rise, ZonedDateTime set, MoonTimes moonTimes, MoonIllumination moonIllumination,
+			MoonPosition moonPosition) {
 		super();
+		this.rise = rise;
+		this.set = set;
 		this.moonTimes = moonTimes;
 		this.moonIllumination = moonIllumination;
 		this.moonPosition = moonPosition;
@@ -29,21 +37,31 @@ public class Moon {
 
 	// https://github.com/shred/commons-suncalc
 
-	public static Moon get(int year, int month, int day, Double lat, Double lon, ZoneId tz) {
-		MoonTimes times = MoonTimes.compute().oneDay().on(year, month, day).timezone(tz).at(lat, lon).execute();
-		ZonedDateTime time = Stream.of(times.getRise(), times.getSet()).filter(java.util.Objects::nonNull).findFirst()
-				.get();
+	public static Moon get(LocalDate date, double lat, double lon, ZoneId tz) {
+		return Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), lat, lon, tz);
+	}
+
+	public static Moon get(int year, int month, int day, double lat, double lon, ZoneId tz) {
+		MoonTimes times = MoonTimes.compute().on(year, month, day).timezone(tz).at(lat, lon).execute();
+		LocalDate date = LocalDate.of(year, month, day);
+		ZonedDateTime rise = times.getRise();
+		if (rise != null && !date.equals(rise.toLocalDate()))
+			rise = null;
+		ZonedDateTime set = times.getSet();
+		if (set != null && !date.equals(set.toLocalDate()))
+			set = null;
+		ZonedDateTime time = Stream.of(rise, set).filter(java.util.Objects::nonNull).findFirst().get();
 		MoonIllumination illumination = MoonIllumination.compute().on(time).execute();
 		MoonPosition position = MoonPosition.compute().on(time).at(lat, lon).execute();
-		return new Moon(times, illumination, position);
+		return new Moon(rise, set, times, illumination, position);
 	}
 
 	public ZonedDateTime getRise() {
-		return moonTimes.getRise();
+		return rise;
 	}
 
 	public ZonedDateTime getSet() {
-		return moonTimes.getSet();
+		return set;
 	}
 
 	public boolean isAlwaysUp() {
@@ -55,7 +73,7 @@ public class Moon {
 	}
 
 	public String toString() {
-		return moonTimes.toString();
+		return "Moon: Rise " + rise + " Set " + set;
 	}
 
 	public double getFraction() {
