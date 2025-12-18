@@ -6,15 +6,13 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.stream.Collectors;
 
 import org.shredzone.commons.suncalc.MoonIllumination;
 import org.shredzone.commons.suncalc.MoonPosition;
 
-public class MoonRiseSet {
+public class MoonRiseSet implements MoonBase{
 
 	private ZonedDateTime rise;
 
@@ -28,8 +26,9 @@ public class MoonRiseSet {
 
 	private MoonPosition setPosition;
 
-	private MoonIllumination illumination;
+	private MoonIllumination noonIllumination;
 
+	@Override
 	public ZonedDateTime getRise() {
 		return rise;
 	}
@@ -38,20 +37,20 @@ public class MoonRiseSet {
 		return noon;
 	}
 
+	@Override
 	public ZonedDateTime getSet() {
 		return set;
 	}
 
 	private MoonRiseSet(ZonedDateTime rise, ZonedDateTime noon, ZonedDateTime set, MoonPosition risePosition,
-			MoonPosition noonPosition, MoonPosition setPosition, MoonIllumination illumination) {
-		super();
+			MoonPosition noonPosition, MoonPosition setPosition, MoonIllumination noonIllumination) {
 		this.rise = rise;
 		this.noon = noon;
 		this.set = set;
 		this.risePosition = risePosition;
 		this.noonPosition = noonPosition;
 		this.setPosition = setPosition;
-		this.illumination = illumination;
+		this.noonIllumination = noonIllumination;
 	}
 
 	public Duration getMoonUpLength() {
@@ -74,29 +73,69 @@ public class MoonRiseSet {
 		return noonPosition.getTrueAltitude();
 	}
 
+	@Override
 	public double getDistance() {
 		return noonPosition.getDistance();
 	}
 
+	@Override
 	public double getFraction() {
-		return illumination.getFraction();
+		return noonIllumination.getFraction();
 	}
 
+	@Override
 	public double getPhase() {
-		return illumination.getPhase();
+		return noonIllumination.getPhase();
 	}
 
+	@Override
 	public String getPhaseName() {
-		String name = illumination.getClosestPhase().toString();
-		return Arrays.stream(name.split("_")).map(str -> str.charAt(0) + str.substring(1).toLowerCase())
-				.collect(Collectors.joining(" "));
+		return Moon.getPhaseName(noonIllumination);
 	}
 
+	@Override
 	public double getAngle() {
-		return illumination.getAngle();
+		return noonIllumination.getAngle();
 	}
 
-	public static class Builder {
+	public static class MoonRiseSetMonth {
+
+		ArrayList<MoonRiseSet> moons;
+
+		public ArrayList<MoonRiseSet> getMoons() {
+			return moons;
+		}
+
+		private MoonRiseSetMonth(ArrayList<MoonRiseSet> moons) {
+			this.moons = moons;
+		}
+
+		public static MoonRiseSetMonth get(int year, int month, double latitude, double longitude, ZoneId timeZone) {
+			Builder builder = new Builder(year, month, latitude, longitude, timeZone);
+			ArrayList<MoonRiseSet> rs = builder.getRiseSet();
+			return new MoonRiseSetMonth(rs);
+		}
+
+		public MoonRiseSet getMoon(LocalDate date) {
+			return moons.stream().filter(rs -> rs.getRise().toLocalDate().equals(date)).findFirst().orElse(null);
+		}
+
+		public MoonRiseSet getClosestMoon(LocalDate date) {
+			MoonRiseSet moon = getMoon(date);
+			if (moon != null)
+				return moon;
+			moon = getMoon(date.minusDays(1));
+			if (moon != null)
+				return moon;
+			moon = getMoon(date.plusDays(1));
+			if (moon != null)
+				return moon;
+			throw new UnsupportedOperationException("" + date);
+		}
+
+	}
+
+	private static class Builder {
 
 		private int year;
 
@@ -109,7 +148,6 @@ public class MoonRiseSet {
 		private ZoneId timeZone;
 
 		public Builder(int year, int month, double latitude, double longitude, ZoneId timeZone) {
-			super();
 			this.year = year;
 			this.month = month;
 			this.latitude = latitude;
@@ -127,7 +165,7 @@ public class MoonRiseSet {
 			return events;
 		}
 
-		public ArrayList<MoonEvent> getEvents() {
+		private ArrayList<MoonEvent> getEvents() {
 			ArrayList<MoonEvent> events = new ArrayList<>();
 			LocalDate start = LocalDate.of(year, month, 1);
 			LocalDate end = LocalDate.of(year, month, start.lengthOfMonth());

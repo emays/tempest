@@ -1,17 +1,17 @@
 package com.mays.tempest.sunmoon;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.shredzone.commons.suncalc.MoonIllumination;
 import org.shredzone.commons.suncalc.MoonPosition;
 import org.shredzone.commons.suncalc.MoonTimes;
 
-public class Moon {
+public class Moon implements MoonBase {
 
 	private ZonedDateTime rise;
 
@@ -25,7 +25,6 @@ public class Moon {
 
 	private Moon(ZonedDateTime rise, ZonedDateTime set, MoonTimes moonTimes, MoonIllumination moonIllumination,
 			MoonPosition moonPosition) {
-		super();
 		this.rise = rise;
 		this.set = set;
 		this.moonTimes = moonTimes;
@@ -50,16 +49,18 @@ public class Moon {
 		ZonedDateTime set = times.getSet();
 		if (set != null && !date.equals(set.toLocalDate()))
 			set = null;
-		ZonedDateTime time = Stream.of(rise, set).filter(java.util.Objects::nonNull).findFirst().get();
+		ZonedDateTime time = ZonedDateTime.of(date, LocalTime.NOON, tz);
 		MoonIllumination illumination = MoonIllumination.compute().on(time).execute();
 		MoonPosition position = MoonPosition.compute().on(time).at(lat, lon).execute();
 		return new Moon(rise, set, times, illumination, position);
 	}
 
+	@Override
 	public ZonedDateTime getRise() {
 		return rise;
 	}
 
+	@Override
 	public ZonedDateTime getSet() {
 		return set;
 	}
@@ -72,24 +73,33 @@ public class Moon {
 		return moonTimes.isAlwaysDown();
 	}
 
+	@Override
 	public String toString() {
 		return "Moon: Rise " + rise + " Set " + set;
 	}
 
+	@Override
 	public double getFraction() {
 		return moonIllumination.getFraction();
 	}
 
+	@Override
 	public double getPhase() {
 		return moonIllumination.getPhase();
 	}
 
-	public String getPhaseName() {
+	static String getPhaseName(MoonIllumination moonIllumination) {
 		String name = moonIllumination.getClosestPhase().toString();
 		return Arrays.stream(name.split("_")).map(str -> str.charAt(0) + str.substring(1).toLowerCase())
 				.collect(Collectors.joining(" "));
 	}
 
+	@Override
+	public String getPhaseName() {
+		return Moon.getPhaseName(moonIllumination);
+	}
+
+	@Override
 	public double getAngle() {
 		return moonIllumination.getAngle();
 	}
@@ -102,6 +112,7 @@ public class Moon {
 		return moonPosition.getAzimuth();
 	}
 
+	@Override
 	public double getDistance() {
 		return moonPosition.getDistance();
 	}
