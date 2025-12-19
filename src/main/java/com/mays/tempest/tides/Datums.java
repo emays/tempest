@@ -101,6 +101,21 @@ public class Datums {
 		return getRawDatum(Datum.MLLW) - getRawDatum(Datum.MLLW);
 	}
 
+	public double getMeanRangeOfTide() {
+		return this.getMeanHighWater() - this.getMeanLowWater();
+	}
+
+	public double getDatum(Datum datum) {
+		return switch (datum) {
+		case MHHW -> this.getMeanHigherHighWater();
+		case MHW -> this.getMeanHighWater();
+		case MLW -> this.getMeanLowWater();
+		case MLLW -> this.getMeanLowerLowWater();
+		case MN -> this.getMeanRangeOfTide();
+		default -> throw new IllegalArgumentException("Unexpected value: " + datum);
+		};
+	}
+
 	public Tide getHighestAstronomicalTide() {
 		return highestAstronomicalTide;
 	}

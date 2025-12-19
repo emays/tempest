@@ -22,6 +22,14 @@ public class MoonEvent {
 		this.type = type;
 	}
 
+	public static MoonEvent setEvent(Moon moon) {
+		return new MoonEvent(moon, moon.getSet(), MoonEvent.Type.Set);
+	}
+
+	public static MoonEvent riseEvent(Moon moon) {
+		return new MoonEvent(moon, moon.getRise(), MoonEvent.Type.Rise);
+	}
+
 	public ZonedDateTime getTime() {
 		return time;
 	}
@@ -36,6 +44,11 @@ public class MoonEvent {
 
 	public void setType(Type type) {
 		this.type = type;
+	}
+
+	@Override
+	public String toString() {
+		return "Moon: " + type + " @ " + time;
 	}
 
 }

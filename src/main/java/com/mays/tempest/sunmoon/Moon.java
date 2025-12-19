@@ -1,16 +1,21 @@
 package com.mays.tempest.sunmoon;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.util.Arrays;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import org.shredzone.commons.suncalc.MoonIllumination;
 import org.shredzone.commons.suncalc.MoonPosition;
 import org.shredzone.commons.suncalc.MoonTimes;
 
-public class Moon {
+public class Moon implements MoonBase {
+
+	private ZonedDateTime rise;
+
+	private ZonedDateTime set;
 
 	private MoonTimes moonTimes;
 
@@ -18,8 +23,10 @@ public class Moon {
 
 	private MoonPosition moonPosition;
 
-	private Moon(MoonTimes moonTimes, MoonIllumination moonIllumination, MoonPosition moonPosition) {
-		super();
+	private Moon(ZonedDateTime rise, ZonedDateTime set, MoonTimes moonTimes, MoonIllumination moonIllumination,
+			MoonPosition moonPosition) {
+		this.rise = rise;
+		this.set = set;
 		this.moonTimes = moonTimes;
 		this.moonIllumination = moonIllumination;
 		this.moonPosition = moonPosition;
@@ -29,21 +36,33 @@ public class Moon {
 
 	// https://github.com/shred/commons-suncalc
 
-	public static Moon get(int year, int month, int day, Double lat, Double lon, ZoneId tz) {
-		MoonTimes times = MoonTimes.compute().oneDay().on(year, month, day).timezone(tz).at(lat, lon).execute();
-		ZonedDateTime time = Stream.of(times.getRise(), times.getSet()).filter(java.util.Objects::nonNull).findFirst()
-				.get();
+	public static Moon get(LocalDate date, double lat, double lon, ZoneId tz) {
+		return Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), lat, lon, tz);
+	}
+
+	public static Moon get(int year, int month, int day, double lat, double lon, ZoneId tz) {
+		MoonTimes times = MoonTimes.compute().on(year, month, day).timezone(tz).at(lat, lon).execute();
+		LocalDate date = LocalDate.of(year, month, day);
+		ZonedDateTime rise = times.getRise();
+		if (rise != null && !date.equals(rise.toLocalDate()))
+			rise = null;
+		ZonedDateTime set = times.getSet();
+		if (set != null && !date.equals(set.toLocalDate()))
+			set = null;
+		ZonedDateTime time = ZonedDateTime.of(date, LocalTime.NOON, tz);
 		MoonIllumination illumination = MoonIllumination.compute().on(time).execute();
 		MoonPosition position = MoonPosition.compute().on(time).at(lat, lon).execute();
-		return new Moon(times, illumination, position);
+		return new Moon(rise, set, times, illumination, position);
 	}
 
+	@Override
 	public ZonedDateTime getRise() {
-		return moonTimes.getRise();
+		return rise;
 	}
 
+	@Override
 	public ZonedDateTime getSet() {
-		return moonTimes.getSet();
+		return set;
 	}
 
 	public boolean isAlwaysUp() {
@@ -54,24 +73,33 @@ public class Moon {
 		return moonTimes.isAlwaysDown();
 	}
 
+	@Override
 	public String toString() {
-		return moonTimes.toString();
+		return "Moon: Rise " + rise + " Set " + set;
 	}
 
+	@Override
 	public double getFraction() {
 		return moonIllumination.getFraction();
 	}
 
+	@Override
 	public double getPhase() {
 		return moonIllumination.getPhase();
 	}
 
-	public String getPhaseName() {
+	static String getPhaseName(MoonIllumination moonIllumination) {
 		String name = moonIllumination.getClosestPhase().toString();
 		return Arrays.stream(name.split("_")).map(str -> str.charAt(0) + str.substring(1).toLowerCase())
 				.collect(Collectors.joining(" "));
 	}
 
+	@Override
+	public String getPhaseName() {
+		return Moon.getPhaseName(moonIllumination);
+	}
+
+	@Override
 	public double getAngle() {
 		return moonIllumination.getAngle();
 	}
@@ -84,6 +112,7 @@ public class Moon {
 		return moonPosition.getAzimuth();
 	}
 
+	@Override
 	public double getDistance() {
 		return moonPosition.getDistance();
 	}

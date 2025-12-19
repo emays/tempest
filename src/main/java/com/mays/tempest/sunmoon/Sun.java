@@ -161,4 +161,8 @@ public class Sun {
 		return on(time).getAzimuth();
 	}
 
+	public double getAltitude(ZonedDateTime time) {
+		return on(time).getAltitude();
+	}
+
 }

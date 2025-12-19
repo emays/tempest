@@ -42,6 +42,7 @@ public class TidesTest {
 		assertEquals(0.33, datums.getMeanLowWater(), 0.001);
 		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
 		assertEquals(10.08, datums.getMeanHigherHighWater(), 0.001);
+		assertEquals(9.29, datums.getMeanRangeOfTide(), 0.001);
 		Tide hat = datums.getHighestAstronomicalTide();
 		assertEquals(12.06, hat.getValue(), 0.01);
 		assertEquals("2034-05-19T04:24", hat.getTime().toString());
@@ -58,6 +59,7 @@ public class TidesTest {
 		assertEquals(ref_datums.getMeanLowWater() * 1.05, datums.getMeanLowWater(), 0.001);
 		assertEquals(ref_datums.getMeanHighWater() * 1.05, datums.getMeanHighWater(), 0.001);
 		assertEquals(ref_datums.getMeanHigherHighWater() * 1.05, datums.getMeanHigherHighWater(), 0.001);
+		assertEquals(ref_datums.getMeanRangeOfTide() * 1.05, datums.getMeanRangeOfTide(), 0.001);
 		Tide hat = datums.getHighestAstronomicalTide();
 		assertEquals(ref_datums.getHighestAstronomicalTide().getValue() * 1.05, hat.getValue(), 0.01);
 		assertEquals(ref_datums.getHighestAstronomicalTide().getTime().plusMinutes(14), hat.getTime());

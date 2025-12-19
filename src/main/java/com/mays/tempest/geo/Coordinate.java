@@ -15,12 +15,34 @@ public class Coordinate {
 	protected Coordinate() {
 	}
 
+	public static Coordinate of(double latitude, double longitude) {
+		return new Coordinate(latitude, longitude);
+	}
+
 	public double getLatitude() {
 		return latitude;
 	}
 
 	public double getLongitude() {
 		return longitude;
+	}
+
+	public static double toDecimal(int degrees, int minutes) {
+		return toDecimal(degrees, minutes, 0);
+	}
+
+	public static double toDecimal(int degrees, int minutes, int seconds) {
+		if (degrees < -180 || degrees > 180)
+			throw new IllegalArgumentException("Degrees: " + degrees);
+		double sign = 1;
+		if (degrees < 0)
+			sign = -1;
+		degrees = Math.abs(degrees);
+		if (minutes < 0 || minutes > 60)
+			throw new IllegalArgumentException("Minutes: " + minutes);
+		if (seconds < 0 || seconds > 60)
+			throw new IllegalArgumentException("Seconds: " + seconds);
+		return sign * (degrees + minutes / 60.0 + seconds / 3600.0);
 	}
 
 	public static boolean isValid(double latitude, double longitude) {
