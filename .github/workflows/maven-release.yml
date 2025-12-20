@@ -1,0 +1,42 @@
+#
+#
+name: Release to Github packages
+
+# Trigger workflow manually
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up JDK
+      uses: actions/setup-java@v4
+      with:
+        java-version: '25'
+        distribution: 'temurin'
+        cache: maven
+        server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+
+    - name: Configure Git User
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Release to GitHub Packages Apache Maven
+      run: |
+        git config --global url.https://${{ github.token }}@github.com/.insteadOf https://www.github.com/
+        mvn release:prepare release:perform -B \
+            -Pgithub-packages \
+            -Pgpg-sign \
+            -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MAVEN_GPG_KEY: ${{secrets.GPG_KEY}}
+        MAVEN_GPG_PASSPHRASE: ${{secrets.GPG_PASSPHRASE}}
