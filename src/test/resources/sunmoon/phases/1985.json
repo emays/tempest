@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 7, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "02:16", 
+      "year": 1985
+    }, 
+    {
+      "day": 13, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "23:27", 
+      "year": 1985
+    }, 
+    {
+      "day": 21, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "02:28", 
+      "year": 1985
+    }, 
+    {
+      "day": 29, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "03:29", 
+      "year": 1985
+    }, 
+    {
+      "day": 5, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "15:19", 
+      "year": 1985
+    }, 
+    {
+      "day": 12, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "07:57", 
+      "year": 1985
+    }, 
+    {
+      "day": 19, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "18:43", 
+      "year": 1985
+    }, 
+    {
+      "day": 27, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "23:41", 
+      "year": 1985
+    }, 
+    {
+      "day": 7, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "02:13", 
+      "year": 1985
+    }, 
+    {
+      "day": 13, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "17:34", 
+      "year": 1985
+    }, 
+    {
+      "day": 21, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "11:59", 
+      "year": 1985
+    }, 
+    {
+      "day": 29, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "16:11", 
+      "year": 1985
+    }, 
+    {
+      "day": 5, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "11:32", 
+      "year": 1985
+    }, 
+    {
+      "day": 12, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "04:42", 
+      "year": 1985
+    }, 
+    {
+      "day": 20, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "05:22", 
+      "year": 1985
+    }, 
+    {
+      "day": 28, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "04:25", 
+      "year": 1985
+    }, 
+    {
+      "day": 4, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "19:53", 
+      "year": 1985
+    }, 
+    {
+      "day": 11, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "17:34", 
+      "year": 1985
+    }, 
+    {
+      "day": 19, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "21:41", 
+      "year": 1985
+    }, 
+    {
+      "day": 27, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "12:56", 
+      "year": 1985
+    }, 
+    {
+      "day": 3, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "03:50", 
+      "year": 1985
+    }, 
+    {
+      "day": 10, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "08:19", 
+      "year": 1985
+    }, 
+    {
+      "day": 18, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "11:58", 
+      "year": 1985
+    }, 
+    {
+      "day": 25, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "18:53", 
+      "year": 1985
+    }, 
+    {
+      "day": 2, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "12:08", 
+      "year": 1985
+    }, 
+    {
+      "day": 10, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "00:49", 
+      "year": 1985
+    }, 
+    {
+      "day": 17, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "23:56", 
+      "year": 1985
+    }, 
+    {
+      "day": 24, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "23:39", 
+      "year": 1985
+    }, 
+    {
+      "day": 31, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "21:41", 
+      "year": 1985
+    }, 
+    {
+      "day": 8, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "18:29", 
+      "year": 1985
+    }, 
+    {
+      "day": 16, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "10:06", 
+      "year": 1985
+    }, 
+    {
+      "day": 23, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "04:36", 
+      "year": 1985
+    }, 
+    {
+      "day": 30, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "09:27", 
+      "year": 1985
+    }, 
+    {
+      "day": 7, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "12:16", 
+      "year": 1985
+    }, 
+    {
+      "day": 14, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "19:20", 
+      "year": 1985
+    }, 
+    {
+      "day": 21, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "11:03", 
+      "year": 1985
+    }, 
+    {
+      "day": 29, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "00:09", 
+      "year": 1985
+    }, 
+    {
+      "day": 7, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "05:04", 
+      "year": 1985
+    }, 
+    {
+      "day": 14, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "04:33", 
+      "year": 1985
+    }, 
+    {
+      "day": 20, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "20:13", 
+      "year": 1985
+    }, 
+    {
+      "day": 28, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "17:38", 
+      "year": 1985
+    }, 
+    {
+      "day": 5, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "20:07", 
+      "year": 1985
+    }, 
+    {
+      "day": 12, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "14:20", 
+      "year": 1985
+    }, 
+    {
+      "day": 19, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "09:04", 
+      "year": 1985
+    }, 
+    {
+      "day": 27, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "12:42", 
+      "year": 1985
+    }, 
+    {
+      "day": 5, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "09:01", 
+      "year": 1985
+    }, 
+    {
+      "day": 12, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "00:54", 
+      "year": 1985
+    }, 
+    {
+      "day": 19, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "01:58", 
+      "year": 1985
+    }, 
+    {
+      "day": 27, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "07:30", 
+      "year": 1985
+    }
+  ], 
+  "year": 1985
+}

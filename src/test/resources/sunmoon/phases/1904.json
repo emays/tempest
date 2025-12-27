@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 3, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "05:47", 
+      "year": 1904
+    }, 
+    {
+      "day": 9, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "21:10", 
+      "year": 1904
+    }, 
+    {
+      "day": 17, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "15:46", 
+      "year": 1904
+    }, 
+    {
+      "day": 25, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "20:41", 
+      "year": 1904
+    }, 
+    {
+      "day": 1, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "16:33", 
+      "year": 1904
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "09:56", 
+      "year": 1904
+    }, 
+    {
+      "day": 16, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "11:04", 
+      "year": 1904
+    }, 
+    {
+      "day": 24, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "11:08", 
+      "year": 1904
+    }, 
+    {
+      "day": 2, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "02:48", 
+      "year": 1904
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "01:00", 
+      "year": 1904
+    }, 
+    {
+      "day": 17, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "05:39", 
+      "year": 1904
+    }, 
+    {
+      "day": 24, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "21:36", 
+      "year": 1904
+    }, 
+    {
+      "day": 31, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "12:44", 
+      "year": 1904
+    }, 
+    {
+      "day": 7, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "17:53", 
+      "year": 1904
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "21:53", 
+      "year": 1904
+    }, 
+    {
+      "day": 23, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "04:54", 
+      "year": 1904
+    }, 
+    {
+      "day": 29, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "22:36", 
+      "year": 1904
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "11:50", 
+      "year": 1904
+    }, 
+    {
+      "day": 15, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "10:58", 
+      "year": 1904
+    }, 
+    {
+      "day": 22, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "10:18", 
+      "year": 1904
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "08:54", 
+      "year": 1904
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "05:53", 
+      "year": 1904
+    }, 
+    {
+      "day": 13, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "21:10", 
+      "year": 1904
+    }, 
+    {
+      "day": 20, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "15:10", 
+      "year": 1904
+    }, 
+    {
+      "day": 27, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "20:23", 
+      "year": 1904
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "22:54", 
+      "year": 1904
+    }, 
+    {
+      "day": 13, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "05:27", 
+      "year": 1904
+    }, 
+    {
+      "day": 19, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "20:48", 
+      "year": 1904
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "09:42", 
+      "year": 1904
+    }, 
+    {
+      "day": 4, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "14:03", 
+      "year": 1904
+    }, 
+    {
+      "day": 11, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "12:58", 
+      "year": 1904
+    }, 
+    {
+      "day": 18, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "04:27", 
+      "year": 1904
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "01:02", 
+      "year": 1904
+    }, 
+    {
+      "day": 3, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "02:58", 
+      "year": 1904
+    }, 
+    {
+      "day": 9, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "20:42", 
+      "year": 1904
+    }, 
+    {
+      "day": 16, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "15:12", 
+      "year": 1904
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "17:50", 
+      "year": 1904
+    }, 
+    {
+      "day": 2, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "13:52", 
+      "year": 1904
+    }, 
+    {
+      "day": 9, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "05:25", 
+      "year": 1904
+    }, 
+    {
+      "day": 16, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "05:54", 
+      "year": 1904
+    }, 
+    {
+      "day": 24, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "10:56", 
+      "year": 1904
+    }, 
+    {
+      "day": 31, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "23:13", 
+      "year": 1904
+    }, 
+    {
+      "day": 7, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "15:36", 
+      "year": 1904
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "00:35", 
+      "year": 1904
+    }, 
+    {
+      "day": 23, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "03:12", 
+      "year": 1904
+    }, 
+    {
+      "day": 30, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "07:38", 
+      "year": 1904
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "03:46", 
+      "year": 1904
+    }, 
+    {
+      "day": 14, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "22:07", 
+      "year": 1904
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "18:01", 
+      "year": 1904
+    }, 
+    {
+      "day": 29, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "15:46", 
+      "year": 1904
+    }
+  ], 
+  "year": 1904
+}

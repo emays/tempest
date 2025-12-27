@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 8, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "03:11", 
+      "year": 1930
+    }, 
+    {
+      "day": 14, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "22:21", 
+      "year": 1930
+    }, 
+    {
+      "day": 21, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "16:07", 
+      "year": 1930
+    }, 
+    {
+      "day": 29, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "19:07", 
+      "year": 1930
+    }, 
+    {
+      "day": 6, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "17:26", 
+      "year": 1930
+    }, 
+    {
+      "day": 13, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "08:39", 
+      "year": 1930
+    }, 
+    {
+      "day": 20, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "08:44", 
+      "year": 1930
+    }, 
+    {
+      "day": 28, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "13:33", 
+      "year": 1930
+    }, 
+    {
+      "day": 8, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "04:00", 
+      "year": 1930
+    }, 
+    {
+      "day": 14, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "18:58", 
+      "year": 1930
+    }, 
+    {
+      "day": 22, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "03:13", 
+      "year": 1930
+    }, 
+    {
+      "day": 30, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "05:46", 
+      "year": 1930
+    }, 
+    {
+      "day": 6, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "11:25", 
+      "year": 1930
+    }, 
+    {
+      "day": 13, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "05:48", 
+      "year": 1930
+    }, 
+    {
+      "day": 20, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "22:08", 
+      "year": 1930
+    }, 
+    {
+      "day": 28, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "19:08", 
+      "year": 1930
+    }, 
+    {
+      "day": 5, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "16:53", 
+      "year": 1930
+    }, 
+    {
+      "day": 12, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "17:29", 
+      "year": 1930
+    }, 
+    {
+      "day": 20, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "16:22", 
+      "year": 1930
+    }, 
+    {
+      "day": 28, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "05:37", 
+      "year": 1930
+    }, 
+    {
+      "day": 3, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "21:56", 
+      "year": 1930
+    }, 
+    {
+      "day": 11, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "06:12", 
+      "year": 1930
+    }, 
+    {
+      "day": 19, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "09:00", 
+      "year": 1930
+    }, 
+    {
+      "day": 26, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "13:47", 
+      "year": 1930
+    }, 
+    {
+      "day": 3, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "04:03", 
+      "year": 1930
+    }, 
+    {
+      "day": 10, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "20:01", 
+      "year": 1930
+    }, 
+    {
+      "day": 18, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "23:29", 
+      "year": 1930
+    }, 
+    {
+      "day": 25, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "20:42", 
+      "year": 1930
+    }, 
+    {
+      "day": 1, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "12:26", 
+      "year": 1930
+    }, 
+    {
+      "day": 9, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "10:58", 
+      "year": 1930
+    }, 
+    {
+      "day": 17, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "11:31", 
+      "year": 1930
+    }, 
+    {
+      "day": 24, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "03:37", 
+      "year": 1930
+    }, 
+    {
+      "day": 30, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "23:57", 
+      "year": 1930
+    }, 
+    {
+      "day": 8, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "02:48", 
+      "year": 1930
+    }, 
+    {
+      "day": 15, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "21:13", 
+      "year": 1930
+    }, 
+    {
+      "day": 22, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "11:41", 
+      "year": 1930
+    }, 
+    {
+      "day": 29, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "14:58", 
+      "year": 1930
+    }, 
+    {
+      "day": 7, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "18:56", 
+      "year": 1930
+    }, 
+    {
+      "day": 15, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "05:12", 
+      "year": 1930
+    }, 
+    {
+      "day": 21, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "21:48", 
+      "year": 1930
+    }, 
+    {
+      "day": 29, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "09:22", 
+      "year": 1930
+    }, 
+    {
+      "day": 6, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "10:28", 
+      "year": 1930
+    }, 
+    {
+      "day": 13, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "12:27", 
+      "year": 1930
+    }, 
+    {
+      "day": 20, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "10:21", 
+      "year": 1930
+    }, 
+    {
+      "day": 28, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "06:18", 
+      "year": 1930
+    }, 
+    {
+      "day": 6, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "00:40", 
+      "year": 1930
+    }, 
+    {
+      "day": 12, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "20:07", 
+      "year": 1930
+    }, 
+    {
+      "day": 20, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "01:24", 
+      "year": 1930
+    }, 
+    {
+      "day": 28, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "03:59", 
+      "year": 1930
+    }
+  ], 
+  "year": 1930
+}

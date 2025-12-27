@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 5, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "02:21", 
+      "year": 1954
+    }, 
+    {
+      "day": 12, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "00:22", 
+      "year": 1954
+    }, 
+    {
+      "day": 19, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "02:37", 
+      "year": 1954
+    }, 
+    {
+      "day": 27, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "03:28", 
+      "year": 1954
+    }, 
+    {
+      "day": 3, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "15:55", 
+      "year": 1954
+    }, 
+    {
+      "day": 10, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "08:29", 
+      "year": 1954
+    }, 
+    {
+      "day": 17, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "19:17", 
+      "year": 1954
+    }, 
+    {
+      "day": 25, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "23:29", 
+      "year": 1954
+    }, 
+    {
+      "day": 5, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "03:11", 
+      "year": 1954
+    }, 
+    {
+      "day": 11, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "17:52", 
+      "year": 1954
+    }, 
+    {
+      "day": 19, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "12:42", 
+      "year": 1954
+    }, 
+    {
+      "day": 27, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:14", 
+      "year": 1954
+    }, 
+    {
+      "day": 3, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "12:25", 
+      "year": 1954
+    }, 
+    {
+      "day": 10, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "05:05", 
+      "year": 1954
+    }, 
+    {
+      "day": 18, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "05:48", 
+      "year": 1954
+    }, 
+    {
+      "day": 26, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "04:57", 
+      "year": 1954
+    }, 
+    {
+      "day": 2, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "20:22", 
+      "year": 1954
+    }, 
+    {
+      "day": 9, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "18:17", 
+      "year": 1954
+    }, 
+    {
+      "day": 17, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "21:47", 
+      "year": 1954
+    }, 
+    {
+      "day": 25, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "13:49", 
+      "year": 1954
+    }, 
+    {
+      "day": 1, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "04:03", 
+      "year": 1954
+    }, 
+    {
+      "day": 8, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "09:14", 
+      "year": 1954
+    }, 
+    {
+      "day": 16, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "12:06", 
+      "year": 1954
+    }, 
+    {
+      "day": 23, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "19:46", 
+      "year": 1954
+    }, 
+    {
+      "day": 30, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "12:26", 
+      "year": 1954
+    }, 
+    {
+      "day": 8, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "01:33", 
+      "year": 1954
+    }, 
+    {
+      "day": 16, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "00:29", 
+      "year": 1954
+    }, 
+    {
+      "day": 23, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "00:14", 
+      "year": 1954
+    }, 
+    {
+      "day": 29, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "22:20", 
+      "year": 1954
+    }, 
+    {
+      "day": 6, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "18:51", 
+      "year": 1954
+    }, 
+    {
+      "day": 14, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "11:03", 
+      "year": 1954
+    }, 
+    {
+      "day": 21, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "04:51", 
+      "year": 1954
+    }, 
+    {
+      "day": 28, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "10:21", 
+      "year": 1954
+    }, 
+    {
+      "day": 5, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "12:28", 
+      "year": 1954
+    }, 
+    {
+      "day": 12, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "20:19", 
+      "year": 1954
+    }, 
+    {
+      "day": 19, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "11:11", 
+      "year": 1954
+    }, 
+    {
+      "day": 27, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "00:50", 
+      "year": 1954
+    }, 
+    {
+      "day": 5, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "05:31", 
+      "year": 1954
+    }, 
+    {
+      "day": 12, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "05:10", 
+      "year": 1954
+    }, 
+    {
+      "day": 18, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "20:30", 
+      "year": 1954
+    }, 
+    {
+      "day": 26, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "17:47", 
+      "year": 1954
+    }, 
+    {
+      "day": 3, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "20:55", 
+      "year": 1954
+    }, 
+    {
+      "day": 10, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "14:29", 
+      "year": 1954
+    }, 
+    {
+      "day": 17, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "09:33", 
+      "year": 1954
+    }, 
+    {
+      "day": 25, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "12:30", 
+      "year": 1954
+    }, 
+    {
+      "day": 3, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "09:56", 
+      "year": 1954
+    }, 
+    {
+      "day": 10, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "00:57", 
+      "year": 1954
+    }, 
+    {
+      "day": 17, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "02:21", 
+      "year": 1954
+    }, 
+    {
+      "day": 25, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "07:33", 
+      "year": 1954
+    }
+  ], 
+  "year": 1954
+}

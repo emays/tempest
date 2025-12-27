@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 2, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "09:02", 
+      "year": 1980
+    }, 
+    {
+      "day": 10, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "11:50", 
+      "year": 1980
+    }, 
+    {
+      "day": 17, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "21:19", 
+      "year": 1980
+    }, 
+    {
+      "day": 24, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "13:58", 
+      "year": 1980
+    }, 
+    {
+      "day": 1, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "02:21", 
+      "year": 1980
+    }, 
+    {
+      "day": 9, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "07:35", 
+      "year": 1980
+    }, 
+    {
+      "day": 16, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "08:51", 
+      "year": 1980
+    }, 
+    {
+      "day": 23, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "00:14", 
+      "year": 1980
+    }, 
+    {
+      "day": 1, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "21:00", 
+      "year": 1980
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "23:49", 
+      "year": 1980
+    }, 
+    {
+      "day": 16, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "18:56", 
+      "year": 1980
+    }, 
+    {
+      "day": 23, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "12:31", 
+      "year": 1980
+    }, 
+    {
+      "day": 31, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "15:14", 
+      "year": 1980
+    }, 
+    {
+      "day": 8, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "12:06", 
+      "year": 1980
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "03:46", 
+      "year": 1980
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "02:59", 
+      "year": 1980
+    }, 
+    {
+      "day": 30, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "07:35", 
+      "year": 1980
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "20:51", 
+      "year": 1980
+    }, 
+    {
+      "day": 14, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "12:00", 
+      "year": 1980
+    }, 
+    {
+      "day": 21, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "19:16", 
+      "year": 1980
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "21:28", 
+      "year": 1980
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "02:53", 
+      "year": 1980
+    }, 
+    {
+      "day": 12, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "20:38", 
+      "year": 1980
+    }, 
+    {
+      "day": 20, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "12:32", 
+      "year": 1980
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "09:02", 
+      "year": 1980
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "07:27", 
+      "year": 1980
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "06:46", 
+      "year": 1980
+    }, 
+    {
+      "day": 20, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "05:51", 
+      "year": 1980
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "18:54", 
+      "year": 1980
+    }, 
+    {
+      "day": 3, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "12:00", 
+      "year": 1980
+    }, 
+    {
+      "day": 10, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "19:09", 
+      "year": 1980
+    }, 
+    {
+      "day": 18, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "22:28", 
+      "year": 1980
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "03:42", 
+      "year": 1980
+    }, 
+    {
+      "day": 1, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "18:08", 
+      "year": 1980
+    }, 
+    {
+      "day": 9, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "10:00", 
+      "year": 1980
+    }, 
+    {
+      "day": 17, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "13:54", 
+      "year": 1980
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "12:08", 
+      "year": 1980
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "03:18", 
+      "year": 1980
+    }, 
+    {
+      "day": 9, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "02:50", 
+      "year": 1980
+    }, 
+    {
+      "day": 17, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "03:47", 
+      "year": 1980
+    }, 
+    {
+      "day": 23, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "20:52", 
+      "year": 1980
+    }, 
+    {
+      "day": 30, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "16:33", 
+      "year": 1980
+    }, 
+    {
+      "day": 7, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "20:43", 
+      "year": 1980
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "15:47", 
+      "year": 1980
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "06:39", 
+      "year": 1980
+    }, 
+    {
+      "day": 29, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "09:59", 
+      "year": 1980
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "14:35", 
+      "year": 1980
+    }, 
+    {
+      "day": 15, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "01:47", 
+      "year": 1980
+    }, 
+    {
+      "day": 21, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "18:08", 
+      "year": 1980
+    }, 
+    {
+      "day": 29, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "06:32", 
+      "year": 1980
+    }
+  ], 
+  "year": 1980
+}

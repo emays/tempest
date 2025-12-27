@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 5, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "04:45", 
+      "year": 1916
+    }, 
+    {
+      "day": 12, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "03:37", 
+      "year": 1916
+    }, 
+    {
+      "day": 20, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "08:29", 
+      "year": 1916
+    }, 
+    {
+      "day": 28, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "00:35", 
+      "year": 1916
+    }, 
+    {
+      "day": 3, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "16:05", 
+      "year": 1916
+    }, 
+    {
+      "day": 10, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "22:20", 
+      "year": 1916
+    }, 
+    {
+      "day": 19, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "02:28", 
+      "year": 1916
+    }, 
+    {
+      "day": 26, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "09:24", 
+      "year": 1916
+    }, 
+    {
+      "day": 4, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "03:57", 
+      "year": 1916
+    }, 
+    {
+      "day": 11, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "18:33", 
+      "year": 1916
+    }, 
+    {
+      "day": 19, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "17:26", 
+      "year": 1916
+    }, 
+    {
+      "day": 26, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:22", 
+      "year": 1916
+    }, 
+    {
+      "day": 2, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "16:21", 
+      "year": 1916
+    }, 
+    {
+      "day": 10, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "14:35", 
+      "year": 1916
+    }, 
+    {
+      "day": 18, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "05:07", 
+      "year": 1916
+    }, 
+    {
+      "day": 24, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "22:38", 
+      "year": 1916
+    }, 
+    {
+      "day": 2, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "05:29", 
+      "year": 1916
+    }, 
+    {
+      "day": 10, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "08:47", 
+      "year": 1916
+    }, 
+    {
+      "day": 17, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "14:11", 
+      "year": 1916
+    }, 
+    {
+      "day": 24, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "05:16", 
+      "year": 1916
+    }, 
+    {
+      "day": 31, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "19:37", 
+      "year": 1916
+    }, 
+    {
+      "day": 8, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "23:58", 
+      "year": 1916
+    }, 
+    {
+      "day": 15, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "21:41", 
+      "year": 1916
+    }, 
+    {
+      "day": 22, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "13:16", 
+      "year": 1916
+    }, 
+    {
+      "day": 30, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "10:43", 
+      "year": 1916
+    }, 
+    {
+      "day": 8, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "11:55", 
+      "year": 1916
+    }, 
+    {
+      "day": 15, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "04:40", 
+      "year": 1916
+    }, 
+    {
+      "day": 21, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "23:33", 
+      "year": 1916
+    }, 
+    {
+      "day": 30, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "02:15", 
+      "year": 1916
+    }, 
+    {
+      "day": 6, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "21:05", 
+      "year": 1916
+    }, 
+    {
+      "day": 13, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "12:00", 
+      "year": 1916
+    }, 
+    {
+      "day": 20, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "12:52", 
+      "year": 1916
+    }, 
+    {
+      "day": 28, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "17:24", 
+      "year": 1916
+    }, 
+    {
+      "day": 5, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "04:26", 
+      "year": 1916
+    }, 
+    {
+      "day": 11, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "20:30", 
+      "year": 1916
+    }, 
+    {
+      "day": 19, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "05:35", 
+      "year": 1916
+    }, 
+    {
+      "day": 27, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "07:34", 
+      "year": 1916
+    }, 
+    {
+      "day": 4, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "11:00", 
+      "year": 1916
+    }, 
+    {
+      "day": 11, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "07:01", 
+      "year": 1916
+    }, 
+    {
+      "day": 19, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "01:08", 
+      "year": 1916
+    }, 
+    {
+      "day": 26, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "20:37", 
+      "year": 1916
+    }, 
+    {
+      "day": 2, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "17:50", 
+      "year": 1916
+    }, 
+    {
+      "day": 9, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "20:18", 
+      "year": 1916
+    }, 
+    {
+      "day": 17, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "22:00", 
+      "year": 1916
+    }, 
+    {
+      "day": 25, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "08:50", 
+      "year": 1916
+    }, 
+    {
+      "day": 2, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "01:55", 
+      "year": 1916
+    }, 
+    {
+      "day": 9, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "12:44", 
+      "year": 1916
+    }, 
+    {
+      "day": 17, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "18:06", 
+      "year": 1916
+    }, 
+    {
+      "day": 24, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "20:31", 
+      "year": 1916
+    }, 
+    {
+      "day": 31, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "12:07", 
+      "year": 1916
+    }
+  ], 
+  "year": 1916
+}

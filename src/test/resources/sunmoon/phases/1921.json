@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 1, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "04:34", 
+      "year": 1921
+    }, 
+    {
+      "day": 9, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "05:27", 
+      "year": 1921
+    }, 
+    {
+      "day": 17, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "06:31", 
+      "year": 1921
+    }, 
+    {
+      "day": 23, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "23:08", 
+      "year": 1921
+    }, 
+    {
+      "day": 30, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "20:02", 
+      "year": 1921
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "00:37", 
+      "year": 1921
+    }, 
+    {
+      "day": 15, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "18:53", 
+      "year": 1921
+    }, 
+    {
+      "day": 22, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "09:32", 
+      "year": 1921
+    }, 
+    {
+      "day": 1, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "14:03", 
+      "year": 1921
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "18:09", 
+      "year": 1921
+    }, 
+    {
+      "day": 17, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "03:49", 
+      "year": 1921
+    }, 
+    {
+      "day": 23, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "20:18", 
+      "year": 1921
+    }, 
+    {
+      "day": 31, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "09:13", 
+      "year": 1921
+    }, 
+    {
+      "day": 8, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "09:05", 
+      "year": 1921
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "10:11", 
+      "year": 1921
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "07:49", 
+      "year": 1921
+    }, 
+    {
+      "day": 30, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "04:08", 
+      "year": 1921
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "21:01", 
+      "year": 1921
+    }, 
+    {
+      "day": 14, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "15:24", 
+      "year": 1921
+    }, 
+    {
+      "day": 21, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "20:15", 
+      "year": 1921
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "21:44", 
+      "year": 1921
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "06:14", 
+      "year": 1921
+    }, 
+    {
+      "day": 12, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "20:59", 
+      "year": 1921
+    }, 
+    {
+      "day": 20, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "09:41", 
+      "year": 1921
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "13:17", 
+      "year": 1921
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "13:36", 
+      "year": 1921
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "04:15", 
+      "year": 1921
+    }, 
+    {
+      "day": 20, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "00:07", 
+      "year": 1921
+    }, 
+    {
+      "day": 28, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "02:20", 
+      "year": 1921
+    }, 
+    {
+      "day": 3, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "20:17", 
+      "year": 1921
+    }, 
+    {
+      "day": 10, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "14:13", 
+      "year": 1921
+    }, 
+    {
+      "day": 18, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "15:28", 
+      "year": 1921
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "12:51", 
+      "year": 1921
+    }, 
+    {
+      "day": 2, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "03:33", 
+      "year": 1921
+    }, 
+    {
+      "day": 9, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "03:29", 
+      "year": 1921
+    }, 
+    {
+      "day": 17, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "07:20", 
+      "year": 1921
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "21:17", 
+      "year": 1921
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "12:26", 
+      "year": 1921
+    }, 
+    {
+      "day": 8, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "20:11", 
+      "year": 1921
+    }, 
+    {
+      "day": 16, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "22:59", 
+      "year": 1921
+    }, 
+    {
+      "day": 24, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "04:31", 
+      "year": 1921
+    }, 
+    {
+      "day": 30, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "23:38", 
+      "year": 1921
+    }, 
+    {
+      "day": 7, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "15:54", 
+      "year": 1921
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "13:39", 
+      "year": 1921
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "11:41", 
+      "year": 1921
+    }, 
+    {
+      "day": 29, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "13:25", 
+      "year": 1921
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "13:19", 
+      "year": 1921
+    }, 
+    {
+      "day": 15, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "02:50", 
+      "year": 1921
+    }, 
+    {
+      "day": 21, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "19:54", 
+      "year": 1921
+    }, 
+    {
+      "day": 29, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "05:39", 
+      "year": 1921
+    }
+  ], 
+  "year": 1921
+}

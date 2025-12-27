@@ -1,6 +1,7 @@
 package com.mays.tempest.seasons;
 
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -47,18 +48,18 @@ public class SeasonsDataAccess {
 		return path;
 	}
 
-	public static void writeSeasonsJsonString(int year) throws Exception {
+	public static void writeSeasonsJsonString(int year) throws IOException {
 		Path path = getPath(year);
 		Files.createDirectories(path.getParent());
 		String res = fetchSeasons(year);
 		Files.writeString(path, res);
 	}
 
-	public static String getSeasonsJsonString(int year) throws Exception {
+	public static String getSeasonsJsonString(int year) throws IOException {
 		Path path = getPath(year);
 		if (Files.exists(path)) {
-			String tides_json = Files.readString(path);
-			return tides_json;
+			String json = Files.readString(path);
+			return json;
 		}
 		throw new FileNotFoundException(path.toString());
 	}
@@ -71,7 +72,7 @@ public class SeasonsDataAccess {
 
 	// https://aa.usno.navy.mil/api/seasons?year=1900
 
-	public static String fetchSeasons(int year) throws Exception {
+	public static String fetchSeasons(int year) throws IOException {
 		ClientBuilder builder = ClientBuilder.newBuilder();
 		Client client = builder.build();
 		String uri = "https://aa.usno.navy.mil/api/seasons";
@@ -84,7 +85,7 @@ public class SeasonsDataAccess {
 		}
 		String message = resp.getStatus() + " " + resp.readEntity(String.class);
 		logger.error(message);
-		throw new Exception(message);
+		throw new IOException(message);
 	}
 
 	public static List<SeasonJson> getSeasonsJsonFromJson(String json) throws Exception {

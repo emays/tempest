@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 6, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "07:24", 
+      "year": 1981
+    }, 
+    {
+      "day": 13, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "10:10", 
+      "year": 1981
+    }, 
+    {
+      "day": 20, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "07:39", 
+      "year": 1981
+    }, 
+    {
+      "day": 28, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "04:19", 
+      "year": 1981
+    }, 
+    {
+      "day": 4, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "22:14", 
+      "year": 1981
+    }, 
+    {
+      "day": 11, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "17:49", 
+      "year": 1981
+    }, 
+    {
+      "day": 18, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "22:58", 
+      "year": 1981
+    }, 
+    {
+      "day": 27, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "01:14", 
+      "year": 1981
+    }, 
+    {
+      "day": 6, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "10:31", 
+      "year": 1981
+    }, 
+    {
+      "day": 13, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "01:51", 
+      "year": 1981
+    }, 
+    {
+      "day": 20, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "15:23", 
+      "year": 1981
+    }, 
+    {
+      "day": 28, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "19:34", 
+      "year": 1981
+    }, 
+    {
+      "day": 4, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "20:19", 
+      "year": 1981
+    }, 
+    {
+      "day": 11, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "11:11", 
+      "year": 1981
+    }, 
+    {
+      "day": 19, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "07:59", 
+      "year": 1981
+    }, 
+    {
+      "day": 27, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "10:14", 
+      "year": 1981
+    }, 
+    {
+      "day": 4, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "04:19", 
+      "year": 1981
+    }, 
+    {
+      "day": 10, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "22:22", 
+      "year": 1981
+    }, 
+    {
+      "day": 19, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "00:04", 
+      "year": 1981
+    }, 
+    {
+      "day": 26, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "21:00", 
+      "year": 1981
+    }, 
+    {
+      "day": 2, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "11:32", 
+      "year": 1981
+    }, 
+    {
+      "day": 9, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "11:33", 
+      "year": 1981
+    }, 
+    {
+      "day": 17, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "15:04", 
+      "year": 1981
+    }, 
+    {
+      "day": 25, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "04:25", 
+      "year": 1981
+    }, 
+    {
+      "day": 1, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "19:03", 
+      "year": 1981
+    }, 
+    {
+      "day": 9, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "02:39", 
+      "year": 1981
+    }, 
+    {
+      "day": 17, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "04:39", 
+      "year": 1981
+    }, 
+    {
+      "day": 24, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "09:40", 
+      "year": 1981
+    }, 
+    {
+      "day": 31, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "03:52", 
+      "year": 1981
+    }, 
+    {
+      "day": 7, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "19:26", 
+      "year": 1981
+    }, 
+    {
+      "day": 15, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "16:37", 
+      "year": 1981
+    }, 
+    {
+      "day": 22, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "14:16", 
+      "year": 1981
+    }, 
+    {
+      "day": 29, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "14:43", 
+      "year": 1981
+    }, 
+    {
+      "day": 6, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "13:26", 
+      "year": 1981
+    }, 
+    {
+      "day": 14, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "03:09", 
+      "year": 1981
+    }, 
+    {
+      "day": 20, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "19:47", 
+      "year": 1981
+    }, 
+    {
+      "day": 28, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "04:07", 
+      "year": 1981
+    }, 
+    {
+      "day": 6, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "07:45", 
+      "year": 1981
+    }, 
+    {
+      "day": 13, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "12:49", 
+      "year": 1981
+    }, 
+    {
+      "day": 20, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "03:41", 
+      "year": 1981
+    }, 
+    {
+      "day": 27, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "20:13", 
+      "year": 1981
+    }, 
+    {
+      "day": 5, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "01:09", 
+      "year": 1981
+    }, 
+    {
+      "day": 11, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "22:27", 
+      "year": 1981
+    }, 
+    {
+      "day": 18, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "14:54", 
+      "year": 1981
+    }, 
+    {
+      "day": 26, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "14:38", 
+      "year": 1981
+    }, 
+    {
+      "day": 4, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "16:22", 
+      "year": 1981
+    }, 
+    {
+      "day": 11, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "08:41", 
+      "year": 1981
+    }, 
+    {
+      "day": 18, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "05:47", 
+      "year": 1981
+    }, 
+    {
+      "day": 26, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "10:10", 
+      "year": 1981
+    }
+  ], 
+  "year": 1981
+}

@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 2, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "20:23", 
+      "year": 2003
+    }, 
+    {
+      "day": 10, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "13:15", 
+      "year": 2003
+    }, 
+    {
+      "day": 18, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "10:48", 
+      "year": 2003
+    }, 
+    {
+      "day": 25, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "08:33", 
+      "year": 2003
+    }, 
+    {
+      "day": 1, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "10:48", 
+      "year": 2003
+    }, 
+    {
+      "day": 9, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "11:11", 
+      "year": 2003
+    }, 
+    {
+      "day": 16, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "23:51", 
+      "year": 2003
+    }, 
+    {
+      "day": 23, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "16:46", 
+      "year": 2003
+    }, 
+    {
+      "day": 3, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "02:35", 
+      "year": 2003
+    }, 
+    {
+      "day": 11, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "07:15", 
+      "year": 2003
+    }, 
+    {
+      "day": 18, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "10:35", 
+      "year": 2003
+    }, 
+    {
+      "day": 25, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "01:51", 
+      "year": 2003
+    }, 
+    {
+      "day": 1, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "19:19", 
+      "year": 2003
+    }, 
+    {
+      "day": 9, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "23:40", 
+      "year": 2003
+    }, 
+    {
+      "day": 16, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "19:36", 
+      "year": 2003
+    }, 
+    {
+      "day": 23, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "12:18", 
+      "year": 2003
+    }, 
+    {
+      "day": 1, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "12:15", 
+      "year": 2003
+    }, 
+    {
+      "day": 9, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "11:53", 
+      "year": 2003
+    }, 
+    {
+      "day": 16, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "03:36", 
+      "year": 2003
+    }, 
+    {
+      "day": 23, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "00:31", 
+      "year": 2003
+    }, 
+    {
+      "day": 31, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "04:20", 
+      "year": 2003
+    }, 
+    {
+      "day": 7, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "20:28", 
+      "year": 2003
+    }, 
+    {
+      "day": 14, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "11:16", 
+      "year": 2003
+    }, 
+    {
+      "day": 21, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "14:45", 
+      "year": 2003
+    }, 
+    {
+      "day": 29, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "18:39", 
+      "year": 2003
+    }, 
+    {
+      "day": 7, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "02:32", 
+      "year": 2003
+    }, 
+    {
+      "day": 13, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "19:21", 
+      "year": 2003
+    }, 
+    {
+      "day": 21, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "07:01", 
+      "year": 2003
+    }, 
+    {
+      "day": 29, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "06:53", 
+      "year": 2003
+    }, 
+    {
+      "day": 5, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "07:28", 
+      "year": 2003
+    }, 
+    {
+      "day": 12, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "04:48", 
+      "year": 2003
+    }, 
+    {
+      "day": 20, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "00:48", 
+      "year": 2003
+    }, 
+    {
+      "day": 27, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "17:26", 
+      "year": 2003
+    }, 
+    {
+      "day": 3, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "12:34", 
+      "year": 2003
+    }, 
+    {
+      "day": 10, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "16:36", 
+      "year": 2003
+    }, 
+    {
+      "day": 18, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "19:03", 
+      "year": 2003
+    }, 
+    {
+      "day": 26, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "03:09", 
+      "year": 2003
+    }, 
+    {
+      "day": 2, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "19:09", 
+      "year": 2003
+    }, 
+    {
+      "day": 10, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "07:27", 
+      "year": 2003
+    }, 
+    {
+      "day": 18, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "12:31", 
+      "year": 2003
+    }, 
+    {
+      "day": 25, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "12:50", 
+      "year": 2003
+    }, 
+    {
+      "day": 1, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "04:25", 
+      "year": 2003
+    }, 
+    {
+      "day": 9, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "01:13", 
+      "year": 2003
+    }, 
+    {
+      "day": 17, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "04:15", 
+      "year": 2003
+    }, 
+    {
+      "day": 23, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "22:59", 
+      "year": 2003
+    }, 
+    {
+      "day": 30, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "17:16", 
+      "year": 2003
+    }, 
+    {
+      "day": 8, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "20:37", 
+      "year": 2003
+    }, 
+    {
+      "day": 16, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "17:42", 
+      "year": 2003
+    }, 
+    {
+      "day": 23, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "09:43", 
+      "year": 2003
+    }, 
+    {
+      "day": 30, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "10:03", 
+      "year": 2003
+    }
+  ], 
+  "year": 2003
+}
