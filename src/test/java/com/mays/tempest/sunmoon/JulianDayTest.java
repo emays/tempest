@@ -18,6 +18,8 @@ public class JulianDayTest {
 
 	private static final boolean trace = false;
 
+	private static final boolean skip_test = true;
+
 	private String toLdt(double jd) {
 		return JulianDay.toLocalDateTime(jd).format(DateTimeFormatter.ISO_DATE_TIME);
 	}
@@ -45,9 +47,10 @@ public class JulianDayTest {
 
 	private static boolean hourly = false;
 
-	// Just test locally
-//	@Test 
+	@Test
 	public void toLocalDateTimeYears() {
+		if (skip_test)
+			return;
 		for (int year = 5000; year > -5000; year--) {
 			for (int day = 0; day < 365; day++) {
 				for (int hour = 0; hour < 24; hour++) {
@@ -65,6 +68,41 @@ public class JulianDayTest {
 				}
 			}
 		}
+	}
+
+	@Test
+	public void toLocalDateTimeJdGregorian() {
+		if (skip_test)
+			return;
+		LocalDateTime date = JulianDay.GREGORIAN_DAY;
+		for (double jd = JulianDay.GREGORIAN_JULIAN_DAY; jd < 3000_000; jd++) {
+			String date_str = date.format(DateTimeFormatter.ISO_DATE_TIME);
+			assertEquals(date_str, toLdt(jd), date_str);
+			date = date.plusDays(1);
+		}
+		if (trace)
+			logger.info("Test to " + date);
+	}
+
+	@Test
+	public void toLocalDateTimeJdPreGregorian() {
+		if (skip_test)
+			return;
+		LocalDateTime date = JulianDay.GREGORIAN_DAY.minusDays(11);
+		for (double jd = JulianDay.GREGORIAN_JULIAN_DAY - 1; jd > -1000; jd--) {
+			String date_str = date.format(DateTimeFormatter.ISO_DATE_TIME);
+			if (date.getYear() % 100 == 0 && date.getYear() % 400 != 0 && date.getMonthValue() == 2
+					&& date.getDayOfMonth() == 28) {
+				assertEquals(date.plusDays(1).format(DateTimeFormatter.ISO_DATE_TIME), toLdt(jd), date_str);
+				if (trace)
+					logger.info("Skipping " + jd + " " + date + " " + toLdt(jd));
+				jd--;
+			}
+			assertEquals(date_str, toLdt(jd), date_str);
+			date = date.minusDays(1);
+		}
+		if (trace)
+			logger.info("Test to " + date);
 	}
 
 	private double toJd(String ldt) {
@@ -137,11 +175,12 @@ public class JulianDayTest {
 			new TestCase(-4712, "Jan", 1.5, 0.0) //
 	);
 
-	// @Test
+	@Test
 	public void parse() {
 		for (TestCase tc : tcs) {
-			logger.info(tc.date().toString());
-			logger.info(tc.dateTime().toString());
+			if (trace)
+				logger.info(tc.date() + " " + tc.dateTime());
+			assertEquals(tc.date(), tc.dateTime().toLocalDate());
 		}
 	}
 

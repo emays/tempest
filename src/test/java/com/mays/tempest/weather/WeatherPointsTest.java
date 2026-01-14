@@ -16,6 +16,10 @@ import com.mays.util.Util;
 
 public class WeatherPointsTest {
 
+	private static final Logger logger = LoggerFactory.getLogger(WeatherPointsTest.class);
+
+	private static final boolean trace = false;
+
 	public static class WeatherPoint implements KmlPointDisplay {
 
 		private String name;
@@ -49,8 +53,6 @@ public class WeatherPointsTest {
 
 	}
 
-	private static final Logger logger = LoggerFactory.getLogger(WeatherPointsTest.class);
-
 	@Test
 	public void getCenter() throws Exception {
 		Path path = Paths.get("src/test/resources/weather", "weather-forecast.json");
@@ -62,25 +64,30 @@ public class WeatherPointsTest {
 		ObjectMapper mapper = new ObjectMapper();
 		JsonNode jsonNode = mapper.readTree(json);
 		JsonNode coords = jsonNode.get("geometry").get("coordinates").get(0);
-		logger.info("\n" + coords);
+		if (trace)
+			logger.info("\n" + coords);
 		double max_lat = Integer.MIN_VALUE;
 		double min_lat = Integer.MAX_VALUE;
 		double max_lng = Integer.MIN_VALUE;
 		double min_lng = Integer.MAX_VALUE;
 		for (JsonNode el : Util.iterable(coords.elements())) {
-			logger.info("" + el);
+			if (trace)
+				logger.info("" + el);
 			Coordinate coord = new Coordinate(el.get(1).asDouble(), el.get(0).asDouble());
-			logger.info(coord.toString());
+			if (trace)
+				logger.info(coord.toString());
 			max_lat = Math.max(max_lat, coord.getLatitude());
 			min_lat = Math.min(min_lat, coord.getLatitude());
 			max_lng = Math.max(max_lng, coord.getLongitude());
 			min_lng = Math.min(min_lng, coord.getLongitude());
 		}
-		logger.info(min_lat + " " + max_lat);
-		logger.info(min_lng + " " + max_lng);
-		Coordinate center = new Coordinate((min_lat + max_lat) / 2, (min_lng + max_lng) / 2);
-		logger.info("Center: " + center);
-		logger.info("Offset: " + (max_lat - min_lat) + " " + (max_lng - min_lng));
+		if (trace) {
+			logger.info(min_lat + " " + max_lat);
+			logger.info(min_lng + " " + max_lng);
+			Coordinate center = new Coordinate((min_lat + max_lat) / 2, (min_lng + max_lng) / 2);
+			logger.info("Center: " + center);
+			logger.info("Offset: " + (max_lat - min_lat) + " " + (max_lng - min_lng));
+		}
 	}
 
 }

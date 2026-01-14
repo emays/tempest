@@ -17,18 +17,9 @@ public class JulianDay {
 //  | 1970-01-02T06:00  |         2,440,589  |         2,440,588.75    |
 //  | 1970-01-02T12:00  |         2,440,589  |         2,440,589.0     |
 
-//  | ISO date          | Modified Julian Day |      Decimal MJD |
-//  | 1970-01-01T00:00  |             40,587  |       40,587.0   |
-//  | 1970-01-01T06:00  |             40,587  |       40,587.25  |
-//  | 1970-01-01T12:00  |             40,587  |       40,587.5   |
-//  | 1970-01-01T18:00  |             40,587  |       40,587.75  |
-//  | 1970-01-02T00:00  |             40,588  |       40,588.0   |
-//  | 1970-01-02T06:00  |             40,588  |       40,588.25  |
-//  | 1970-01-02T12:00  |             40,588  |       40,588.5   |
-
 	public static final double EPOCH_JULIAN_DAY = 2440_587.5;
 
-	static final int seconds_in_day = 60 * 60 * 24;
+	private static final int seconds_in_day = 60 * 60 * 24;
 
 	// The day following 1582 October 4 (Julian calendar) is 1582 October 15
 	// (Gregorian calendar).
@@ -41,6 +32,9 @@ public class JulianDay {
 		if (jd < GREGORIAN_JULIAN_DAY) {
 			// This doesn't work for Julian days that are not valid Gregorian dates
 			// e.g. 1500-02-29
+			// 2268991.5 should produce 1500-02-29T00:00:00 but instead produces 1500-03-01
+			//
+			// https://aa.usno.navy.mil/faq/leap_years
 			double jd0 = jd;
 			double jdl = toJulianDay(LocalDateTime.of(1500, 3, 1, 0, 0, 0)) - 1;
 			if (jd <= jdl) {

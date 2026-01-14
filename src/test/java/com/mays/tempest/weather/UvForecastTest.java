@@ -63,12 +63,14 @@ public class UvForecastTest {
 
 	@Test
 	public void getZip() throws Exception {
-		logger.info(zipJson);
+		if (trace)
+			logger.info(zipJson);
 	}
 
 	@Test
 	public void getCity() throws Exception {
-		logger.info(cityJson);
+		if (trace)
+			logger.info(cityJson);
 	}
 
 }
