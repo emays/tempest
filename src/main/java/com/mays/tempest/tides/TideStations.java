@@ -46,21 +46,6 @@ public class TideStations {
 	}
 
 	private void init() throws Exception {
-//		Path dir = TideDataAccess.getDirectory();
-//		Files.createDirectories(dir);
-//		Path path = dir.resolve("tide-stations.json");
-//		Path stamp_path = dir.resolve("tide-stations-stamp.txt");
-//		if (!Files.exists(path)) {
-//			logger.info("Init from : " + path.toString());
-//			if (file_missing_exception)
-//				throw new Exception();
-//			String res = getStationsJsonString();
-//			Files.writeString(path, res);
-//			Files.writeString(stamp_path, ZonedDateTime.now(ZoneId.of("UTC")).toString());
-//		}
-//		ZonedDateTime stamp = ZonedDateTime.parse(Files.readString(stamp_path));
-//		logger.info("Stamp " + stamp);
-//		String stationsJson = Files.readString(path);
 		String stationsJson = TideDataAccess.getStationsJsonString();
 		stations = getStationsFromJson(stationsJson).stream() //
 				.filter(x -> !skipStates.contains(x.getState())) //

@@ -7,6 +7,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -39,7 +40,7 @@ public class MoonPhaseTest {
 			phase = phase - 360.0;
 		if (trace) {
 			logger.info(date.toString());
-			logger.info(date.withZoneSameInstant(ZoneId.of("UTC")).toString());
+			logger.info(date.withZoneSameInstant(ZoneOffset.UTC).toString());
 			logger.info("Phase: " + phase);
 		}
 		Phase next_phase = null;
@@ -57,7 +58,7 @@ public class MoonPhaseTest {
 			if (trace)
 				logger.info(moon_phase.getTime() + " " + next_phase + (moon_phase.isSuperMoon() ? " Supermoon" : ""));
 			lines.add("BEGIN:VEVENT");
-			String str = moon_phase.getTime().withZoneSameInstant(ZoneId.of("UTC"))
+			String str = moon_phase.getTime().withZoneSameInstant(ZoneOffset.UTC)
 					.format(DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss'Z'"));
 			lines.add("UID:" + str);
 			lines.add("SUMMARY:" + next_phase);

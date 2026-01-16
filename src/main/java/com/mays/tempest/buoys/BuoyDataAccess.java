@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
 import org.slf4j.Logger;
@@ -17,7 +17,7 @@ public class BuoyDataAccess {
 	private static Path dir = Paths.get("data", "buoy");
 
 	private static boolean file_missing_exception = true;
-	
+
 	public static void setTest() {
 		dir = Paths.get("src/test/resources", "buoys");
 	}
@@ -32,7 +32,7 @@ public class BuoyDataAccess {
 				throw new FileNotFoundException(path.toString());
 			String res = BuoyStations.getStationsXmlString();
 			Files.writeString(path, res);
-			Files.writeString(stamp_path, ZonedDateTime.now(ZoneId.of("UTC")).toString());
+			Files.writeString(stamp_path, ZonedDateTime.now(ZoneOffset.UTC).toString());
 		}
 		ZonedDateTime stamp = ZonedDateTime.parse(Files.readString(stamp_path));
 		logger.info("Stamp " + stamp);
