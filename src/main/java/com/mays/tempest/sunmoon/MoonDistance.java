@@ -1,6 +1,9 @@
 package com.mays.tempest.sunmoon;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -200,8 +203,16 @@ public class MoonDistance {
 		return getValue(jde, distance_terms, Math::cos);
 	}
 
-	public double getDistance(double jde) {
+	double getDistance(double jde) {
 		return 385_000.56 + getSr(jde) / 1000;
+	}
+
+	public double getDistance(LocalDateTime time) {
+		return getDistance(JulianDay.toJulianDay(time));
+	}
+
+	public double getDistance(ZonedDateTime time) {
+		return getDistance(time.withZoneSameInstant(ZoneOffset.UTC));
 	}
 
 }
