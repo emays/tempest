@@ -28,6 +28,7 @@ jobs:
     - name: Publish to GitHub Packages Apache Maven
       run: |
         mvn deploy -B \
+            -DskipTests \
             -Pgithub-packages \
             -Pgpg-sign \
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
