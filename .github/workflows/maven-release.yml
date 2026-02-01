@@ -33,7 +33,6 @@ jobs:
       run: |
         git config --global url.https://${{ github.token }}@github.com/.insteadOf https://www.github.com/
         mvn release:prepare release:perform -B \
-            -DskipTests \
             -Pgithub-packages \
             -Pgpg-sign \
             -Dorg.slf4j.simpleLogger.log.org.apache.maven.cli.transfer.Slf4jMavenTransferListener=warn
