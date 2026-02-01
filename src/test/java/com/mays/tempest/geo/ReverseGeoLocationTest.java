@@ -18,6 +18,8 @@ public class ReverseGeoLocationTest {
 
 	private static final Logger logger = LoggerFactory.getLogger(ReverseGeoLocationTest.class);
 
+	private final static boolean trace = false;
+
 	private static ReverseGeoLocation rgl;
 
 	@BeforeAll
@@ -34,7 +36,8 @@ public class ReverseGeoLocationTest {
 	@Test
 	public void nearest() {
 		Location loc = rgl.getNearest(MyLocation.LATITUDE, MyLocation.LONGITUDE);
-		logger.info("Nearest: " + loc);
+		if (trace)
+			logger.info("Nearest: " + loc);
 		assertEquals("Truro", loc.getName());
 		assertEquals("MA", loc.getState());
 		assertEquals(41.99344, loc.getLatitude());
@@ -55,12 +58,14 @@ public class ReverseGeoLocationTest {
 				rgl.getNearest(lat, lon);
 				cnt++;
 				if (cnt % 1000 == 0)
-					logger.info(lat + " " + lon + " " + cnt);
+					if (trace)
+						logger.info(lat + " " + lon + " " + cnt);
 			}
 		}
 		long end = System.currentTimeMillis();
-		logger.info(
-				"Processed " + cnt + " in " + (end - start) + " @ " + (int) (cnt / ((end - start) / 1000.0)) + "/sec");
+		double time = (end - start) / 1000.0;
+		logger.info("Processed " + cnt + " in " + String.format("%.1f secs", time) + " @ " + Math.round(cnt / time)
+				+ "/sec");
 	}
 
 	@Test

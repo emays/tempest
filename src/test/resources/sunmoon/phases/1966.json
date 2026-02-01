@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 7, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "05:16", 
+      "year": 1966
+    }, 
+    {
+      "day": 13, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "20:00", 
+      "year": 1966
+    }, 
+    {
+      "day": 21, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "15:46", 
+      "year": 1966
+    }, 
+    {
+      "day": 29, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "19:48", 
+      "year": 1966
+    }, 
+    {
+      "day": 5, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "15:58", 
+      "year": 1966
+    }, 
+    {
+      "day": 12, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "08:53", 
+      "year": 1966
+    }, 
+    {
+      "day": 20, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "10:49", 
+      "year": 1966
+    }, 
+    {
+      "day": 28, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "10:15", 
+      "year": 1966
+    }, 
+    {
+      "day": 7, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "01:45", 
+      "year": 1966
+    }, 
+    {
+      "day": 14, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "00:19", 
+      "year": 1966
+    }, 
+    {
+      "day": 22, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "04:46", 
+      "year": 1966
+    }, 
+    {
+      "day": 29, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "20:43", 
+      "year": 1966
+    }, 
+    {
+      "day": 5, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "11:13", 
+      "year": 1966
+    }, 
+    {
+      "day": 12, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "17:28", 
+      "year": 1966
+    }, 
+    {
+      "day": 20, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "20:35", 
+      "year": 1966
+    }, 
+    {
+      "day": 28, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "03:49", 
+      "year": 1966
+    }, 
+    {
+      "day": 4, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "21:00", 
+      "year": 1966
+    }, 
+    {
+      "day": 12, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "11:19", 
+      "year": 1966
+    }, 
+    {
+      "day": 20, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "09:42", 
+      "year": 1966
+    }, 
+    {
+      "day": 27, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "08:50", 
+      "year": 1966
+    }, 
+    {
+      "day": 3, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "07:40", 
+      "year": 1966
+    }, 
+    {
+      "day": 11, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "04:58", 
+      "year": 1966
+    }, 
+    {
+      "day": 18, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "20:09", 
+      "year": 1966
+    }, 
+    {
+      "day": 25, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "13:22", 
+      "year": 1966
+    }, 
+    {
+      "day": 2, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "19:36", 
+      "year": 1966
+    }, 
+    {
+      "day": 10, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "21:43", 
+      "year": 1966
+    }, 
+    {
+      "day": 18, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "04:30", 
+      "year": 1966
+    }, 
+    {
+      "day": 24, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "19:00", 
+      "year": 1966
+    }, 
+    {
+      "day": 1, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "09:05", 
+      "year": 1966
+    }, 
+    {
+      "day": 9, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "12:55", 
+      "year": 1966
+    }, 
+    {
+      "day": 16, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "11:48", 
+      "year": 1966
+    }, 
+    {
+      "day": 23, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "03:02", 
+      "year": 1966
+    }, 
+    {
+      "day": 31, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "00:14", 
+      "year": 1966
+    }, 
+    {
+      "day": 8, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "02:07", 
+      "year": 1966
+    }, 
+    {
+      "day": 14, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "19:13", 
+      "year": 1966
+    }, 
+    {
+      "day": 21, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "14:24", 
+      "year": 1966
+    }, 
+    {
+      "day": 29, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "16:47", 
+      "year": 1966
+    }, 
+    {
+      "day": 7, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "13:08", 
+      "year": 1966
+    }, 
+    {
+      "day": 14, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "03:51", 
+      "year": 1966
+    }, 
+    {
+      "day": 21, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "05:34", 
+      "year": 1966
+    }, 
+    {
+      "day": 29, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "10:00", 
+      "year": 1966
+    }, 
+    {
+      "day": 5, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "22:18", 
+      "year": 1966
+    }, 
+    {
+      "day": 12, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "14:26", 
+      "year": 1966
+    }, 
+    {
+      "day": 20, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "00:20", 
+      "year": 1966
+    }, 
+    {
+      "day": 28, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "02:40", 
+      "year": 1966
+    }, 
+    {
+      "day": 5, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "06:22", 
+      "year": 1966
+    }, 
+    {
+      "day": 12, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "03:13", 
+      "year": 1966
+    }, 
+    {
+      "day": 19, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "21:41", 
+      "year": 1966
+    }, 
+    {
+      "day": 27, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "17:43", 
+      "year": 1966
+    }
+  ], 
+  "year": 1966
+}

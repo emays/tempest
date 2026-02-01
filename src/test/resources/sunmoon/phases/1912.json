@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 4, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "13:29", 
+      "year": 1912
+    }, 
+    {
+      "day": 11, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "07:43", 
+      "year": 1912
+    }, 
+    {
+      "day": 19, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "11:10", 
+      "year": 1912
+    }, 
+    {
+      "day": 27, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "08:51", 
+      "year": 1912
+    }, 
+    {
+      "day": 2, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "23:58", 
+      "year": 1912
+    }, 
+    {
+      "day": 10, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "00:50", 
+      "year": 1912
+    }, 
+    {
+      "day": 18, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "05:44", 
+      "year": 1912
+    }, 
+    {
+      "day": 25, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "19:26", 
+      "year": 1912
+    }, 
+    {
+      "day": 3, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "10:42", 
+      "year": 1912
+    }, 
+    {
+      "day": 10, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "19:55", 
+      "year": 1912
+    }, 
+    {
+      "day": 18, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "22:08", 
+      "year": 1912
+    }, 
+    {
+      "day": 26, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "03:02", 
+      "year": 1912
+    }, 
+    {
+      "day": 1, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "22:04", 
+      "year": 1912
+    }, 
+    {
+      "day": 9, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "15:24", 
+      "year": 1912
+    }, 
+    {
+      "day": 17, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "11:40", 
+      "year": 1912
+    }, 
+    {
+      "day": 24, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "08:47", 
+      "year": 1912
+    }, 
+    {
+      "day": 1, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "10:19", 
+      "year": 1912
+    }, 
+    {
+      "day": 9, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "09:56", 
+      "year": 1912
+    }, 
+    {
+      "day": 16, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "22:13", 
+      "year": 1912
+    }, 
+    {
+      "day": 23, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "14:11", 
+      "year": 1912
+    }, 
+    {
+      "day": 30, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "23:29", 
+      "year": 1912
+    }, 
+    {
+      "day": 8, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "02:35", 
+      "year": 1912
+    }, 
+    {
+      "day": 15, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "06:23", 
+      "year": 1912
+    }, 
+    {
+      "day": 21, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "20:39", 
+      "year": 1912
+    }, 
+    {
+      "day": 29, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "13:33", 
+      "year": 1912
+    }, 
+    {
+      "day": 7, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "16:47", 
+      "year": 1912
+    }, 
+    {
+      "day": 14, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "13:13", 
+      "year": 1912
+    }, 
+    {
+      "day": 21, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "05:18", 
+      "year": 1912
+    }, 
+    {
+      "day": 29, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "04:28", 
+      "year": 1912
+    }, 
+    {
+      "day": 6, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "04:17", 
+      "year": 1912
+    }, 
+    {
+      "day": 12, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "19:57", 
+      "year": 1912
+    }, 
+    {
+      "day": 19, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "16:56", 
+      "year": 1912
+    }, 
+    {
+      "day": 27, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "19:58", 
+      "year": 1912
+    }, 
+    {
+      "day": 4, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "13:23", 
+      "year": 1912
+    }, 
+    {
+      "day": 11, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "03:48", 
+      "year": 1912
+    }, 
+    {
+      "day": 18, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "07:54", 
+      "year": 1912
+    }, 
+    {
+      "day": 26, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "11:34", 
+      "year": 1912
+    }, 
+    {
+      "day": 3, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "20:48", 
+      "year": 1912
+    }, 
+    {
+      "day": 10, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "13:40", 
+      "year": 1912
+    }, 
+    {
+      "day": 18, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "02:06", 
+      "year": 1912
+    }, 
+    {
+      "day": 26, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "02:30", 
+      "year": 1912
+    }, 
+    {
+      "day": 2, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "03:38", 
+      "year": 1912
+    }, 
+    {
+      "day": 9, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "02:05", 
+      "year": 1912
+    }, 
+    {
+      "day": 16, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "22:43", 
+      "year": 1912
+    }, 
+    {
+      "day": 24, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "16:12", 
+      "year": 1912
+    }, 
+    {
+      "day": 1, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "11:05", 
+      "year": 1912
+    }, 
+    {
+      "day": 8, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "17:06", 
+      "year": 1912
+    }, 
+    {
+      "day": 16, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "20:06", 
+      "year": 1912
+    }, 
+    {
+      "day": 24, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "04:30", 
+      "year": 1912
+    }, 
+    {
+      "day": 30, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "20:12", 
+      "year": 1912
+    }
+  ], 
+  "year": 1912
+}

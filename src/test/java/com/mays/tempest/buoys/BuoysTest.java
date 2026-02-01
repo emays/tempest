@@ -20,7 +20,7 @@ public class BuoysTest {
 
 	private static final Logger logger = LoggerFactory.getLogger(BuoysTest.class);
 
-	private static final boolean trace = true;
+	private static final boolean trace = false;
 
 	private final String cache_dir = "src/test/resources/buoys";
 
@@ -62,12 +62,14 @@ public class BuoysTest {
 		assertEquals(42, obs2.getAirTemperature().to(USCustomary.FAHRENHEIT).getValue().doubleValue(), 0.5);
 		assertEquals(39, obs2.getWaterTemperature().to(USCustomary.FAHRENHEIT).getValue().doubleValue(), 0.5);
 		assertEquals(34, obs2.getDewPoint().to(USCustomary.FAHRENHEIT).getValue().doubleValue(), 0.5);
-		logger.info("Obs2: " + obs2);
+		if (trace)
+			logger.info("Obs2: " + obs2);
 		// 2021 03 09 16 50 280 3.0 3.0 0.5 3 3.8 255 1021.6 5.3 4.2 1.2 MM MM MM
 		BuoyObservation obs5 = obs.get(4);
 		assertEquals(1.6, obs5.getWaveHeight().to(USCustomary.FOOT).getValue().doubleValue(), 0.1);
 		assertEquals(255, obs5.getWaveDirection().getValue().intValue());
-		logger.info("Obs5: " + obs5);
+		if (trace)
+			logger.info("Obs5: " + obs5);
 	}
 
 //	@Test

@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
-import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
@@ -35,7 +35,7 @@ public class TideDataAccess {
 				throw new FileNotFoundException(path.toString());
 			String res = TideStations.getStationsJsonString();
 			Files.writeString(path, res);
-			Files.writeString(stamp_path, ZonedDateTime.now(ZoneId.of("UTC")).toString());
+			Files.writeString(stamp_path, ZonedDateTime.now(ZoneOffset.UTC).toString());
 		}
 		ZonedDateTime stamp = ZonedDateTime.parse(Files.readString(stamp_path));
 		logger.info("Stamp " + stamp);

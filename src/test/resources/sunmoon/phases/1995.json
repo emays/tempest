@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 1, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "10:56", 
+      "year": 1995
+    }, 
+    {
+      "day": 8, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "15:46", 
+      "year": 1995
+    }, 
+    {
+      "day": 16, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "20:26", 
+      "year": 1995
+    }, 
+    {
+      "day": 24, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "04:58", 
+      "year": 1995
+    }, 
+    {
+      "day": 30, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "22:48", 
+      "year": 1995
+    }, 
+    {
+      "day": 7, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "12:54", 
+      "year": 1995
+    }, 
+    {
+      "day": 15, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "12:15", 
+      "year": 1995
+    }, 
+    {
+      "day": 22, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "13:04", 
+      "year": 1995
+    }, 
+    {
+      "day": 1, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "11:48", 
+      "year": 1995
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "10:14", 
+      "year": 1995
+    }, 
+    {
+      "day": 17, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "01:26", 
+      "year": 1995
+    }, 
+    {
+      "day": 23, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "20:10", 
+      "year": 1995
+    }, 
+    {
+      "day": 31, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "02:09", 
+      "year": 1995
+    }, 
+    {
+      "day": 8, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "05:35", 
+      "year": 1995
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "12:08", 
+      "year": 1995
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "03:18", 
+      "year": 1995
+    }, 
+    {
+      "day": 29, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "17:36", 
+      "year": 1995
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "21:44", 
+      "year": 1995
+    }, 
+    {
+      "day": 14, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "20:48", 
+      "year": 1995
+    }, 
+    {
+      "day": 21, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "11:36", 
+      "year": 1995
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "09:27", 
+      "year": 1995
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "10:26", 
+      "year": 1995
+    }, 
+    {
+      "day": 13, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "04:04", 
+      "year": 1995
+    }, 
+    {
+      "day": 19, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "22:01", 
+      "year": 1995
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "00:50", 
+      "year": 1995
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "20:02", 
+      "year": 1995
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "10:49", 
+      "year": 1995
+    }, 
+    {
+      "day": 19, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "11:10", 
+      "year": 1995
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "15:13", 
+      "year": 1995
+    }, 
+    {
+      "day": 4, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "03:16", 
+      "year": 1995
+    }, 
+    {
+      "day": 10, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "18:16", 
+      "year": 1995
+    }, 
+    {
+      "day": 18, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "03:04", 
+      "year": 1995
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "04:31", 
+      "year": 1995
+    }, 
+    {
+      "day": 2, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "09:03", 
+      "year": 1995
+    }, 
+    {
+      "day": 9, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "03:37", 
+      "year": 1995
+    }, 
+    {
+      "day": 16, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "21:09", 
+      "year": 1995
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "16:55", 
+      "year": 1995
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "14:36", 
+      "year": 1995
+    }, 
+    {
+      "day": 8, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "15:52", 
+      "year": 1995
+    }, 
+    {
+      "day": 16, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "16:26", 
+      "year": 1995
+    }, 
+    {
+      "day": 24, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "04:36", 
+      "year": 1995
+    }, 
+    {
+      "day": 30, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "21:17", 
+      "year": 1995
+    }, 
+    {
+      "day": 7, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "07:21", 
+      "year": 1995
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "11:40", 
+      "year": 1995
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "15:43", 
+      "year": 1995
+    }, 
+    {
+      "day": 29, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "06:28", 
+      "year": 1995
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "01:27", 
+      "year": 1995
+    }, 
+    {
+      "day": 15, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "05:31", 
+      "year": 1995
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "02:22", 
+      "year": 1995
+    }, 
+    {
+      "day": 28, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "19:06", 
+      "year": 1995
+    }
+  ], 
+  "year": 1995
+}

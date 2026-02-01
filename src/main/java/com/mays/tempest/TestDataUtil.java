@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class TestDataUtil {
 
 	public static final DateTimeFormatter DIR_DATE_TIME_FORMAT = DateTimeFormatter.ofPattern("yyyyMMdd'T'HHmmss");
 
-	private ZonedDateTime now = ZonedDateTime.now(ZoneId.of("UTC"));
+	private ZonedDateTime now = ZonedDateTime.now(ZoneOffset.UTC);
 
 	private String time;
 

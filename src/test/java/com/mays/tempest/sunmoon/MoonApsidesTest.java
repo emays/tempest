@@ -2,7 +2,6 @@ package com.mays.tempest.sunmoon;
 
 import java.time.LocalDateTime;
 
-import org.junit.jupiter.api.Test;
 import org.shredzone.commons.suncalc.MoonPosition;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,9 +12,9 @@ public class MoonApsidesTest {
 
 	// https://en.wikipedia.org/wiki/Apsis
 
-	private static final boolean trace = true;
+	private static final boolean trace = false;
 
-	@Test
+//	@Test
 	public void getDistance() {
 		final int year = 2024;
 		LocalDateTime time = LocalDateTime.of(2024, 1, 1, 0, 0, 0);
@@ -48,7 +47,6 @@ public class MoonApsidesTest {
 		}
 		logger.info("Min: " + time_min + " " + distance_min);
 		logger.info("Max: " + time_max + " " + distance_max);
-
 	}
 
 }

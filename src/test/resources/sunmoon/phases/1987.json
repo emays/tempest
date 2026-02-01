@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 6, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "22:35", 
+      "year": 1987
+    }, 
+    {
+      "day": 15, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "02:30", 
+      "year": 1987
+    }, 
+    {
+      "day": 22, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "22:45", 
+      "year": 1987
+    }, 
+    {
+      "day": 29, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "13:45", 
+      "year": 1987
+    }, 
+    {
+      "day": 5, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "16:21", 
+      "year": 1987
+    }, 
+    {
+      "day": 13, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "20:58", 
+      "year": 1987
+    }, 
+    {
+      "day": 21, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "08:56", 
+      "year": 1987
+    }, 
+    {
+      "day": 28, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "00:51", 
+      "year": 1987
+    }, 
+    {
+      "day": 7, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "11:58", 
+      "year": 1987
+    }, 
+    {
+      "day": 15, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "13:13", 
+      "year": 1987
+    }, 
+    {
+      "day": 22, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:22", 
+      "year": 1987
+    }, 
+    {
+      "day": 29, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "12:46", 
+      "year": 1987
+    }, 
+    {
+      "day": 6, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "07:48", 
+      "year": 1987
+    }, 
+    {
+      "day": 14, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "02:31", 
+      "year": 1987
+    }, 
+    {
+      "day": 20, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "22:15", 
+      "year": 1987
+    }, 
+    {
+      "day": 28, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "01:34", 
+      "year": 1987
+    }, 
+    {
+      "day": 6, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "02:26", 
+      "year": 1987
+    }, 
+    {
+      "day": 13, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "12:50", 
+      "year": 1987
+    }, 
+    {
+      "day": 20, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "04:02", 
+      "year": 1987
+    }, 
+    {
+      "day": 27, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "15:13", 
+      "year": 1987
+    }, 
+    {
+      "day": 4, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "18:53", 
+      "year": 1987
+    }, 
+    {
+      "day": 11, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "20:49", 
+      "year": 1987
+    }, 
+    {
+      "day": 18, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "11:03", 
+      "year": 1987
+    }, 
+    {
+      "day": 26, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "05:37", 
+      "year": 1987
+    }, 
+    {
+      "day": 4, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "08:34", 
+      "year": 1987
+    }, 
+    {
+      "day": 11, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "03:33", 
+      "year": 1987
+    }, 
+    {
+      "day": 17, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "20:17", 
+      "year": 1987
+    }, 
+    {
+      "day": 25, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "20:38", 
+      "year": 1987
+    }, 
+    {
+      "day": 2, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "19:24", 
+      "year": 1987
+    }, 
+    {
+      "day": 9, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "10:17", 
+      "year": 1987
+    }, 
+    {
+      "day": 16, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "08:25", 
+      "year": 1987
+    }, 
+    {
+      "day": 24, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "11:59", 
+      "year": 1987
+    }, 
+    {
+      "day": 1, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "03:48", 
+      "year": 1987
+    }, 
+    {
+      "day": 7, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "18:13", 
+      "year": 1987
+    }, 
+    {
+      "day": 14, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "23:45", 
+      "year": 1987
+    }, 
+    {
+      "day": 23, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "03:08", 
+      "year": 1987
+    }, 
+    {
+      "day": 30, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "10:39", 
+      "year": 1987
+    }, 
+    {
+      "day": 7, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "04:12", 
+      "year": 1987
+    }, 
+    {
+      "day": 14, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "18:06", 
+      "year": 1987
+    }, 
+    {
+      "day": 22, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "17:28", 
+      "year": 1987
+    }, 
+    {
+      "day": 29, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "17:10", 
+      "year": 1987
+    }, 
+    {
+      "day": 5, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "16:46", 
+      "year": 1987
+    }, 
+    {
+      "day": 13, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "14:38", 
+      "year": 1987
+    }, 
+    {
+      "day": 21, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "06:33", 
+      "year": 1987
+    }, 
+    {
+      "day": 28, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "00:37", 
+      "year": 1987
+    }, 
+    {
+      "day": 5, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "08:01", 
+      "year": 1987
+    }, 
+    {
+      "day": 13, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "11:41", 
+      "year": 1987
+    }, 
+    {
+      "day": 20, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "18:25", 
+      "year": 1987
+    }, 
+    {
+      "day": 27, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "10:01", 
+      "year": 1987
+    }
+  ], 
+  "year": 1987
+}

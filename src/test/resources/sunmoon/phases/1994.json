@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 5, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "00:01", 
+      "year": 1994
+    }, 
+    {
+      "day": 11, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "23:10", 
+      "year": 1994
+    }, 
+    {
+      "day": 19, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "20:27", 
+      "year": 1994
+    }, 
+    {
+      "day": 27, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "13:23", 
+      "year": 1994
+    }, 
+    {
+      "day": 3, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "08:06", 
+      "year": 1994
+    }, 
+    {
+      "day": 10, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "14:30", 
+      "year": 1994
+    }, 
+    {
+      "day": 18, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "17:47", 
+      "year": 1994
+    }, 
+    {
+      "day": 26, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "01:15", 
+      "year": 1994
+    }, 
+    {
+      "day": 4, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:53", 
+      "year": 1994
+    }, 
+    {
+      "day": 12, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "07:05", 
+      "year": 1994
+    }, 
+    {
+      "day": 20, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "12:14", 
+      "year": 1994
+    }, 
+    {
+      "day": 27, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "11:10", 
+      "year": 1994
+    }, 
+    {
+      "day": 3, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "02:55", 
+      "year": 1994
+    }, 
+    {
+      "day": 11, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "00:17", 
+      "year": 1994
+    }, 
+    {
+      "day": 19, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "02:34", 
+      "year": 1994
+    }, 
+    {
+      "day": 25, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "19:45", 
+      "year": 1994
+    }, 
+    {
+      "day": 2, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "14:32", 
+      "year": 1994
+    }, 
+    {
+      "day": 10, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "17:07", 
+      "year": 1994
+    }, 
+    {
+      "day": 18, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "12:50", 
+      "year": 1994
+    }, 
+    {
+      "day": 25, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "03:39", 
+      "year": 1994
+    }, 
+    {
+      "day": 1, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "04:02", 
+      "year": 1994
+    }, 
+    {
+      "day": 9, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "08:26", 
+      "year": 1994
+    }, 
+    {
+      "day": 16, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "19:57", 
+      "year": 1994
+    }, 
+    {
+      "day": 23, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "11:33", 
+      "year": 1994
+    }, 
+    {
+      "day": 30, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "19:31", 
+      "year": 1994
+    }, 
+    {
+      "day": 8, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "21:37", 
+      "year": 1994
+    }, 
+    {
+      "day": 16, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "01:12", 
+      "year": 1994
+    }, 
+    {
+      "day": 22, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "20:16", 
+      "year": 1994
+    }, 
+    {
+      "day": 30, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "12:40", 
+      "year": 1994
+    }, 
+    {
+      "day": 7, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "08:45", 
+      "year": 1994
+    }, 
+    {
+      "day": 14, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "05:57", 
+      "year": 1994
+    }, 
+    {
+      "day": 21, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "06:47", 
+      "year": 1994
+    }, 
+    {
+      "day": 29, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "06:41", 
+      "year": 1994
+    }, 
+    {
+      "day": 5, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "18:33", 
+      "year": 1994
+    }, 
+    {
+      "day": 12, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "11:34", 
+      "year": 1994
+    }, 
+    {
+      "day": 19, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "20:01", 
+      "year": 1994
+    }, 
+    {
+      "day": 28, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "00:23", 
+      "year": 1994
+    }, 
+    {
+      "day": 5, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "03:55", 
+      "year": 1994
+    }, 
+    {
+      "day": 11, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "19:17", 
+      "year": 1994
+    }, 
+    {
+      "day": 19, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "12:18", 
+      "year": 1994
+    }, 
+    {
+      "day": 27, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "16:44", 
+      "year": 1994
+    }, 
+    {
+      "day": 3, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "13:36", 
+      "year": 1994
+    }, 
+    {
+      "day": 10, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "06:14", 
+      "year": 1994
+    }, 
+    {
+      "day": 18, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "06:57", 
+      "year": 1994
+    }, 
+    {
+      "day": 26, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "07:04", 
+      "year": 1994
+    }, 
+    {
+      "day": 2, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "23:54", 
+      "year": 1994
+    }, 
+    {
+      "day": 9, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "21:06", 
+      "year": 1994
+    }, 
+    {
+      "day": 18, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "02:17", 
+      "year": 1994
+    }, 
+    {
+      "day": 25, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "19:06", 
+      "year": 1994
+    }
+  ], 
+  "year": 1994
+}

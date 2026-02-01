@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 2, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "04:56", 
+      "year": 1940
+    }, 
+    {
+      "day": 9, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "13:53", 
+      "year": 1940
+    }, 
+    {
+      "day": 17, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "18:21", 
+      "year": 1940
+    }, 
+    {
+      "day": 24, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "23:22", 
+      "year": 1940
+    }, 
+    {
+      "day": 31, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "14:47", 
+      "year": 1940
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "07:45", 
+      "year": 1940
+    }, 
+    {
+      "day": 16, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "12:55", 
+      "year": 1940
+    }, 
+    {
+      "day": 23, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "09:55", 
+      "year": 1940
+    }, 
+    {
+      "day": 1, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "02:35", 
+      "year": 1940
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "02:23", 
+      "year": 1940
+    }, 
+    {
+      "day": 17, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "03:25", 
+      "year": 1940
+    }, 
+    {
+      "day": 23, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "19:33", 
+      "year": 1940
+    }, 
+    {
+      "day": 30, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:20", 
+      "year": 1940
+    }, 
+    {
+      "day": 7, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "20:18", 
+      "year": 1940
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "13:45", 
+      "year": 1940
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "04:37", 
+      "year": 1940
+    }, 
+    {
+      "day": 29, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "07:49", 
+      "year": 1940
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "12:07", 
+      "year": 1940
+    }, 
+    {
+      "day": 14, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "20:51", 
+      "year": 1940
+    }, 
+    {
+      "day": 21, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "13:33", 
+      "year": 1940
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "00:40", 
+      "year": 1940
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "01:05", 
+      "year": 1940
+    }, 
+    {
+      "day": 13, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "01:59", 
+      "year": 1940
+    }, 
+    {
+      "day": 19, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "23:02", 
+      "year": 1940
+    }, 
+    {
+      "day": 27, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "18:13", 
+      "year": 1940
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "11:28", 
+      "year": 1940
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "06:35", 
+      "year": 1940
+    }, 
+    {
+      "day": 19, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "09:55", 
+      "year": 1940
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "11:29", 
+      "year": 1940
+    }, 
+    {
+      "day": 3, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "20:09", 
+      "year": 1940
+    }, 
+    {
+      "day": 10, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "12:00", 
+      "year": 1940
+    }, 
+    {
+      "day": 17, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "23:02", 
+      "year": 1940
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "03:33", 
+      "year": 1940
+    }, 
+    {
+      "day": 2, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "04:15", 
+      "year": 1940
+    }, 
+    {
+      "day": 8, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "19:32", 
+      "year": 1940
+    }, 
+    {
+      "day": 16, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "14:41", 
+      "year": 1940
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "17:47", 
+      "year": 1940
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "12:41", 
+      "year": 1940
+    }, 
+    {
+      "day": 8, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "06:18", 
+      "year": 1940
+    }, 
+    {
+      "day": 16, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "08:15", 
+      "year": 1940
+    }, 
+    {
+      "day": 24, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "06:04", 
+      "year": 1940
+    }, 
+    {
+      "day": 30, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "22:03", 
+      "year": 1940
+    }, 
+    {
+      "day": 6, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "21:08", 
+      "year": 1940
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "02:23", 
+      "year": 1940
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "16:36", 
+      "year": 1940
+    }, 
+    {
+      "day": 29, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "08:42", 
+      "year": 1940
+    }, 
+    {
+      "day": 6, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "16:01", 
+      "year": 1940
+    }, 
+    {
+      "day": 14, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "19:38", 
+      "year": 1940
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "01:45", 
+      "year": 1940
+    }, 
+    {
+      "day": 28, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "20:56", 
+      "year": 1940
+    }
+  ], 
+  "year": 1940
+}

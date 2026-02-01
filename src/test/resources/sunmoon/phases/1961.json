@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 1, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "23:06", 
+      "year": 1961
+    }, 
+    {
+      "day": 10, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "03:02", 
+      "year": 1961
+    }, 
+    {
+      "day": 16, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "21:30", 
+      "year": 1961
+    }, 
+    {
+      "day": 23, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "16:13", 
+      "year": 1961
+    }, 
+    {
+      "day": 31, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "18:47", 
+      "year": 1961
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "16:49", 
+      "year": 1961
+    }, 
+    {
+      "day": 15, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "08:10", 
+      "year": 1961
+    }, 
+    {
+      "day": 22, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "08:34", 
+      "year": 1961
+    }, 
+    {
+      "day": 2, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "13:35", 
+      "year": 1961
+    }, 
+    {
+      "day": 10, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "02:57", 
+      "year": 1961
+    }, 
+    {
+      "day": 16, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "18:51", 
+      "year": 1961
+    }, 
+    {
+      "day": 24, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "02:48", 
+      "year": 1961
+    }, 
+    {
+      "day": 1, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "05:47", 
+      "year": 1961
+    }, 
+    {
+      "day": 8, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "10:16", 
+      "year": 1961
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "05:37", 
+      "year": 1961
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "21:49", 
+      "year": 1961
+    }, 
+    {
+      "day": 30, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "18:40", 
+      "year": 1961
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "15:57", 
+      "year": 1961
+    }, 
+    {
+      "day": 14, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "16:54", 
+      "year": 1961
+    }, 
+    {
+      "day": 22, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "16:18", 
+      "year": 1961
+    }, 
+    {
+      "day": 30, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "04:37", 
+      "year": 1961
+    }, 
+    {
+      "day": 5, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "21:18", 
+      "year": 1961
+    }, 
+    {
+      "day": 13, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "05:16", 
+      "year": 1961
+    }, 
+    {
+      "day": 21, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "09:01", 
+      "year": 1961
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "12:37", 
+      "year": 1961
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "03:32", 
+      "year": 1961
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "19:11", 
+      "year": 1961
+    }, 
+    {
+      "day": 20, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "23:13", 
+      "year": 1961
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "19:50", 
+      "year": 1961
+    }, 
+    {
+      "day": 3, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "11:47", 
+      "year": 1961
+    }, 
+    {
+      "day": 11, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "10:36", 
+      "year": 1961
+    }, 
+    {
+      "day": 19, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "10:51", 
+      "year": 1961
+    }, 
+    {
+      "day": 26, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "03:13", 
+      "year": 1961
+    }, 
+    {
+      "day": 1, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "23:05", 
+      "year": 1961
+    }, 
+    {
+      "day": 10, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "02:49", 
+      "year": 1961
+    }, 
+    {
+      "day": 17, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "20:23", 
+      "year": 1961
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "11:33", 
+      "year": 1961
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "14:10", 
+      "year": 1961
+    }, 
+    {
+      "day": 9, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "18:52", 
+      "year": 1961
+    }, 
+    {
+      "day": 17, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "04:34", 
+      "year": 1961
+    }, 
+    {
+      "day": 23, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "21:30", 
+      "year": 1961
+    }, 
+    {
+      "day": 31, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "08:58", 
+      "year": 1961
+    }, 
+    {
+      "day": 8, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "09:58", 
+      "year": 1961
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "12:12", 
+      "year": 1961
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "09:44", 
+      "year": 1961
+    }, 
+    {
+      "day": 30, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "06:18", 
+      "year": 1961
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "23:52", 
+      "year": 1961
+    }, 
+    {
+      "day": 14, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "20:05", 
+      "year": 1961
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "00:42", 
+      "year": 1961
+    }, 
+    {
+      "day": 30, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "03:57", 
+      "year": 1961
+    }
+  ], 
+  "year": 1961
+}

@@ -158,10 +158,12 @@ public class WeatherTest {
 		Weather weather = new Weather();
 		List<WeatherObservationStationJson> obs = weather.getObservationStationsJsonFromJson(observationStationsString);
 		WeatherObservationStationJson obs1 = obs.get(0);
-		logger.info("" + obs1.getCoordinates()[0] + " " + obs1.getCoordinates()[1]);
-		logger.info("" + obs1.getStationIdentifier());
-		logger.info("" + obs1.getName());
-		logger.info("" + obs1.getTimeZone());
+		if (trace) {
+			logger.info("" + obs1.getCoordinates()[0] + " " + obs1.getCoordinates()[1]);
+			logger.info("" + obs1.getStationIdentifier());
+			logger.info("" + obs1.getName());
+			logger.info("" + obs1.getTimeZone());
+		}
 	}
 
 //	@Test
@@ -184,36 +186,41 @@ public class WeatherTest {
 		Weather weather = new Weather();
 		List<WeatherObservationJson> obs = weather.getObservationsJsonFromJson(observationsString);
 		WeatherObservation obs1 = new WeatherObservation(obs.get(0));
-		logger.info("" + obs1.getTime());
+		if (trace)
+			logger.info("" + obs1.getTime());
 		{
 			WeatherObservationStation station = new WeatherObservationStation(
 					weather.getObservationStationJsonFromJson(observationStationString));
-			logger.info("" + station.getTimeZone());
-			logger.info("" + station.getTimeZone().getDisplayName(TextStyle.SHORT, Locale.getDefault()));
-			logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone()));
-			logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone()).getOffset());
-			logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone())
-					.format(DateTimeFormatter.ofPattern("zzz")));
+			if (trace) {
+				logger.info("" + station.getTimeZone());
+				logger.info("" + station.getTimeZone().getDisplayName(TextStyle.SHORT, Locale.getDefault()));
+				logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone()));
+				logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone()).getOffset());
+				logger.info("" + obs1.getTime().withZoneSameInstant(station.getTimeZone())
+						.format(DateTimeFormatter.ofPattern("zzz")));
+			}
 		}
-		logger.info("" + obs1.getRawMessage());
-		logger.info("" + obs1.getTextDescription());
-		logger.info("" + obs1.getIcon());
-		logger.info("" + obs1.getTemperature());
-		logger.info("" + obs1.getTemperature().to(USCustomary.FAHRENHEIT));
-		logger.info("" + obs1.getDewpoint().to(USCustomary.FAHRENHEIT));
-		logger.info("" + obs1.getWindDirection());
-		logger.info("" + obs1.getWindSpeed().to(USCustomary.MILE_PER_HOUR));
-		logger.info("" + obs1.getWindGust());
-		logger.info("" + obs1.getBarometricPressure());
-		logger.info("" + obs1.getSeaLevelPressure());
-		logger.info("" + obs1.getVisibility().to(USCustomary.MILE));
-		logger.info("" + obs1.getMaxTemperatureLast24Hours());
-		logger.info("" + obs1.getMinTemperatureLast24Hours());
-		logger.info("" + obs1.getPrecipitationLastHour());
-		logger.info("" + obs1.getPrecipitationLast3Hours());
-		logger.info("" + obs1.getPrecipitationLast6Hours());
-		logger.info("" + obs1.getWindChill());
-		logger.info("" + obs1.getHeatIndex());
+		if (trace) {
+			logger.info("" + obs1.getRawMessage());
+			logger.info("" + obs1.getTextDescription());
+			logger.info("" + obs1.getIcon());
+			logger.info("" + obs1.getTemperature());
+			logger.info("" + obs1.getTemperature().to(USCustomary.FAHRENHEIT));
+			logger.info("" + obs1.getDewpoint().to(USCustomary.FAHRENHEIT));
+			logger.info("" + obs1.getWindDirection());
+			logger.info("" + obs1.getWindSpeed().to(USCustomary.MILE_PER_HOUR));
+			logger.info("" + obs1.getWindGust());
+			logger.info("" + obs1.getBarometricPressure());
+			logger.info("" + obs1.getSeaLevelPressure());
+			logger.info("" + obs1.getVisibility().to(USCustomary.MILE));
+			logger.info("" + obs1.getMaxTemperatureLast24Hours());
+			logger.info("" + obs1.getMinTemperatureLast24Hours());
+			logger.info("" + obs1.getPrecipitationLastHour());
+			logger.info("" + obs1.getPrecipitationLast3Hours());
+			logger.info("" + obs1.getPrecipitationLast6Hours());
+			logger.info("" + obs1.getWindChill());
+			logger.info("" + obs1.getHeatIndex());
+		}
 		obs.forEach(WeatherObservation::new);
 	}
 
@@ -222,12 +229,14 @@ public class WeatherTest {
 		Weather weather = new Weather();
 		WeatherObservationStationJson obs = weather.getObservationStationJsonFromJson(observationStationString);
 		WeatherObservationStation obs1 = new WeatherObservationStation(obs);
-		logger.info("" + obs1.getCoordinate().getLatitude() + " " + obs1.getCoordinate().getLongitude());
-		logger.info("" + obs1.getElevation() + " " + obs1.getElevation().to(USCustomary.FOOT) + " "
-				+ String.format("%.0f ft", obs1.getElevation().to(USCustomary.FOOT).getValue().doubleValue()));
-		logger.info("" + obs1.getStationIdentifier());
-		logger.info("" + obs1.getName());
-		logger.info("" + obs1.getTimeZone());
+		if (trace) {
+			logger.info("" + obs1.getCoordinate().getLatitude() + " " + obs1.getCoordinate().getLongitude());
+			logger.info("" + obs1.getElevation() + " " + obs1.getElevation().to(USCustomary.FOOT) + " "
+					+ String.format("%.0f ft", obs1.getElevation().to(USCustomary.FOOT).getValue().doubleValue()));
+			logger.info("" + obs1.getStationIdentifier());
+			logger.info("" + obs1.getName());
+			logger.info("" + obs1.getTimeZone());
+		}
 //		obs1 = weather.getObservationStation(PVC_ID);
 		assertEquals(42.07, obs1.getCoordinate().getLatitude(), 0.005);
 		assertEquals(-70.22, obs1.getCoordinate().getLongitude(), 0.005);
@@ -242,12 +251,14 @@ public class WeatherTest {
 		Weather weather = new Weather();
 		WeatherForecastGridDataJson fcgd_json = weather.getForecastGridDataJsonFromJson(forecastGridDataString);
 		WeatherForecastGridData fcgd = new WeatherForecastGridData(fcgd_json);
-		logger.info(fcgd_json.getUpdateTime());
-		logger.info(fcgd.getUpdateTime().toString());
-		logger.info(fcgd_json.getValidTimes());
-		logger.info(fcgd.getValidTimes().toString());
-		logger.info(fcgd_json.getElevation().toString());
-		logger.info(fcgd.getElevation().toString());
+		if (trace) {
+			logger.info(fcgd_json.getUpdateTime());
+			logger.info(fcgd.getUpdateTime().toString());
+			logger.info(fcgd_json.getValidTimes());
+			logger.info(fcgd.getValidTimes().toString());
+			logger.info(fcgd_json.getElevation().toString());
+			logger.info(fcgd.getElevation().toString());
+		}
 		for (ForecastElement<Temperature> fe : fcgd.getTemperature()) {
 			if (trace)
 				logger.info(fe.toString());
@@ -286,12 +297,14 @@ public class WeatherTest {
 		Weather weather = new Weather();
 		WeatherForecastGeneralJson fc_json = weather.getForecastGeneralJsonFromJson(forecastString);
 		WeatherForecastGeneral fc = new WeatherForecastGeneral(fc_json);
-		logger.info(fc_json.getUpdateTime());
-		logger.info(fc.getUpdateTime().toString());
-		logger.info(fc_json.getValidTimes());
-		logger.info(fc.getValidTimes().toString());
-		logger.info(fc_json.getElevation().toString());
-		logger.info(fc.getElevation().toString());
+		if (trace) {
+			logger.info(fc_json.getUpdateTime());
+			logger.info(fc.getUpdateTime().toString());
+			logger.info(fc_json.getValidTimes());
+			logger.info(fc.getValidTimes().toString());
+			logger.info(fc_json.getElevation().toString());
+			logger.info(fc.getElevation().toString());
+		}
 		assertEquals(14, fc_json.getPeriods().length);
 		assertEquals(14, fc.getPeriods().size());
 	}

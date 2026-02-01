@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 1, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "20:29", 
+      "year": 1955
+    }, 
+    {
+      "day": 8, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "12:44", 
+      "year": 1955
+    }, 
+    {
+      "day": 15, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "22:13", 
+      "year": 1955
+    }, 
+    {
+      "day": 24, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "01:07", 
+      "year": 1955
+    }, 
+    {
+      "day": 31, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "05:05", 
+      "year": 1955
+    }, 
+    {
+      "day": 7, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "01:43", 
+      "year": 1955
+    }, 
+    {
+      "day": 14, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "19:40", 
+      "year": 1955
+    }, 
+    {
+      "day": 22, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "15:54", 
+      "year": 1955
+    }, 
+    {
+      "day": 1, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "12:40", 
+      "year": 1955
+    }, 
+    {
+      "day": 8, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "15:41", 
+      "year": 1955
+    }, 
+    {
+      "day": 16, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "16:36", 
+      "year": 1955
+    }, 
+    {
+      "day": 24, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "03:42", 
+      "year": 1955
+    }, 
+    {
+      "day": 30, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "20:10", 
+      "year": 1955
+    }, 
+    {
+      "day": 7, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "06:35", 
+      "year": 1955
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "11:01", 
+      "year": 1955
+    }, 
+    {
+      "day": 22, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "13:06", 
+      "year": 1955
+    }, 
+    {
+      "day": 29, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "04:23", 
+      "year": 1955
+    }, 
+    {
+      "day": 6, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "22:14", 
+      "year": 1955
+    }, 
+    {
+      "day": 15, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "01:42", 
+      "year": 1955
+    }, 
+    {
+      "day": 21, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "20:58", 
+      "year": 1955
+    }, 
+    {
+      "day": 28, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "14:01", 
+      "year": 1955
+    }, 
+    {
+      "day": 5, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "14:08", 
+      "year": 1955
+    }, 
+    {
+      "day": 13, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "12:37", 
+      "year": 1955
+    }, 
+    {
+      "day": 20, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "04:12", 
+      "year": 1955
+    }, 
+    {
+      "day": 27, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "01:44", 
+      "year": 1955
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "05:28", 
+      "year": 1955
+    }, 
+    {
+      "day": 12, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "20:31", 
+      "year": 1955
+    }, 
+    {
+      "day": 19, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "11:34", 
+      "year": 1955
+    }, 
+    {
+      "day": 26, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "15:59", 
+      "year": 1955
+    }, 
+    {
+      "day": 3, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "19:30", 
+      "year": 1955
+    }, 
+    {
+      "day": 11, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "02:33", 
+      "year": 1955
+    }, 
+    {
+      "day": 17, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "19:58", 
+      "year": 1955
+    }, 
+    {
+      "day": 25, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "08:52", 
+      "year": 1955
+    }, 
+    {
+      "day": 2, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "07:59", 
+      "year": 1955
+    }, 
+    {
+      "day": 9, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "07:59", 
+      "year": 1955
+    }, 
+    {
+      "day": 16, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "06:19", 
+      "year": 1955
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "03:41", 
+      "year": 1955
+    }, 
+    {
+      "day": 1, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "19:17", 
+      "year": 1955
+    }, 
+    {
+      "day": 8, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "14:04", 
+      "year": 1955
+    }, 
+    {
+      "day": 15, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "19:32", 
+      "year": 1955
+    }, 
+    {
+      "day": 23, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "23:05", 
+      "year": 1955
+    }, 
+    {
+      "day": 31, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "06:04", 
+      "year": 1955
+    }, 
+    {
+      "day": 6, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "21:56", 
+      "year": 1955
+    }, 
+    {
+      "day": 14, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "12:01", 
+      "year": 1955
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "17:29", 
+      "year": 1955
+    }, 
+    {
+      "day": 29, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "16:50", 
+      "year": 1955
+    }, 
+    {
+      "day": 6, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "08:35", 
+      "year": 1955
+    }, 
+    {
+      "day": 14, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "07:07", 
+      "year": 1955
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "09:39", 
+      "year": 1955
+    }, 
+    {
+      "day": 29, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "03:44", 
+      "year": 1955
+    }
+  ], 
+  "year": 1955
+}

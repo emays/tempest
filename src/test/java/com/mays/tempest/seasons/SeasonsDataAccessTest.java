@@ -42,7 +42,8 @@ public class SeasonsDataAccessTest {
 			Seasons seasons = SeasonsDataAccess.getSeasons(year);
 			Arrays.stream(Season.Phenom.values()).forEach(seasons::getSeason);
 		}
-		logger.info("Min: " + min + " Max: " + max);
+		if (trace)
+			logger.info("Min: " + min + " Max: " + max);
 	}
 
 }

@@ -21,6 +21,8 @@ public class TidesSubordinateTest {
 
 	private static final Logger logger = LoggerFactory.getLogger(TidesSubordinateTest.class);
 
+	private static final boolean trace = false;
+
 	@BeforeAll
 	public static void setTest() {
 		TideDataAccess.setTest();
@@ -43,7 +45,8 @@ public class TidesSubordinateTest {
 		StartEnd start_end = TideDataAccess.getStartEnd(station);
 		LocalDate start = start_end.start();
 		LocalDate end = start_end.end();
-		logger.info(station + " " + start + " " + end);
+		if (trace)
+			logger.info(station + " " + start + " " + end);
 		for (int year = start.getYear(); year <= end.getYear(); year++) {
 			for (int month = 1; month <= 12; month++) {
 				List<Tide> bos_tides = new ArrayList<>(

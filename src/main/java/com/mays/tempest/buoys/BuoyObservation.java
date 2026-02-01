@@ -1,7 +1,7 @@
 package com.mays.tempest.buoys;
 
 import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 
 import javax.measure.Quantity;
@@ -44,7 +44,7 @@ public class BuoyObservation {
 	public BuoyObservation(int year, int month, int day, int hour, int minute, Integer windDirection, Double windSpeed,
 			Double windGust, Double waveHeight, Integer waveDirection, Double atmosphericPressure,
 			Double airTemperature, Double waterTemperature, Double dewPoint, Double visibility) {
-		time = ZonedDateTime.of(year, month, day, hour, minute, 0, 0, ZoneId.of("UTC").normalized());
+		time = ZonedDateTime.of(year, month, day, hour, minute, 0, 0, ZoneOffset.UTC);
 		this.windDirection = WeatherQuantities.toAngle(windDirection, "degT");
 		if (windSpeed != null)
 //			this.windSpeed = windSpeed * 1.9438445;

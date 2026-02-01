@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 5, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "20:51", 
+      "year": 1996
+    }, 
+    {
+      "day": 13, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "20:45", 
+      "year": 1996
+    }, 
+    {
+      "day": 20, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "12:50", 
+      "year": 1996
+    }, 
+    {
+      "day": 27, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "11:14", 
+      "year": 1996
+    }, 
+    {
+      "day": 4, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "15:58", 
+      "year": 1996
+    }, 
+    {
+      "day": 12, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "08:37", 
+      "year": 1996
+    }, 
+    {
+      "day": 18, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "23:30", 
+      "year": 1996
+    }, 
+    {
+      "day": 26, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "05:52", 
+      "year": 1996
+    }, 
+    {
+      "day": 5, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "09:23", 
+      "year": 1996
+    }, 
+    {
+      "day": 12, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "17:15", 
+      "year": 1996
+    }, 
+    {
+      "day": 19, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "10:45", 
+      "year": 1996
+    }, 
+    {
+      "day": 27, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "01:31", 
+      "year": 1996
+    }, 
+    {
+      "day": 4, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "00:07", 
+      "year": 1996
+    }, 
+    {
+      "day": 10, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "23:36", 
+      "year": 1996
+    }, 
+    {
+      "day": 17, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "22:49", 
+      "year": 1996
+    }, 
+    {
+      "day": 25, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "20:40", 
+      "year": 1996
+    }, 
+    {
+      "day": 3, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "11:48", 
+      "year": 1996
+    }, 
+    {
+      "day": 10, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "05:04", 
+      "year": 1996
+    }, 
+    {
+      "day": 17, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "11:46", 
+      "year": 1996
+    }, 
+    {
+      "day": 25, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "14:13", 
+      "year": 1996
+    }, 
+    {
+      "day": 1, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "20:47", 
+      "year": 1996
+    }, 
+    {
+      "day": 8, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "11:06", 
+      "year": 1996
+    }, 
+    {
+      "day": 16, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "01:36", 
+      "year": 1996
+    }, 
+    {
+      "day": 24, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "05:23", 
+      "year": 1996
+    }, 
+    {
+      "day": 1, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "03:58", 
+      "year": 1996
+    }, 
+    {
+      "day": 7, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "18:55", 
+      "year": 1996
+    }, 
+    {
+      "day": 15, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "16:15", 
+      "year": 1996
+    }, 
+    {
+      "day": 23, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "17:49", 
+      "year": 1996
+    }, 
+    {
+      "day": 30, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "10:35", 
+      "year": 1996
+    }, 
+    {
+      "day": 6, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "05:25", 
+      "year": 1996
+    }, 
+    {
+      "day": 14, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "07:34", 
+      "year": 1996
+    }, 
+    {
+      "day": 22, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "03:36", 
+      "year": 1996
+    }, 
+    {
+      "day": 28, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "17:52", 
+      "year": 1996
+    }, 
+    {
+      "day": 4, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "19:06", 
+      "year": 1996
+    }, 
+    {
+      "day": 12, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "23:07", 
+      "year": 1996
+    }, 
+    {
+      "day": 20, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "11:23", 
+      "year": 1996
+    }, 
+    {
+      "day": 27, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "02:51", 
+      "year": 1996
+    }, 
+    {
+      "day": 4, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "12:04", 
+      "year": 1996
+    }, 
+    {
+      "day": 12, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "14:14", 
+      "year": 1996
+    }, 
+    {
+      "day": 19, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "18:09", 
+      "year": 1996
+    }, 
+    {
+      "day": 26, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "14:11", 
+      "year": 1996
+    }, 
+    {
+      "day": 3, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "07:50", 
+      "year": 1996
+    }, 
+    {
+      "day": 11, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "04:16", 
+      "year": 1996
+    }, 
+    {
+      "day": 18, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "01:09", 
+      "year": 1996
+    }, 
+    {
+      "day": 25, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "04:10", 
+      "year": 1996
+    }, 
+    {
+      "day": 3, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "05:06", 
+      "year": 1996
+    }, 
+    {
+      "day": 10, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "16:56", 
+      "year": 1996
+    }, 
+    {
+      "day": 17, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "09:31", 
+      "year": 1996
+    }, 
+    {
+      "day": 24, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "20:41", 
+      "year": 1996
+    }
+  ], 
+  "year": 1996
+}

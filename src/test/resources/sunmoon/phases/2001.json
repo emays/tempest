@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 2, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "22:32", 
+      "year": 2001
+    }, 
+    {
+      "day": 9, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "20:24", 
+      "year": 2001
+    }, 
+    {
+      "day": 16, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "12:35", 
+      "year": 2001
+    }, 
+    {
+      "day": 24, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "13:07", 
+      "year": 2001
+    }, 
+    {
+      "day": 1, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "14:02", 
+      "year": 2001
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "07:12", 
+      "year": 2001
+    }, 
+    {
+      "day": 15, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "03:24", 
+      "year": 2001
+    }, 
+    {
+      "day": 23, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "08:21", 
+      "year": 2001
+    }, 
+    {
+      "day": 3, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "02:03", 
+      "year": 2001
+    }, 
+    {
+      "day": 9, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "17:23", 
+      "year": 2001
+    }, 
+    {
+      "day": 16, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "20:45", 
+      "year": 2001
+    }, 
+    {
+      "day": 25, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "01:21", 
+      "year": 2001
+    }, 
+    {
+      "day": 1, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "10:49", 
+      "year": 2001
+    }, 
+    {
+      "day": 8, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "03:22", 
+      "year": 2001
+    }, 
+    {
+      "day": 15, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "15:31", 
+      "year": 2001
+    }, 
+    {
+      "day": 23, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "15:26", 
+      "year": 2001
+    }, 
+    {
+      "day": 30, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "17:08", 
+      "year": 2001
+    }, 
+    {
+      "day": 7, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "13:53", 
+      "year": 2001
+    }, 
+    {
+      "day": 15, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "10:11", 
+      "year": 2001
+    }, 
+    {
+      "day": 23, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "02:46", 
+      "year": 2001
+    }, 
+    {
+      "day": 29, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "22:09", 
+      "year": 2001
+    }, 
+    {
+      "day": 6, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "01:39", 
+      "year": 2001
+    }, 
+    {
+      "day": 14, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "03:28", 
+      "year": 2001
+    }, 
+    {
+      "day": 21, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "11:58", 
+      "year": 2001
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "03:20", 
+      "year": 2001
+    }, 
+    {
+      "day": 5, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "15:04", 
+      "year": 2001
+    }, 
+    {
+      "day": 13, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "18:45", 
+      "year": 2001
+    }, 
+    {
+      "day": 20, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "19:44", 
+      "year": 2001
+    }, 
+    {
+      "day": 27, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "10:08", 
+      "year": 2001
+    }, 
+    {
+      "day": 4, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "05:56", 
+      "year": 2001
+    }, 
+    {
+      "day": 12, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "07:53", 
+      "year": 2001
+    }, 
+    {
+      "day": 19, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "02:55", 
+      "year": 2001
+    }, 
+    {
+      "day": 25, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "19:55", 
+      "year": 2001
+    }, 
+    {
+      "day": 2, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "21:43", 
+      "year": 2001
+    }, 
+    {
+      "day": 10, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "19:00", 
+      "year": 2001
+    }, 
+    {
+      "day": 17, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "10:27", 
+      "year": 2001
+    }, 
+    {
+      "day": 24, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "09:31", 
+      "year": 2001
+    }, 
+    {
+      "day": 2, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "13:49", 
+      "year": 2001
+    }, 
+    {
+      "day": 10, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "04:20", 
+      "year": 2001
+    }, 
+    {
+      "day": 16, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "19:23", 
+      "year": 2001
+    }, 
+    {
+      "day": 24, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "02:58", 
+      "year": 2001
+    }, 
+    {
+      "day": 1, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "05:41", 
+      "year": 2001
+    }, 
+    {
+      "day": 8, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "12:21", 
+      "year": 2001
+    }, 
+    {
+      "day": 15, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "06:40", 
+      "year": 2001
+    }, 
+    {
+      "day": 22, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "23:21", 
+      "year": 2001
+    }, 
+    {
+      "day": 30, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "20:49", 
+      "year": 2001
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "19:52", 
+      "year": 2001
+    }, 
+    {
+      "day": 14, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "20:47", 
+      "year": 2001
+    }, 
+    {
+      "day": 22, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "20:56", 
+      "year": 2001
+    }, 
+    {
+      "day": 30, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "10:41", 
+      "year": 2001
+    }
+  ], 
+  "year": 2001
+}

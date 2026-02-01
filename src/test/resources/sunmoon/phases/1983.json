@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 6, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "04:00", 
+      "year": 1983
+    }, 
+    {
+      "day": 14, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "05:08", 
+      "year": 1983
+    }, 
+    {
+      "day": 22, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "05:33", 
+      "year": 1983
+    }, 
+    {
+      "day": 28, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "22:26", 
+      "year": 1983
+    }, 
+    {
+      "day": 4, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "19:17", 
+      "year": 1983
+    }, 
+    {
+      "day": 13, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "00:32", 
+      "year": 1983
+    }, 
+    {
+      "day": 20, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "17:32", 
+      "year": 1983
+    }, 
+    {
+      "day": 27, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "08:58", 
+      "year": 1983
+    }, 
+    {
+      "day": 6, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "13:16", 
+      "year": 1983
+    }, 
+    {
+      "day": 14, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "17:43", 
+      "year": 1983
+    }, 
+    {
+      "day": 22, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "02:25", 
+      "year": 1983
+    }, 
+    {
+      "day": 28, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "19:27", 
+      "year": 1983
+    }, 
+    {
+      "day": 5, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "08:38", 
+      "year": 1983
+    }, 
+    {
+      "day": 13, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "07:58", 
+      "year": 1983
+    }, 
+    {
+      "day": 20, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "08:58", 
+      "year": 1983
+    }, 
+    {
+      "day": 27, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "06:31", 
+      "year": 1983
+    }, 
+    {
+      "day": 5, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "03:43", 
+      "year": 1983
+    }, 
+    {
+      "day": 12, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "19:25", 
+      "year": 1983
+    }, 
+    {
+      "day": 19, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "14:17", 
+      "year": 1983
+    }, 
+    {
+      "day": 26, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "18:48", 
+      "year": 1983
+    }, 
+    {
+      "day": 3, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "21:07", 
+      "year": 1983
+    }, 
+    {
+      "day": 11, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "04:38", 
+      "year": 1983
+    }, 
+    {
+      "day": 17, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "19:46", 
+      "year": 1983
+    }, 
+    {
+      "day": 25, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "08:32", 
+      "year": 1983
+    }, 
+    {
+      "day": 3, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "12:12", 
+      "year": 1983
+    }, 
+    {
+      "day": 10, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "12:19", 
+      "year": 1983
+    }, 
+    {
+      "day": 17, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "02:50", 
+      "year": 1983
+    }, 
+    {
+      "day": 24, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "23:27", 
+      "year": 1983
+    }, 
+    {
+      "day": 2, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "00:52", 
+      "year": 1983
+    }, 
+    {
+      "day": 8, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "19:18", 
+      "year": 1983
+    }, 
+    {
+      "day": 15, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "12:47", 
+      "year": 1983
+    }, 
+    {
+      "day": 23, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "14:59", 
+      "year": 1983
+    }, 
+    {
+      "day": 31, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "11:22", 
+      "year": 1983
+    }, 
+    {
+      "day": 7, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "02:35", 
+      "year": 1983
+    }, 
+    {
+      "day": 14, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "02:24", 
+      "year": 1983
+    }, 
+    {
+      "day": 22, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "06:36", 
+      "year": 1983
+    }, 
+    {
+      "day": 29, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "20:05", 
+      "year": 1983
+    }, 
+    {
+      "day": 6, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "11:16", 
+      "year": 1983
+    }, 
+    {
+      "day": 13, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "19:42", 
+      "year": 1983
+    }, 
+    {
+      "day": 21, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "21:53", 
+      "year": 1983
+    }, 
+    {
+      "day": 29, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "03:37", 
+      "year": 1983
+    }, 
+    {
+      "day": 4, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "22:21", 
+      "year": 1983
+    }, 
+    {
+      "day": 12, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "15:49", 
+      "year": 1983
+    }, 
+    {
+      "day": 20, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "12:29", 
+      "year": 1983
+    }, 
+    {
+      "day": 27, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "10:50", 
+      "year": 1983
+    }, 
+    {
+      "day": 4, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "12:26", 
+      "year": 1983
+    }, 
+    {
+      "day": 12, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "13:09", 
+      "year": 1983
+    }, 
+    {
+      "day": 20, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "02:00", 
+      "year": 1983
+    }, 
+    {
+      "day": 26, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "18:52", 
+      "year": 1983
+    }
+  ], 
+  "year": 1983
+}

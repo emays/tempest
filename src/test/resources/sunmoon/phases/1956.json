@@ -1,0 +1,350 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 49, 
+  "phasedata": [
+    {
+      "day": 4, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "22:41", 
+      "year": 1956
+    }, 
+    {
+      "day": 13, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "03:01", 
+      "year": 1956
+    }, 
+    {
+      "day": 20, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "22:58", 
+      "year": 1956
+    }, 
+    {
+      "day": 27, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "14:40", 
+      "year": 1956
+    }, 
+    {
+      "day": 3, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "16:08", 
+      "year": 1956
+    }, 
+    {
+      "day": 11, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "21:38", 
+      "year": 1956
+    }, 
+    {
+      "day": 19, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "09:21", 
+      "year": 1956
+    }, 
+    {
+      "day": 26, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "01:41", 
+      "year": 1956
+    }, 
+    {
+      "day": 4, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "11:53", 
+      "year": 1956
+    }, 
+    {
+      "day": 12, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "13:36", 
+      "year": 1956
+    }, 
+    {
+      "day": 19, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "17:14", 
+      "year": 1956
+    }, 
+    {
+      "day": 26, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "13:11", 
+      "year": 1956
+    }, 
+    {
+      "day": 3, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "08:06", 
+      "year": 1956
+    }, 
+    {
+      "day": 11, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "02:39", 
+      "year": 1956
+    }, 
+    {
+      "day": 17, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "23:28", 
+      "year": 1956
+    }, 
+    {
+      "day": 25, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "01:40", 
+      "year": 1956
+    }, 
+    {
+      "day": 3, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "02:55", 
+      "year": 1956
+    }, 
+    {
+      "day": 10, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "13:04", 
+      "year": 1956
+    }, 
+    {
+      "day": 17, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "05:15", 
+      "year": 1956
+    }, 
+    {
+      "day": 24, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "15:26", 
+      "year": 1956
+    }, 
+    {
+      "day": 1, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "19:13", 
+      "year": 1956
+    }, 
+    {
+      "day": 8, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "21:29", 
+      "year": 1956
+    }, 
+    {
+      "day": 15, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "11:56", 
+      "year": 1956
+    }, 
+    {
+      "day": 23, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "06:13", 
+      "year": 1956
+    }, 
+    {
+      "day": 1, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "08:41", 
+      "year": 1956
+    }, 
+    {
+      "day": 8, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "04:38", 
+      "year": 1956
+    }, 
+    {
+      "day": 14, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "20:46", 
+      "year": 1956
+    }, 
+    {
+      "day": 22, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "21:29", 
+      "year": 1956
+    }, 
+    {
+      "day": 30, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "19:31", 
+      "year": 1956
+    }, 
+    {
+      "day": 6, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "11:25", 
+      "year": 1956
+    }, 
+    {
+      "day": 13, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "08:45", 
+      "year": 1956
+    }, 
+    {
+      "day": 21, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "12:38", 
+      "year": 1956
+    }, 
+    {
+      "day": 29, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "04:13", 
+      "year": 1956
+    }, 
+    {
+      "day": 4, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "18:57", 
+      "year": 1956
+    }, 
+    {
+      "day": 12, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "00:13", 
+      "year": 1956
+    }, 
+    {
+      "day": 20, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "03:19", 
+      "year": 1956
+    }, 
+    {
+      "day": 27, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "11:25", 
+      "year": 1956
+    }, 
+    {
+      "day": 4, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "04:24", 
+      "year": 1956
+    }, 
+    {
+      "day": 11, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "18:44", 
+      "year": 1956
+    }, 
+    {
+      "day": 19, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "17:25", 
+      "year": 1956
+    }, 
+    {
+      "day": 26, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "18:02", 
+      "year": 1956
+    }, 
+    {
+      "day": 2, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "16:44", 
+      "year": 1956
+    }, 
+    {
+      "day": 10, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "15:09", 
+      "year": 1956
+    }, 
+    {
+      "day": 18, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "06:45", 
+      "year": 1956
+    }, 
+    {
+      "day": 25, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "01:12", 
+      "year": 1956
+    }, 
+    {
+      "day": 2, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "08:12", 
+      "year": 1956
+    }, 
+    {
+      "day": 10, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "11:51", 
+      "year": 1956
+    }, 
+    {
+      "day": 17, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "19:06", 
+      "year": 1956
+    }, 
+    {
+      "day": 24, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "10:10", 
+      "year": 1956
+    }
+  ], 
+  "year": 1956
+}

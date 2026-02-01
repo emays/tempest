@@ -1,0 +1,357 @@
+{
+  "apiversion": "4.0.1", 
+  "numphases": 50, 
+  "phasedata": [
+    {
+      "day": 3, 
+      "month": 1, 
+      "phase": "First Quarter", 
+      "time": "01:02", 
+      "year": 1963
+    }, 
+    {
+      "day": 9, 
+      "month": 1, 
+      "phase": "Full Moon", 
+      "time": "23:08", 
+      "year": 1963
+    }, 
+    {
+      "day": 17, 
+      "month": 1, 
+      "phase": "Last Quarter", 
+      "time": "20:34", 
+      "year": 1963
+    }, 
+    {
+      "day": 25, 
+      "month": 1, 
+      "phase": "New Moon", 
+      "time": "13:42", 
+      "year": 1963
+    }, 
+    {
+      "day": 1, 
+      "month": 2, 
+      "phase": "First Quarter", 
+      "time": "08:50", 
+      "year": 1963
+    }, 
+    {
+      "day": 8, 
+      "month": 2, 
+      "phase": "Full Moon", 
+      "time": "14:52", 
+      "year": 1963
+    }, 
+    {
+      "day": 16, 
+      "month": 2, 
+      "phase": "Last Quarter", 
+      "time": "17:38", 
+      "year": 1963
+    }, 
+    {
+      "day": 24, 
+      "month": 2, 
+      "phase": "New Moon", 
+      "time": "02:06", 
+      "year": 1963
+    }, 
+    {
+      "day": 2, 
+      "month": 3, 
+      "phase": "First Quarter", 
+      "time": "17:17", 
+      "year": 1963
+    }, 
+    {
+      "day": 10, 
+      "month": 3, 
+      "phase": "Full Moon", 
+      "time": "07:48", 
+      "year": 1963
+    }, 
+    {
+      "day": 18, 
+      "month": 3, 
+      "phase": "Last Quarter", 
+      "time": "12:07", 
+      "year": 1963
+    }, 
+    {
+      "day": 25, 
+      "month": 3, 
+      "phase": "New Moon", 
+      "time": "12:10", 
+      "year": 1963
+    }, 
+    {
+      "day": 1, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "03:15", 
+      "year": 1963
+    }, 
+    {
+      "day": 9, 
+      "month": 4, 
+      "phase": "Full Moon", 
+      "time": "00:57", 
+      "year": 1963
+    }, 
+    {
+      "day": 17, 
+      "month": 4, 
+      "phase": "Last Quarter", 
+      "time": "02:52", 
+      "year": 1963
+    }, 
+    {
+      "day": 23, 
+      "month": 4, 
+      "phase": "New Moon", 
+      "time": "20:29", 
+      "year": 1963
+    }, 
+    {
+      "day": 30, 
+      "month": 4, 
+      "phase": "First Quarter", 
+      "time": "15:07", 
+      "year": 1963
+    }, 
+    {
+      "day": 8, 
+      "month": 5, 
+      "phase": "Full Moon", 
+      "time": "17:23", 
+      "year": 1963
+    }, 
+    {
+      "day": 16, 
+      "month": 5, 
+      "phase": "Last Quarter", 
+      "time": "13:36", 
+      "year": 1963
+    }, 
+    {
+      "day": 23, 
+      "month": 5, 
+      "phase": "New Moon", 
+      "time": "04:00", 
+      "year": 1963
+    }, 
+    {
+      "day": 30, 
+      "month": 5, 
+      "phase": "First Quarter", 
+      "time": "04:55", 
+      "year": 1963
+    }, 
+    {
+      "day": 7, 
+      "month": 6, 
+      "phase": "Full Moon", 
+      "time": "08:31", 
+      "year": 1963
+    }, 
+    {
+      "day": 14, 
+      "month": 6, 
+      "phase": "Last Quarter", 
+      "time": "20:53", 
+      "year": 1963
+    }, 
+    {
+      "day": 21, 
+      "month": 6, 
+      "phase": "New Moon", 
+      "time": "11:46", 
+      "year": 1963
+    }, 
+    {
+      "day": 28, 
+      "month": 6, 
+      "phase": "First Quarter", 
+      "time": "20:23", 
+      "year": 1963
+    }, 
+    {
+      "day": 6, 
+      "month": 7, 
+      "phase": "Full Moon", 
+      "time": "21:55", 
+      "year": 1963
+    }, 
+    {
+      "day": 14, 
+      "month": 7, 
+      "phase": "Last Quarter", 
+      "time": "01:57", 
+      "year": 1963
+    }, 
+    {
+      "day": 20, 
+      "month": 7, 
+      "phase": "New Moon", 
+      "time": "20:43", 
+      "year": 1963
+    }, 
+    {
+      "day": 28, 
+      "month": 7, 
+      "phase": "First Quarter", 
+      "time": "13:13", 
+      "year": 1963
+    }, 
+    {
+      "day": 5, 
+      "month": 8, 
+      "phase": "Full Moon", 
+      "time": "09:31", 
+      "year": 1963
+    }, 
+    {
+      "day": 12, 
+      "month": 8, 
+      "phase": "Last Quarter", 
+      "time": "06:21", 
+      "year": 1963
+    }, 
+    {
+      "day": 19, 
+      "month": 8, 
+      "phase": "New Moon", 
+      "time": "07:34", 
+      "year": 1963
+    }, 
+    {
+      "day": 27, 
+      "month": 8, 
+      "phase": "First Quarter", 
+      "time": "06:54", 
+      "year": 1963
+    }, 
+    {
+      "day": 3, 
+      "month": 9, 
+      "phase": "Full Moon", 
+      "time": "19:33", 
+      "year": 1963
+    }, 
+    {
+      "day": 10, 
+      "month": 9, 
+      "phase": "Last Quarter", 
+      "time": "11:42", 
+      "year": 1963
+    }, 
+    {
+      "day": 17, 
+      "month": 9, 
+      "phase": "New Moon", 
+      "time": "20:51", 
+      "year": 1963
+    }, 
+    {
+      "day": 26, 
+      "month": 9, 
+      "phase": "First Quarter", 
+      "time": "00:38", 
+      "year": 1963
+    }, 
+    {
+      "day": 3, 
+      "month": 10, 
+      "phase": "Full Moon", 
+      "time": "04:44", 
+      "year": 1963
+    }, 
+    {
+      "day": 9, 
+      "month": 10, 
+      "phase": "Last Quarter", 
+      "time": "19:27", 
+      "year": 1963
+    }, 
+    {
+      "day": 17, 
+      "month": 10, 
+      "phase": "New Moon", 
+      "time": "12:43", 
+      "year": 1963
+    }, 
+    {
+      "day": 25, 
+      "month": 10, 
+      "phase": "First Quarter", 
+      "time": "17:20", 
+      "year": 1963
+    }, 
+    {
+      "day": 1, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "13:55", 
+      "year": 1963
+    }, 
+    {
+      "day": 8, 
+      "month": 11, 
+      "phase": "Last Quarter", 
+      "time": "06:37", 
+      "year": 1963
+    }, 
+    {
+      "day": 16, 
+      "month": 11, 
+      "phase": "New Moon", 
+      "time": "06:50", 
+      "year": 1963
+    }, 
+    {
+      "day": 24, 
+      "month": 11, 
+      "phase": "First Quarter", 
+      "time": "07:56", 
+      "year": 1963
+    }, 
+    {
+      "day": 30, 
+      "month": 11, 
+      "phase": "Full Moon", 
+      "time": "23:54", 
+      "year": 1963
+    }, 
+    {
+      "day": 7, 
+      "month": 12, 
+      "phase": "Last Quarter", 
+      "time": "21:34", 
+      "year": 1963
+    }, 
+    {
+      "day": 16, 
+      "month": 12, 
+      "phase": "New Moon", 
+      "time": "02:06", 
+      "year": 1963
+    }, 
+    {
+      "day": 23, 
+      "month": 12, 
+      "phase": "First Quarter", 
+      "time": "19:54", 
+      "year": 1963
+    }, 
+    {
+      "day": 30, 
+      "month": 12, 
+      "phase": "Full Moon", 
+      "time": "11:04", 
+      "year": 1963
+    }
+  ], 
+  "year": 1963
+}
