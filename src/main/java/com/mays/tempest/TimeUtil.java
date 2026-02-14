@@ -5,12 +5,18 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.time.temporal.TemporalAdjusters;
 
 public class TimeUtil {
-	
+
 	public static boolean equalYearMonth(LocalDate d1, LocalDate d2) {
 		return d1.getYear() == d2.getYear() && d1.getMonthValue() == d2.getMonthValue();
+	}
+
+	public static String format(TemporalAccessor temporal, String pattern) {
+		return DateTimeFormatter.ofPattern(pattern).format(temporal);
 	}
 
 	// TODO Should use
