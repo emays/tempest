@@ -12,7 +12,9 @@ import java.util.Comparator;
 import org.shredzone.commons.suncalc.MoonIllumination;
 import org.shredzone.commons.suncalc.MoonPosition;
 
-public class MoonRiseSet implements MoonBase{
+import com.mays.tempest.geo.Coordinate;
+
+public class MoonRiseSet implements MoonBase {
 
 	private ZonedDateTime rise;
 
@@ -114,6 +116,15 @@ public class MoonRiseSet implements MoonBase{
 			Builder builder = new Builder(year, month, latitude, longitude, timeZone);
 			ArrayList<MoonRiseSet> rs = builder.getRiseSet();
 			return new MoonRiseSetMonth(rs);
+		}
+
+		public static MoonRiseSetMonth get(LocalDate date, Coordinate coord, ZoneId tz) {
+			return MoonRiseSetMonth.get(date.getYear(), date.getMonthValue(), coord.getLatitude(), coord.getLongitude(),
+					tz);
+		}
+
+		public static MoonRiseSetMonth get(ZonedDateTime time, Coordinate coord) {
+			return get(time.toLocalDate(), coord, time.getZone());
 		}
 
 		public MoonRiseSet getMoon(LocalDate date) {

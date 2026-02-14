@@ -1,6 +1,7 @@
 package com.mays.tempest.tides;
 
 import java.time.Duration;
+import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +12,8 @@ public class TideCalc {
 
 	private static final boolean trace = false;
 
-	/// https://courses.lumenlearning.com/precalctwo/chapter/graphs-of-the-sine-and-cosine-function/
+	/// https://courses.lumenlearning.com/precalctwo/chapter/graphs-of-the-sine-and-
+	/// cosine-function /
 
 	// https://study.com/academy/answer/at-high-tide-the-water-level-at-a-particular-boat-dock-is-9-feet-deep-at-low-tide-the-water-is-3-feet-deep-on-a-certain-day-the-low-tide-occurs-at-3-am-and-high-tide-occurs-at-9-am-find-an-equation-for-the-height-of-the-tide-at-time-t-where-t-3-is.html
 
@@ -77,6 +79,14 @@ public class TideCalc {
 			logger.info("> " + Math.asin(x));
 		}
 		return (int) Math.abs(Math.round((Math.asin(x) - (Math.PI / 2)) / (Math.PI / time_between)));
+	}
+
+	public static double getLevel(Tide fr_tide, Tide to_tide, LocalDateTime time) {
+		if (!(time.isAfter(fr_tide.getTime()) && time.isBefore(to_tide.getTime())))
+			throw new IllegalArgumentException(
+					"Not between " + fr_tide.getTime() + " & " + to_tide.getTime() + " @ " + time);
+		int minutes = Math.round(Duration.between(fr_tide.getTime(), time).toMinutes());
+		return getLevelAfterMinutes(fr_tide, to_tide, minutes);
 	}
 
 }

@@ -28,6 +28,7 @@ jobs:
     - name: Publish to GitHub Packages Apache Maven
       run: |
         mvn deploy -B \
+            -Pgithub-repo \
             -DskipTests \
             -Pgithub-packages \
             -Pgpg-sign \

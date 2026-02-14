@@ -13,9 +13,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mays.tempest.BostonLocation;
-import com.mays.tempest.TimeUtil;
 import com.mays.tempest.WellfleetLocation;
 import com.mays.tempest.tides.TideDataAccess.StartEnd;
+import com.mays.util.TimeUtil;
 
 public class TidesSubordinateTest {
 

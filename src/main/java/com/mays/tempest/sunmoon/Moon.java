@@ -8,8 +8,11 @@ import java.util.Arrays;
 import java.util.stream.Collectors;
 
 import org.shredzone.commons.suncalc.MoonIllumination;
+import org.shredzone.commons.suncalc.MoonPhase.Phase;
 import org.shredzone.commons.suncalc.MoonPosition;
 import org.shredzone.commons.suncalc.MoonTimes;
+
+import com.mays.tempest.geo.Coordinate;
 
 public class Moon implements MoonBase {
 
@@ -36,10 +39,6 @@ public class Moon implements MoonBase {
 
 	// https://github.com/shred/commons-suncalc
 
-	public static Moon get(LocalDate date, double lat, double lon, ZoneId tz) {
-		return Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), lat, lon, tz);
-	}
-
 	public static Moon get(int year, int month, int day, double lat, double lon, ZoneId tz) {
 		MoonTimes times = MoonTimes.compute().on(year, month, day).timezone(tz).at(lat, lon).execute();
 		LocalDate date = LocalDate.of(year, month, day);
@@ -53,6 +52,19 @@ public class Moon implements MoonBase {
 		MoonIllumination illumination = MoonIllumination.compute().on(time).execute();
 		MoonPosition position = MoonPosition.compute().on(time).at(lat, lon).execute();
 		return new Moon(rise, set, times, illumination, position);
+	}
+
+	public static Moon get(LocalDate date, double lat, double lon, ZoneId tz) {
+		return Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), lat, lon, tz);
+	}
+
+	public static Moon get(LocalDate date, Coordinate coord, ZoneId tz) {
+		return Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), coord.getLatitude(),
+				coord.getLongitude(), tz);
+	}
+
+	public static Moon get(ZonedDateTime time, Coordinate coord) {
+		return get(time.toLocalDate(), coord, time.getZone());
 	}
 
 	@Override
@@ -88,8 +100,12 @@ public class Moon implements MoonBase {
 		return moonIllumination.getPhase();
 	}
 
-	static String getPhaseName(MoonIllumination moonIllumination) {
-		String name = moonIllumination.getClosestPhase().toString();
+	public static String getPhaseName(MoonIllumination moonIllumination) {
+		return getPhaseName(moonIllumination.getClosestPhase());
+	}
+
+	public static String getPhaseName(Phase phase) {
+		String name = phase.toString();
 		return Arrays.stream(name.split("_")).map(str -> str.charAt(0) + str.substring(1).toLowerCase())
 				.collect(Collectors.joining(" "));
 	}

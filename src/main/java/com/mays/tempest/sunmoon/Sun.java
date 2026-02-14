@@ -1,6 +1,7 @@
 package com.mays.tempest.sunmoon;
 
 import java.time.Duration;
+import java.time.LocalDate;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,6 +10,8 @@ import org.shredzone.commons.suncalc.SunPosition;
 import org.shredzone.commons.suncalc.SunTimes;
 import org.shredzone.commons.suncalc.SunTimes.Parameters;
 import org.shredzone.commons.suncalc.SunTimes.Twilight;
+
+import com.mays.tempest.geo.Coordinate;
 
 public class Sun {
 
@@ -43,6 +46,15 @@ public class Sun {
 		sun.setPosition = sun.on(sun.getSet());
 		sun.noonPosition = sun.on(sun.getNoon());
 		return sun;
+	}
+
+	public static Sun get(LocalDate date, Coordinate coord, ZoneId tz) {
+		return Sun.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), coord.getLatitude(),
+				coord.getLongitude(), tz);
+	}
+
+	public static Sun get(ZonedDateTime time, Coordinate coord) {
+		return Sun.get(time.toLocalDate(), coord, time.getZone());
 	}
 
 	private Sun(SunTimes sunTimes, SunTimes civilTwilight, SunTimes nauticalTwilight, SunTimes astronomicalTwilight,
@@ -96,6 +108,10 @@ public class Sun {
 
 	public static String getDurationFormat(Duration length) {
 		return String.format("%d:%02d", length.toHours(), length.toMinutesPart());
+	}
+
+	public static String getDurationFormatHrMin(Duration length) {
+		return String.format("%d hr %d min", length.toHours(), length.toMinutesPart());
 	}
 
 	public String toString() {

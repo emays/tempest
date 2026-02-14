@@ -21,8 +21,8 @@ import com.mays.tempest.BostonLocation;
 import com.mays.tempest.MyLocation;
 import com.mays.tempest.ProvincetownLocation;
 import com.mays.tempest.TestDataUtil;
-import com.mays.tempest.TimeUtil;
 import com.mays.tempest.WellfleetLocation;
+import com.mays.util.TimeUtil;
 
 public class TidesTest {
 
