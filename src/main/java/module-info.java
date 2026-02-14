@@ -8,7 +8,7 @@ module com.mays.tempest {
 
 	requires net.iakovlev.timeshape;
 
-	requires org.shredzone.commons.suncalc;
+	requires transitive org.shredzone.commons.suncalc;
 
 	requires transitive java.measure;
 	requires si.uom.units;

@@ -22,7 +22,6 @@ public class MoonPhase {
 		return moonPhase.toString();
 	}
 
-	@SuppressWarnings("exports")
 	public Phase getPhase() {
 		return phase;
 	}
@@ -33,7 +32,6 @@ public class MoonPhase {
 		this.phase = phase;
 	}
 
-	@SuppressWarnings("exports")
 	public static MoonPhase get(ZonedDateTime time, Phase phase) {
 		org.shredzone.commons.suncalc.MoonPhase mp = org.shredzone.commons.suncalc.MoonPhase.compute().on(time)
 				.phase(phase).execute();

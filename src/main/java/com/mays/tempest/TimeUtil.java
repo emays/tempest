@@ -6,6 +6,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
 import java.time.temporal.TemporalAccessor;
 import java.time.temporal.TemporalAdjusters;
 
@@ -68,6 +69,35 @@ public class TimeUtil {
 		if (isDstEnd(d, tz))
 			return d;
 		return null;
+	}
+
+	private static String getDstText(String tag, LocalDate dst, ZonedDateTime time, int lower, int upper) {
+		if (dst == null)
+			return null;
+		long days = time.toLocalDate().until(dst, ChronoUnit.DAYS);
+		if (days < lower || days > upper)
+			return null;
+		if (days < -1)
+			return tag + "ed " + -days + " days ago";
+		if (days > 1)
+			return tag + "s in " + days + " days";
+		if (days == -1)
+			return tag + "ed yesterday";
+		if (days == 0)
+			return tag + "s today";
+		if (days == 1)
+			return tag + "s tomorrow";
+		throw new IllegalStateException(time + " " + lower + " " + upper);
+	}
+
+	public static String getDstStartText(ZonedDateTime time, int lower, int upper) {
+		LocalDate dst = TimeUtil.getDstStart(time.getYear(), time.getZone());
+		return getDstText("Start", dst, time, lower, upper);
+	}
+
+	public static String getDstEndText(ZonedDateTime time, int lower, int upper) {
+		LocalDate dst = TimeUtil.getDstEnd(time.getYear(), time.getZone());
+		return getDstText("End", dst, time, lower, upper);
 	}
 
 }
