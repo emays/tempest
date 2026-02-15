@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>io.github.emays</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.9</version>
+		<version>0.0.10-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -41,7 +41,7 @@
 
 	<properties>
 		<!--io.github.emays:util-->
-		<util.version>0.0.7</util.version>
+		<util.version>0.0.8-SNAPSHOT</util.version>
 	</properties>
 
 	<dependencies>
