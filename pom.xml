@@ -10,7 +10,7 @@
 	</parent>
 
 	<artifactId>tempest</artifactId>
-	<version>0.0.4-SNAPSHOT</version>
+	<version>0.0.4</version>
 
 	<name>Tempest</name>
 	<description>Tides and weather</description>
@@ -36,7 +36,7 @@
 		<connection>scm:git:https://www.github.com/emays/tempest</connection>
 		<developerConnection>scm:git:https://www.github.com/emays/tempest</developerConnection>
 		<url>https://www.github.com/emays/tempest</url>
-		<tag>HEAD</tag>
+		<tag>tempest-0.0.4</tag>
 	</scm>
 
 	<properties>
