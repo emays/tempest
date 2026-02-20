@@ -4,6 +4,7 @@ import java.time.ZoneId;
 
 import com.mays.tempest.geo.Coordinate;
 
+@Deprecated
 public class ProvincetownLocation {
 
 	public static final Coordinate COORDINATE = new Coordinate(42.049592, -70.182158);

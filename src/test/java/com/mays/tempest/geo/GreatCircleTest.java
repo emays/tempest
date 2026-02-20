@@ -8,8 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.ProvincetownLocation;
-import com.mays.tempest.WellfleetLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.tides.TideDataAccess;
 
 public class GreatCircleTest {
@@ -24,7 +23,8 @@ public class GreatCircleTest {
 
 	@Test
 	public void stationDistance() throws Exception {
-		assertEquals(9.9043, GreatCircle.distance(ProvincetownLocation.COORDINATE, WellfleetLocation.COORDINATE),
+		assertEquals(9.9043,
+				GreatCircle.distance(LocationInfo.PROVINCETOWN.getCoordinate(), LocationInfo.WELLFLEET.getCoordinate()),
 				0.00005);
 	}
 

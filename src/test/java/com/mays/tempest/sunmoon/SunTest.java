@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.TimeZoneUtil;
 import com.mays.util.Util;
 
@@ -28,8 +28,7 @@ public class SunTest {
 	public void getRiseSet() {
 		Util.repeat(365, day -> {
 			LocalDate date = LocalDate.of(2021, 1, 1).plusDays(day);
-			Sun sun = Sun.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), MyLocation.LATITUDE,
-					MyLocation.LONGITUDE, MyLocation.TZ);
+			Sun sun = Sun.get(date, LocationInfo.PROVINCETOWN.getCoordinate(), LocationInfo.PROVINCETOWN.getTimeZone());
 			if (trace) {
 				logger.info(date.toString());
 				logger.info("\tAM twilight: " + String.format("%tT %tT %tT", sun.getAstronomicalTwilight(true),
@@ -49,8 +48,7 @@ public class SunTest {
 		LocalDate max_date = null;
 		for (int day = 0; day < 365; day++) {
 			LocalDate date = LocalDate.of(2021, 1, 1).plusDays(day);
-			Sun sun = Sun.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), MyLocation.LATITUDE,
-					MyLocation.LONGITUDE, MyLocation.TZ);
+			Sun sun = Sun.get(date, LocationInfo.PROVINCETOWN.getCoordinate(), LocationInfo.PROVINCETOWN.getTimeZone());
 			long len = sun.getAstronomicalTwilight(false).toEpochSecond()
 					- sun.getAstronomicalTwilight(true).toEpochSecond();
 			if (len > max) {
@@ -64,8 +62,10 @@ public class SunTest {
 
 	@Test
 	public void daylightSavings() throws Exception {
-		Sun sun_313 = Sun.get(2021, 3, 13, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
-		Sun sun_314 = Sun.get(2021, 3, 14, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
+		Sun sun_313 = Sun.get(LocalDate.of(2021, 3, 13), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
+		Sun sun_314 = Sun.get(LocalDate.of(2021, 3, 14), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
 //		logger.info(sun_313.toString());
 //		logger.info(sun_314.toString());
 		assertEquals(5, sun_313.getRise().getHour());
@@ -77,7 +77,8 @@ public class SunTest {
 
 	@Test
 	public void spring() throws Exception {
-		Sun sun = Sun.get(2021, 3, 20, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
+		Sun sun = Sun.get(LocalDate.of(2021, 3, 20), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
 		if (trace) {
 			logger.info(sun.toString());
 			logger.info("" + sun.getNoonAltitude());
@@ -87,7 +88,8 @@ public class SunTest {
 
 	@Test
 	public void summer() throws Exception {
-		Sun sun = Sun.get(2021, 6, 20, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
+		Sun sun = Sun.get(LocalDate.of(2021, 6, 20), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
 		if (trace) {
 			logger.info(sun.toString());
 			logger.info("" + sun.getNoonAltitude());
@@ -97,7 +99,8 @@ public class SunTest {
 
 	@Test
 	public void fall() throws Exception {
-		Sun sun = Sun.get(2021, 9, 22, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
+		Sun sun = Sun.get(LocalDate.of(2021, 9, 22), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
 		if (trace) {
 			logger.info(sun.toString());
 			logger.info("" + sun.getNoonAltitude());
@@ -107,7 +110,8 @@ public class SunTest {
 
 	@Test
 	public void winter() throws Exception {
-		Sun sun = Sun.get(2021, 12, 21, MyLocation.LATITUDE, MyLocation.LONGITUDE, MyLocation.TZ);
+		Sun sun = Sun.get(LocalDate.of(2021, 12, 21), LocationInfo.PROVINCETOWN.getCoordinate(),
+				LocationInfo.PROVINCETOWN.getTimeZone());
 		if (trace) {
 			logger.info(sun.toString());
 			logger.info("" + sun.getNoonAltitude());

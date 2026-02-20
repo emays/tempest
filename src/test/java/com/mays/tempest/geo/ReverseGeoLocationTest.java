@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.TimeZoneUtil;
 import com.mays.tempest.geo.ReverseGeoLocation.Location;
 
@@ -35,7 +35,8 @@ public class ReverseGeoLocationTest {
 
 	@Test
 	public void nearest() {
-		Location loc = rgl.getNearest(MyLocation.LATITUDE, MyLocation.LONGITUDE);
+		Location loc = rgl.getNearest(LocationInfo.COLD_STORAGE.getLatitude(),
+				LocationInfo.COLD_STORAGE.getLongitude());
 		if (trace)
 			logger.info("Nearest: " + loc);
 		assertEquals("Truro", loc.getName());

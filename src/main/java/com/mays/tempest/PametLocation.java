@@ -4,6 +4,7 @@ import java.time.ZoneId;
 
 import com.mays.tempest.geo.Coordinate;
 
+@Deprecated
 public class PametLocation {
 
 	public static final Coordinate COORDINATE = new Coordinate(41.991605, -70.071953);

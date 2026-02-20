@@ -17,11 +17,8 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.BostonLocation;
-import com.mays.tempest.MyLocation;
-import com.mays.tempest.ProvincetownLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.TestDataUtil;
-import com.mays.tempest.WellfleetLocation;
 import com.mays.util.TimeUtil;
 
 public class TidesTest {
@@ -37,7 +34,7 @@ public class TidesTest {
 
 	@Test
 	public void getDatums() throws Exception {
-		Datums datums = Tides.getDatums(ProvincetownLocation.TIDE_STATION_ID, true);
+		Datums datums = Tides.getDatums(LocationInfo.PROVINCETOWN.getTideStationId(), true);
 		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
 		assertEquals(0.33, datums.getMeanLowWater(), 0.001);
 		assertEquals(9.62, datums.getMeanHighWater(), 0.001);
@@ -53,8 +50,8 @@ public class TidesTest {
 
 	@Test
 	public void getDatumsSubordinate() throws Exception {
-		Datums ref_datums = Tides.getDatums(BostonLocation.TIDE_STATION_ID, true);
-		Datums datums = Tides.getDatums(WellfleetLocation.TIDE_STATION_ID, true);
+		Datums ref_datums = Tides.getDatums(LocationInfo.BOSTON.getTideStationId(), true);
+		Datums datums = Tides.getDatums(LocationInfo.WELLFLEET.getTideStationId(), true);
 		assertEquals(0, datums.getMeanLowerLowWater(), 0.001);
 		assertEquals(ref_datums.getMeanLowWater() * 1.05, datums.getMeanLowWater(), 0.001);
 		assertEquals(ref_datums.getMeanHighWater() * 1.05, datums.getMeanHighWater(), 0.001);
@@ -70,7 +67,7 @@ public class TidesTest {
 
 	@Test
 	public void getTidePredOffsets() throws Exception {
-		TidePredOffsets datums = Tides.getTidePredOffsets(WellfleetLocation.TIDE_STATION_ID, true);
+		TidePredOffsets datums = Tides.getTidePredOffsets(LocationInfo.WELLFLEET.getTideStationId(), true);
 		assertEquals("S", datums.getType());
 		assertEquals(1.05, datums.getHeightOffsetHighTide(), 0.001);
 		assertEquals(1.05, datums.getHeightOffsetLowTide(), 0.001);
@@ -115,7 +112,7 @@ public class TidesTest {
 
 	@Test
 	public void getTides() throws Exception {
-		List<Tide> tides = Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, LocalDate.of(2021, 3, 1),
+		List<Tide> tides = Tides.getTides(LocationInfo.PROVINCETOWN.getTideStationId(), LocalDate.of(2021, 3, 1),
 				LocalDate.of(2021, 3, 31), true);
 		if (trace)
 			tides.forEach(x -> logger.info(x.toString()));
@@ -124,7 +121,7 @@ public class TidesTest {
 
 	@Test
 	public void getDailyTides() throws Exception {
-		List<Tide> tides = Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, LocalDate.of(2021, 3, 1),
+		List<Tide> tides = Tides.getTides(LocationInfo.PROVINCETOWN.getTideStationId(), LocalDate.of(2021, 3, 1),
 				LocalDate.of(2021, 3, 31), true);
 		List<DailyTide> dts = Tides.getDailyTides(tides, LocalDate.of(2021, 3, 2), LocalDate.of(2021, 3, 30));
 		if (trace) {
@@ -154,21 +151,21 @@ public class TidesTest {
 
 	@Test
 	public void getMissing() throws Exception {
-		assertNull(TideDataAccess.getTidesJsonString(MyLocation.TIDE_STATION_ID, 1990, 1, false));
+		assertNull(TideDataAccess.getTidesJsonString(LocationInfo.PROVINCETOWN.getTideStationId(), 1990, 1, false));
 		String msg = null;
 		try {
-			Tides.getTides(ProvincetownLocation.TIDE_STATION_ID, 1990, 1, true);
+			Tides.getTides(LocationInfo.PROVINCETOWN.getTideStationId(), 1990, 1, true);
 		} catch (FileNotFoundException ex) {
 			msg = ex.getMessage();
 		}
-		assertEquals(
-				Paths.get("src/test/resources/tides", ProvincetownLocation.TIDE_STATION_ID, "199001.json").toString(),
-				msg);
+		assertEquals(Paths.get("src/test/resources/tides", LocationInfo.PROVINCETOWN.getTideStationId(), "199001.json")
+				.toString(), msg);
 	}
 
 	@Test
 	public void getTidesApart() throws Exception {
-		for (String station : List.of(ProvincetownLocation.TIDE_STATION_ID, WellfleetLocation.TIDE_STATION_ID)) {
+		for (String station : List.of(LocationInfo.PROVINCETOWN.getTideStationId(),
+				LocationInfo.WELLFLEET.getTideStationId())) {
 			for (int year = 2020; year <= 2029; year++) {
 				for (int month = 1; month <= 12; month++) {
 					List<Tide> tides = Tides.getTides(station, year, month, true);
@@ -196,7 +193,8 @@ public class TidesTest {
 
 	@Test
 	public void getTideDateRange() throws Exception {
-		for (String station : List.of(ProvincetownLocation.TIDE_STATION_ID, WellfleetLocation.TIDE_STATION_ID)) {
+		for (String station : List.of(LocationInfo.PROVINCETOWN.getTideStationId(),
+				LocationInfo.WELLFLEET.getTideStationId())) {
 			for (int year = 2020; year <= 2029; year++) {
 				for (int month = 1; month <= 12; month++) {
 					LocalDate end_date = LocalDate.of(year, month, 1);

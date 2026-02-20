@@ -18,7 +18,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.TestDataUtil;
 import com.mays.tempest.weather.WeatherForecastGeneral.Period;
 import com.mays.tempest.weather.WeatherForecastGridData.ForecastElement;
@@ -57,7 +57,8 @@ public class WeatherTest {
 				if (resources_exception)
 					throw new Exception();
 				logger.info("setupPoints");
-				String res = new Weather().getPointsJsonString(MyLocation.LATITUDE, MyLocation.LONGITUDE);
+				String res = new Weather().getPointsJsonString(LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude());
 				// logger.info(res);
 				Files.writeString(path, res);
 			}
@@ -69,7 +70,8 @@ public class WeatherTest {
 				if (resources_exception)
 					throw new Exception();
 				logger.info("setupObservationStations");
-				WeatherPointsJson points = new Weather().getPointsJson(MyLocation.LATITUDE, MyLocation.LONGITUDE);
+				WeatherPointsJson points = new Weather().getPointsJson(LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude());
 				logger.info(points.getObservationStations());
 				String res = new Weather().getPointJsonString(points.getObservationStations());
 				// logger.info(res);
@@ -107,7 +109,8 @@ public class WeatherTest {
 				if (resources_exception)
 					throw new Exception();
 				logger.info("setupForecastGridData");
-				WeatherPointsJson points = new Weather().getPointsJson(MyLocation.LATITUDE, MyLocation.LONGITUDE);
+				WeatherPointsJson points = new Weather().getPointsJson(LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude());
 				if (trace)
 					logger.info(points.getForecastGridData());
 				String res = new Weather().getPointJsonString(points.getForecastGridData());
@@ -122,7 +125,8 @@ public class WeatherTest {
 				if (resources_exception)
 					throw new Exception();
 				logger.info("setupForecast");
-				WeatherPointsJson points = new Weather().getPointsJson(MyLocation.LATITUDE, MyLocation.LONGITUDE);
+				WeatherPointsJson points = new Weather().getPointsJson(LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude());
 				if (trace)
 					logger.info(points.getForecast());
 				String res = new Weather().getPointJsonString(points.getForecast());
@@ -169,8 +173,8 @@ public class WeatherTest {
 //	@Test
 	public void getNearest() throws Exception {
 		Weather weather = new Weather();
-		List<WeatherObservationStationDistance> stations = weather.getNearest(MyLocation.LATITUDE, MyLocation.LONGITUDE,
-				50, 5);
+		List<WeatherObservationStationDistance> stations = weather.getNearest(LocationInfo.PROVINCETOWN.getLatitude(),
+				LocationInfo.PROVINCETOWN.getLongitude(), 50, 5);
 		stations.forEach(x -> logger.info(x.toString()));
 	}
 
@@ -315,12 +319,12 @@ public class WeatherTest {
 		WeatherForecast wf = tdu.getWeatherForecast();
 		for (Period period : wf.getPeriods()) {
 			if (trace)
-				logger.info(
-						period.getStartLocalDateTime(MyLocation.TZ) + " - " + period.getEndLocalDateTime(MyLocation.TZ)
-								+ " (" + Duration.between(period.getStartTime(), period.getEndTime()).toHours() + ")");
+				logger.info(period.getStartLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()) + " - "
+						+ period.getEndLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()) + " ("
+						+ Duration.between(period.getStartTime(), period.getEndTime()).toHours() + ")");
 			for (WeatherForecastGridDataSlice slice : wf.getSlices(period)) {
 				if (trace)
-					logger.info("\t" + slice.getLocalDateTime(MyLocation.TZ));
+					logger.info("\t" + slice.getLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()));
 			}
 		}
 	}

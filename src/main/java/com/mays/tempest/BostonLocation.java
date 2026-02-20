@@ -4,6 +4,7 @@ import java.time.ZoneId;
 
 import com.mays.tempest.geo.Coordinate;
 
+@Deprecated
 public class BostonLocation {
 
 	public static final Coordinate COORDINATE = new Coordinate(42.353888, -71.050277);

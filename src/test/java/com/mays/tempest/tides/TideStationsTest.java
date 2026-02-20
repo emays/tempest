@@ -11,10 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.BostonLocation;
-import com.mays.tempest.MyLocation;
-import com.mays.tempest.ProvincetownLocation;
-import com.mays.tempest.WellfleetLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.geo.Kml;
 import com.mays.tempest.geo.KmlPointDisplay;
 
@@ -31,7 +28,7 @@ public class TideStationsTest {
 
 	@Test
 	public void getStation() throws Exception {
-		TideStation st = TideStations.getInstance().getStation(ProvincetownLocation.TIDE_STATION_ID);
+		TideStation st = TideStations.getInstance().getStation(LocationInfo.PROVINCETOWN.getTideStationId());
 		assertEquals("Provincetown", st.getName());
 		assertEquals("MA", st.getState());
 		assertEquals("R", st.getType());
@@ -39,11 +36,11 @@ public class TideStationsTest {
 
 	@Test
 	public void getStationSubordinate() throws Exception {
-		TideStation st = TideStations.getInstance().getStation(WellfleetLocation.TIDE_STATION_ID);
+		TideStation st = TideStations.getInstance().getStation(LocationInfo.WELLFLEET.getTideStationId());
 		assertEquals("Wellfleet", st.getName());
 		assertEquals("MA", st.getState());
 		assertEquals("S", st.getType());
-		assertEquals(BostonLocation.TIDE_STATION_ID, st.getReference());
+		assertEquals(LocationInfo.BOSTON.getTideStationId(), st.getReference());
 	}
 
 	@Test
@@ -68,32 +65,32 @@ public class TideStationsTest {
 
 	@Test
 	public void getNearest() throws Exception {
-		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(MyLocation.LATITUDE,
-				MyLocation.LONGITUDE, 5, 100);
+		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(LocationInfo.PROVINCETOWN.getLatitude(),
+				LocationInfo.PROVINCETOWN.getLongitude(), 5, 100);
 		if (trace)
 			nearest.forEach(x -> logger.info(x.toString()));
 		assertEquals(1, nearest.size());
-		assertEquals(MyLocation.TIDE_STATION_ID, nearest.get(0).getStation().getId());
+		assertEquals(LocationInfo.PROVINCETOWN.getTideStationId(), nearest.getFirst().getStation().getId());
 	}
 
 	@Test
 	public void getNearestNm() throws Exception {
-		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(MyLocation.LATITUDE,
-				MyLocation.LONGITUDE, 20, 100);
+		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(LocationInfo.PROVINCETOWN.getLatitude(),
+				LocationInfo.PROVINCETOWN.getLongitude(), 20, 100);
 		if (trace)
 			nearest.forEach(x -> logger.info(x.toString()));
-		assertEquals(4, nearest.size());
-		assertEquals(MyLocation.TIDE_STATION_ID, nearest.get(0).getStation().getId());
+		assertEquals(3, nearest.size());
+		assertEquals(LocationInfo.PROVINCETOWN.getTideStationId(), nearest.getFirst().getStation().getId());
 	}
 
 	@Test
 	public void getNearestLimit() throws Exception {
-		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(MyLocation.LATITUDE,
-				MyLocation.LONGITUDE, Integer.MAX_VALUE, 5);
+		List<TideStationDistance> nearest = TideStations.getInstance().getNearest(LocationInfo.PROVINCETOWN.getLatitude(),
+				LocationInfo.PROVINCETOWN.getLongitude(), Integer.MAX_VALUE, 5);
 		if (trace)
 			nearest.forEach(x -> logger.info(x.toString()));
 		assertEquals(5, nearest.size());
-		assertEquals(MyLocation.TIDE_STATION_ID, nearest.get(0).getStation().getId());
+		assertEquals(LocationInfo.PROVINCETOWN.getTideStationId(), nearest.getFirst().getStation().getId());
 	}
 
 	@Test
