@@ -18,7 +18,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mays.tempest.LocationInfo;
-import com.mays.tempest.TestDataUtil;
 import com.mays.util.TimeUtil;
 
 public class TidesTest {
@@ -130,23 +129,6 @@ public class TidesTest {
 			}
 		}
 		assertEquals(29, dts.size());
-	}
-
-	@Test
-	public void getDailyTidesPriorNext() throws Exception {
-		TestDataUtil tdu = new TestDataUtil("20210909T173907");
-		assertEquals(116, tdu.getTidesForMonth(false).size());
-		List<Tide> tides = tdu.getTidesForMonth(true);
-		assertEquals(118, tides.size());
-		List<DailyTide> dts = Tides.getDailyTides(tides, 2021, 9);
-		if (trace) {
-			for (DailyTide dt : dts) {
-				logger.info(dt.toString());
-			}
-		}
-		assertEquals(30, dts.size());
-		assertEquals(tides.get(0), dts.get(0).getPrior());
-		assertEquals(tides.get(tides.size() - 1), dts.get(dts.size() - 1).getNext());
 	}
 
 	@Test

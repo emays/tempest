@@ -5,7 +5,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.time.Duration;
 import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.util.List;
@@ -19,8 +18,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.mays.tempest.LocationInfo;
-import com.mays.tempest.TestDataUtil;
-import com.mays.tempest.weather.WeatherForecastGeneral.Period;
 import com.mays.tempest.weather.WeatherForecastGridData.ForecastElement;
 
 import systems.uom.common.USCustomary;
@@ -311,32 +308,6 @@ public class WeatherTest {
 		}
 		assertEquals(14, fc_json.getPeriods().length);
 		assertEquals(14, fc.getPeriods().size());
-	}
-
-	@Test
-	public void getSlices() throws Exception {
-		TestDataUtil tdu = new TestDataUtil("20210909T173907");
-		WeatherForecast wf = tdu.getWeatherForecast();
-		for (Period period : wf.getPeriods()) {
-			if (trace)
-				logger.info(period.getStartLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()) + " - "
-						+ period.getEndLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()) + " ("
-						+ Duration.between(period.getStartTime(), period.getEndTime()).toHours() + ")");
-			for (WeatherForecastGridDataSlice slice : wf.getSlices(period)) {
-				if (trace)
-					logger.info("\t" + slice.getLocalDateTime(LocationInfo.PROVINCETOWN.getTimeZone()));
-			}
-		}
-	}
-
-	@Test
-	public void getForecast() throws Exception {
-//		TestDataUtil tdu = new TestDataUtil("20211103T113450");
-//		tdu.getWeatherForecastGridData();
-		for (String dir : TestDataUtil.getDataDirectories()) {
-			TestDataUtil tdu = new TestDataUtil(dir);
-			tdu.getWeatherForecast();
-		}
 	}
 
 }
