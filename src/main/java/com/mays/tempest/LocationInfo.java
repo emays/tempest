@@ -1,10 +1,13 @@
 package com.mays.tempest;
 
 import java.time.ZoneId;
+import java.util.List;
 
 import com.mays.tempest.geo.Coordinate;
 
 public class LocationInfo {
+
+	String name;
 
 	private Coordinate coordinate;
 
@@ -15,6 +18,10 @@ public class LocationInfo {
 	private String buoyStationId;
 
 	private String weatherStationId;
+
+	public String getName() {
+		return name;
+	}
 
 	public Coordinate getCoordinate() {
 		return coordinate;
@@ -44,9 +51,10 @@ public class LocationInfo {
 		return coordinate.getLongitude();
 	}
 
-	private LocationInfo(double latitude, double longitude, ZoneId timeZone, String tideStationId, String buoyStationId,
-			String weatherStationId) {
+	private LocationInfo(String name, double latitude, double longitude, ZoneId timeZone, String tideStationId,
+			String buoyStationId, String weatherStationId) {
 		super();
+		this.name = name;
 		this.coordinate = new Coordinate(latitude, longitude);
 		this.timeZone = timeZone;
 		this.tideStationId = tideStationId;
@@ -54,14 +62,15 @@ public class LocationInfo {
 		this.weatherStationId = weatherStationId;
 	}
 
-	public static LocationInfo of(double latitude, double longitude, ZoneId timeZone, String tideStationId,
+	public static LocationInfo of(String name, double latitude, double longitude, ZoneId timeZone, String tideStationId,
 			String buoyStationId, String weatherStationId) {
-		return new LocationInfo(latitude, longitude, timeZone, tideStationId, buoyStationId, weatherStationId);
+		return new LocationInfo(name, latitude, longitude, timeZone, tideStationId, buoyStationId, weatherStationId);
 	}
 
-	private static LocationInfo of(double latitude, double longitude, ZoneId timeZone, TideStationId tideStationId,
-			BuoyStationId buoyStationId, WeatherStationId weatherStationId) {
-		return new LocationInfo(latitude, longitude, timeZone, tideStationId.id, buoyStationId.id, weatherStationId.id);
+	private static LocationInfo of(String name, double latitude, double longitude, ZoneId timeZone,
+			TideStationId tideStationId, BuoyStationId buoyStationId, WeatherStationId weatherStationId) {
+		return new LocationInfo(name, latitude, longitude, timeZone, tideStationId.id, buoyStationId.id,
+				weatherStationId.id);
 	}
 
 	public enum TideStationId {
@@ -75,7 +84,7 @@ public class LocationInfo {
 	}
 
 	public enum BuoyStationId {
-		// TODO Provincetown is actually Cape Cod
+		// TODO Provincetown is actually called Cape Cod
 		BostonApproach("44013"), CapeCodBay("44090"), Provincetown("44018");
 
 		public String id;
@@ -97,19 +106,21 @@ public class LocationInfo {
 
 	private static final ZoneId tz = ZoneId.of("America/New_York");
 
-	public static final LocationInfo BOSTON = LocationInfo.of(42.353_888, -71.050_277, tz, TideStationId.Boston,
-			BuoyStationId.BostonApproach, WeatherStationId.Boston);
+	public static final LocationInfo BOSTON = LocationInfo.of("Boston", 42.353_888, -71.050_277, tz,
+			TideStationId.Boston, BuoyStationId.BostonApproach, WeatherStationId.Boston);
 
-	public static final LocationInfo COLD_STORAGE = LocationInfo.of(42.030_785, -70.093_849, tz, TideStationId.Provincetown,
-			BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
+	public static final LocationInfo COLD_STORAGE = LocationInfo.of("Cold Storage", 42.030_785, -70.093_849, tz,
+			TideStationId.Provincetown, BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
 
-	public static final LocationInfo PAMET = LocationInfo.of(41.991_605, -70.071_953, tz, TideStationId.Wellfleet,
-			BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
+	public static final LocationInfo PAMET = LocationInfo.of("Pamet", 41.991_605, -70.071_953, tz,
+			TideStationId.Wellfleet, BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
 
-	public static final LocationInfo PROVINCETOWN = LocationInfo.of(42.049_592, -70.182_158, tz, TideStationId.Provincetown,
-			BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
+	public static final LocationInfo PROVINCETOWN = LocationInfo.of("Provincetown", 42.049_592, -70.182_158, tz,
+			TideStationId.Provincetown, BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
 
-	public static final LocationInfo WELLFLEET = LocationInfo.of(41.929_669, -70.029_542, tz, TideStationId.Wellfleet,
-			BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
+	public static final LocationInfo WELLFLEET = LocationInfo.of("Wellfleet", 41.929_669, -70.029_542, tz,
+			TideStationId.Wellfleet, BuoyStationId.CapeCodBay, WeatherStationId.Provincetown);
+
+	public static final List<LocationInfo> locations = List.of(BOSTON, COLD_STORAGE, PAMET, PROVINCETOWN, WELLFLEET);
 
 }
