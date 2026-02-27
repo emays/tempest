@@ -119,10 +119,10 @@
 			<groupId>systems.uom</groupId>
 			<artifactId>systems-common</artifactId>
 		</dependency>
-		<dependency><!--This seems to be an issue with a module requires somewhere-->
+		<!--This is provided scope in systems-common with a requires transitive in the module-info-->
+		<dependency>
 			<groupId>systems.uom</groupId>
 			<artifactId>systems-quantity</artifactId>
-			<version>2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>tech.units</groupId>
