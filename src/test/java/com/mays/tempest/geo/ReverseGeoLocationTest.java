@@ -1,8 +1,11 @@
 package com.mays.tempest.geo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.time.ZoneId;
+import java.util.Comparator;
+import java.util.TreeSet;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -49,14 +52,17 @@ public class ReverseGeoLocationTest {
 
 	@Test
 	public void grid() {
+		TreeSet<ZoneId> zones = new TreeSet<>(Comparator.comparing(ZoneId::toString));
 		int cnt = 0;
 		long start = System.currentTimeMillis();
 		for (double lat = ContiguousUS.NORTHERNMOST.getLatitude(); lat > ContiguousUS.SOUTHERNMOST
 				.getLatitude(); lat = lat - 0.5) {
 			for (double lon = ContiguousUS.EASTERNMOST.getLongitude(); lon > ContiguousUS.WESTERNMOST
 					.getLongitude(); lon = lon - 0.5) {
-				// Location loc =
-				rgl.getNearest(lat, lon);
+				Location loc = rgl.getNearest(lat, lon);
+				ZoneId tz = TimeZoneUtil.getInstance().getTimeZone(loc.getLatitude(), loc.getLongitude());
+				assertNotNull(tz, loc.getLatitude() + " " + loc.getLongitude());
+				zones.add(tz);
 				cnt++;
 				if (cnt % 1000 == 0)
 					if (trace)
@@ -67,6 +73,9 @@ public class ReverseGeoLocationTest {
 		double time = (end - start) / 1000.0;
 		logger.info("Processed " + cnt + " in " + String.format("%.1f secs", time) + " @ " + Math.round(cnt / time)
 				+ "/sec");
+		if (trace)
+			zones.forEach(x -> logger.info("" + x));
+		assertEquals(16, zones.size());
 	}
 
 	@Test
@@ -85,6 +94,32 @@ public class ReverseGeoLocationTest {
 			}
 		}
 		assertEquals(8, error_cnt);
+	}
+
+	@Test
+	public void extremes() {
+		Location north = rgl.getLocations().getFirst();
+		Location south = rgl.getLocations().getFirst();
+		Location east = rgl.getLocations().getFirst();
+		Location west = rgl.getLocations().getFirst();
+		for (Location location : rgl.getLocations()) {
+			if (location.getLatitude() > north.getLatitude())
+				north = location;
+			if (location.getLatitude() < south.getLatitude())
+				south = location;
+			if (location.getLongitude() > east.getLongitude())
+				east = location;
+			if (location.getLongitude() < west.getLongitude())
+				west = location;
+		}
+		logger.info("N: " + north.toString());
+		logger.info("S: " + south.toString());
+		logger.info("E: " + east.toString());
+		logger.info("W: " + west.toString());
+		assertEquals(ContiguousUS.NORTHERNMOST.getLatitude(), north.getLatitude(), 0.1);
+		assertEquals(ContiguousUS.SOUTHERNMOST.getLatitude(), south.getLatitude(), 0.1);
+		assertEquals(ContiguousUS.EASTERNMOST.getLongitude(), east.getLongitude(), 0.1);
+		assertEquals(ContiguousUS.WESTERNMOST.getLongitude(), west.getLongitude(), 0.15);
 	}
 
 }
