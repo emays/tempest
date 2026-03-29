@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>io.github.emays</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.10-SNAPSHOT</version>
+		<version>0.0.10</version>
 		<relativePath />
 	</parent>
 
@@ -41,7 +41,9 @@
 
 	<properties>
 		<!--io.github.emays:util-->
-		<util.version>0.0.8-SNAPSHOT</util.version>
+		<util.version>0.0.8</util.version>
+		<!--io.github.emays:timezone-boundary-->
+		<timezone-boundary.version>2025b.0.1</timezone-boundary.version>
 	</properties>
 
 	<dependencies>
@@ -184,7 +186,7 @@
 								<artifactItem>
 									<groupId>io.github.emays</groupId>
 									<artifactId>timezone-boundary</artifactId>
-									<version>2025b.0.1-SNAPSHOT</version>
+									<version>${timezone-boundary.version}</version>
 								</artifactItem>
 							</artifactItems>
 							<outputDirectory>
