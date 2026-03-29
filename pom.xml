@@ -5,7 +5,7 @@
 	<parent>
 		<groupId>io.github.emays</groupId>
 		<artifactId>parent</artifactId>
-		<version>0.0.9</version>
+		<version>0.0.10-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -41,7 +41,7 @@
 
 	<properties>
 		<!--io.github.emays:util-->
-		<util.version>0.0.7</util.version>
+		<util.version>0.0.8-SNAPSHOT</util.version>
 	</properties>
 
 	<dependencies>
@@ -119,20 +119,27 @@
 			<groupId>systems.uom</groupId>
 			<artifactId>systems-common</artifactId>
 		</dependency>
-		<dependency><!--This seems to be an issue with a module requires somewhere-->
+		<!--This is provided scope in systems-common with a requires transitive in the module-info-->
+		<dependency>
 			<groupId>systems.uom</groupId>
 			<artifactId>systems-quantity</artifactId>
-			<version>2.2</version>
 		</dependency>
 		<dependency>
 			<groupId>tech.units</groupId>
 			<artifactId>indriya</artifactId>
 		</dependency>
-		<!-- tempest dependencies -->
+		<!-- timezone dependencies -->
 		<dependency>
-			<groupId>net.iakovlev</groupId>
-			<artifactId>timeshape</artifactId>
+			<groupId>com.esri.geometry</groupId>
+			<artifactId>esri-geometry-api</artifactId>
+			<version>2.2.4</version>
 		</dependency>
+		<dependency>
+			<groupId>de.grundid.opendatalab</groupId>
+			<artifactId>geojson-jackson</artifactId>
+			<version>1.14</version>
+		</dependency>
+		<!-- tempest dependencies -->
 		<dependency>
 			<groupId>org.shredzone.commons</groupId>
 			<artifactId>commons-suncalc</artifactId>
@@ -164,12 +171,27 @@
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<configuration>
-					<forkCount>1</forkCount>
-					<reuseForks>false</reuseForks>
-					<useModulePath>false</useModulePath>
-				</configuration>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>unpack-timezone-data</id>
+						<phase>generate-test-resources</phase>
+						<goals>
+							<goal>unpack</goal>
+						</goals>
+						<configuration>
+							<artifactItems>
+								<artifactItem>
+									<groupId>io.github.emays</groupId>
+									<artifactId>timezone-boundary</artifactId>
+									<version>2025b.0.1-SNAPSHOT</version>
+								</artifactItem>
+							</artifactItems>
+							<outputDirectory>
+								${project.basedir}/src/test/resources/timezone</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -208,6 +230,16 @@
 					<snapshots>
 						<enabled>true</enabled>
 						<!--<updatePolicy>always</updatePolicy>-->
+					</snapshots>
+				</repository>
+				<repository>
+					<id>github-timezone-boundary</id>
+					<url>https://maven.pkg.github.com/emays/timezone-boundary</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
 					</snapshots>
 				</repository>
 			</repositories>

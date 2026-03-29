@@ -12,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.geo.Kml;
 import com.mays.tempest.geo.KmlPointDisplay;
 
@@ -21,8 +21,6 @@ public class BuoyStationsTest {
 	private static final Logger logger = LoggerFactory.getLogger(BuoyStationsTest.class);
 
 	private static final boolean trace = false;
-
-	private static final String PVC_ID = "44018";
 
 	@BeforeAll
 	public static void setTest() {
@@ -58,14 +56,18 @@ public class BuoyStationsTest {
 
 	@Test
 	public void getNearest() throws Exception {
-		List<BuoyStationDistance> nearest = BuoyStations.getInstance().getNearest(MyLocation.LATITUDE,
-				MyLocation.LONGITUDE, 15, 1);
+		LocationInfo loc = LocationInfo.PROVINCETOWN;
+		List<BuoyStationDistance> nearest = BuoyStations.getInstance().getNearest(loc.getLatitude(), loc.getLongitude(),
+				15, 1);
 		if (trace)
 			nearest.forEach(x -> logger.info(x.toString()));
 		assertEquals(1, nearest.size());
-		assertEquals(PVC_ID, nearest.get(0).getStation().getId());
-		assertEquals(PVC_ID,
-				BuoyStations.getInstance().getNearest(MyLocation.LATITUDE, MyLocation.LONGITUDE).getStation().getId());
+		assertEquals(LocationInfo.BuoyStationId.Provincetown.id, nearest.getFirst().getStation().getId());
+		assertEquals(LocationInfo.BuoyStationId.Provincetown.id,
+				BuoyStations.getInstance().getNearest(loc.getLatitude(), loc.getLongitude()).getStation().getId());
+		loc = LocationInfo.WELLFLEET;
+		assertEquals(LocationInfo.BuoyStationId.CapeCodBay.id,
+				BuoyStations.getInstance().getNearest(loc.getLatitude(), loc.getLongitude()).getStation().getId());
 	}
 
 	@Test

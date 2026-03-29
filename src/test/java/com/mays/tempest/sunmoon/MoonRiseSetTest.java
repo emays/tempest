@@ -15,7 +15,7 @@ import org.shredzone.commons.suncalc.MoonTimes;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.tempest.sunmoon.MoonRiseSet.MoonRiseSetMonth;
 
 public class MoonRiseSetTest {
@@ -26,8 +26,8 @@ public class MoonRiseSetTest {
 	public void riseSet() {
 		for (int year = 1956; year < 2056; year++) {
 			for (int month = 1; month <= 12; month++) {
-				MoonRiseSetMonth mrsb = MoonRiseSetMonth.get(year, month, MyLocation.LATITUDE, MyLocation.LONGITUDE,
-						MyLocation.TZ);
+				MoonRiseSetMonth mrsb = MoonRiseSetMonth.get(year, month, LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude(), LocationInfo.PROVINCETOWN.getTimeZone());
 				ArrayList<MoonRiseSet> events = mrsb.getMoons();
 				assertTrue(events.size() >= 27);
 				assertTrue(events.size() <= 31);
@@ -43,8 +43,8 @@ public class MoonRiseSetTest {
 	public void noon() {
 		for (int year = 1956; year < 2056; year++) {
 			for (int month = 1; month <= 12; month++) {
-				MoonRiseSetMonth mrsb = MoonRiseSetMonth.get(year, month, MyLocation.LATITUDE, MyLocation.LONGITUDE,
-						MyLocation.TZ);
+				MoonRiseSetMonth mrsb = MoonRiseSetMonth.get(year, month, LocationInfo.PROVINCETOWN.getLatitude(),
+						LocationInfo.PROVINCETOWN.getLongitude(), LocationInfo.PROVINCETOWN.getTimeZone());
 				for (MoonRiseSet rs : mrsb.getMoons()) {
 					ZonedDateTime rise = rs.getRise();
 					ZonedDateTime set = rs.getSet();
@@ -52,7 +52,7 @@ public class MoonRiseSetTest {
 					long diff = mid.until(rs.getNoon(), ChronoUnit.MINUTES);
 					assertTrue(Math.abs(diff) < 9);
 					MoonPosition position = MoonPosition.compute().on(rs.getNoon())
-							.at(MyLocation.LATITUDE, MyLocation.LONGITUDE).execute();
+							.at(LocationInfo.PROVINCETOWN.getLatitude(), LocationInfo.PROVINCETOWN.getLongitude()).execute();
 					long az = Math.round(position.getAzimuth());
 					assertEquals(180, az);
 				}

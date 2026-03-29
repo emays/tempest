@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 import com.mays.util.Util;
 
 public class MoonTest {
@@ -19,8 +19,7 @@ public class MoonTest {
 	public void getRiseSet() {
 		Util.repeat(365, day -> {
 			LocalDate date = LocalDate.of(2021, 1, 1).plusDays(day);
-			Moon moon = Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), MyLocation.LATITUDE,
-					MyLocation.LONGITUDE, MyLocation.TZ);
+			Moon moon = Moon.get(date, LocationInfo.PROVINCETOWN.getCoordinate(), LocationInfo.PROVINCETOWN.getTimeZone());
 			if (trace) {
 				logger.info("Rise: " + date + " " + moon.getRise());
 				logger.info("Set:  " + date + " " + moon.getSet());
@@ -33,8 +32,7 @@ public class MoonTest {
 	public void getPhase() {
 		Util.repeat(365, day -> {
 			LocalDate date = LocalDate.of(2021, 1, 1).plusDays(day);
-			Moon moon = Moon.get(date.getYear(), date.getMonthValue(), date.getDayOfMonth(), MyLocation.LATITUDE,
-					MyLocation.LONGITUDE, MyLocation.TZ);
+			Moon moon = Moon.get(date, LocationInfo.PROVINCETOWN.getCoordinate(), LocationInfo.PROVINCETOWN.getTimeZone());
 			if (trace)
 				logger.info(date + " " + moon.getPhaseName());
 		});

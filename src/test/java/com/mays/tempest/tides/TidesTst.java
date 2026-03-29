@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.mays.tempest.MyLocation;
+import com.mays.tempest.LocationInfo;
 
 public class TidesTst {
 
@@ -18,7 +18,7 @@ public class TidesTst {
 
 	@Test
 	public void getTidesJson() throws Exception {
-		List<TideJson> tides = Tides.getTidesJson(MyLocation.TIDE_STATION_ID, "20210221", "20210227");
+		List<TideJson> tides = Tides.getTidesJson(LocationInfo.PROVINCETOWN.getTideStationId(), "20210221", "20210227");
 		if (trace) {
 			for (TideJson tj : tides) {
 				logger.info(tj.toString());
@@ -30,7 +30,7 @@ public class TidesTst {
 
 	@Test
 	public void getTides() throws Exception {
-		List<Tide> tides = Tides.getTides(MyLocation.TIDE_STATION_ID, 2021, 9);
+		List<Tide> tides = Tides.getTides(LocationInfo.PROVINCETOWN.getTideStationId(), 2021, 9);
 		if (trace) {
 			for (Tide tide : tides) {
 				logger.info(tide.toString());

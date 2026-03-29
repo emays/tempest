@@ -6,14 +6,14 @@ module com.mays.tempest {
 
 	requires jakarta.ws.rs;
 
-	requires net.iakovlev.timeshape;
-
 	requires transitive org.shredzone.commons.suncalc;
 
 	requires transitive java.measure;
 	requires si.uom.units;
 	requires systems.uom.common;
 	requires tech.units.indriya;
+	requires esri.geometry.api;
+	requires geojson.jackson;
 
 	exports com.mays.tempest;
 	exports com.mays.tempest.buoys;
