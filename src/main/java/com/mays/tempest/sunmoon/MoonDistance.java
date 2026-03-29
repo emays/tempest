@@ -69,7 +69,7 @@ public class MoonDistance {
 	private MoonDistance() {
 	}
 
-	public static MoonDistance getInstance() throws Exception {
+	public static synchronized MoonDistance getInstance() throws Exception {
 		if (instance == null) {
 			instance = new MoonDistance();
 			instance.init();

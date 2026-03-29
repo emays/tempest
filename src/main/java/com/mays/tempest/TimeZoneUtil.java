@@ -1,13 +1,14 @@
 package com.mays.tempest;
 
+import java.io.IOException;
 import java.time.ZoneId;
 import java.time.ZoneOffset;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.mays.tempest.geo.ContiguousUS;
 import com.mays.tempest.geo.Coordinate;
-
-import net.iakovlev.timeshape.TimeZoneEngine;
+import com.mays.tempest.timezone.TimeZoneEngine;
 
 public class TimeZoneUtil {
 
@@ -18,7 +19,7 @@ public class TimeZoneUtil {
 	// NM = one minute (⁠1/60 of a degree) of latitude at the equator
 	// territorial waters = 12 NM
 
-	private static final double round_offset = 1; // (12.0 / 60.0) + 0.5;
+	private static final double round_offset = (12.0 / 60.0) + 0.5;
 
 	public static final int MIN_LATITUDE = (int) Math.round(ContiguousUS.SOUTHERNMOST.getLatitude() - round_offset);
 
@@ -28,20 +29,26 @@ public class TimeZoneUtil {
 
 	public static final int MAX_LONGITUDE = (int) Math.round(ContiguousUS.EASTERNMOST.getLongitude() + round_offset);
 
-	public static TimeZoneUtil getInstance() {
+	public static synchronized TimeZoneUtil getInstance() {
 		if (instance == null) {
 			instance = new TimeZoneUtil();
-			instance.timeZoneEngine = TimeZoneEngine.initialize(MIN_LATITUDE, MIN_LONGITUDE, MAX_LATITUDE,
-					MAX_LONGITUDE, false);
-			// timeZoneEngine = TimeZoneEngine.initialize(20, -130, 50, -60, false);
+			try {
+				instance.timeZoneEngine = TimeZoneEngine.initialize();
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
 		}
 		return instance;
 	}
 
 	// Just for testing
-	static TimeZoneUtil getGlobal() {
+	public static TimeZoneUtil getContiguousUS() {
 		TimeZoneUtil tzu = new TimeZoneUtil();
-		tzu.timeZoneEngine = TimeZoneEngine.initialize();
+		try {
+			tzu.timeZoneEngine = TimeZoneEngine.initialize(MIN_LATITUDE, MIN_LONGITUDE, MAX_LATITUDE, MAX_LONGITUDE);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 		return tzu;
 	}
 
@@ -54,15 +61,32 @@ public class TimeZoneUtil {
 				"Bounds for longitude " + longitude + ": >= " + MIN_LONGITUDE + " & <= " + MAX_LONGITUDE);
 	}
 
+	private ZoneId normalized(ZoneId zone) {
+		zone = zone.normalized();
+		if (zone instanceof ZoneOffset)
+			zone = ZoneId.ofOffset("UTC", (ZoneOffset) zone);
+		return zone;
+	}
+
 	public ZoneId getTimeZone(double latitude, double longitude) {
 		ZoneId tz = timeZoneEngine.query(latitude, longitude).orElse(null);
 		if (tz == null)
 			tz = getUTC(longitude);
-		return tz.normalized();
+		return normalized(tz);
+	}
+
+	public ArrayList<ZoneId> getTimeZoneAll(double latitude, double longitude) {
+		ArrayList<ZoneId> ret = new ArrayList<>();
+		for (ZoneId tz : timeZoneEngine.queryAll(latitude, longitude)) {
+			if (tz == null)
+				tz = getUTC(longitude);
+			ret.add(normalized(tz));
+		}
+		return ret;
 	}
 
 	public List<ZoneId> getZoneIds() {
-		return timeZoneEngine.getKnownZoneIds();
+		return timeZoneEngine.getKnownZoneIds().stream().map(this::normalized).toList();
 	}
 
 	// https://en.wikipedia.org/wiki/Tz_database

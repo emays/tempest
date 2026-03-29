@@ -3,6 +3,7 @@ package com.mays.tempest.geo;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Comparator;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -18,17 +19,31 @@ public class ReverseGeoLocation {
 		dir = Paths.get("src/test/resources", "geonames");
 	}
 
+	public static final String CITIES_FILTERED = "cities15000-filtered.txt";
+
 	public static final String US_FILTERED = "US-filtered.txt";
 
-//4945798	North Trurox	North Trurox		42.03344	-70.0953	P	PPL	US		MA	001	70605		0	16	14	America/New_York	2017-05-23
+	public enum Geo {
 
-//4947767	Pond Village	Pond Village		42.03066	-70.09391	P	PPL	US		MA	001	70605		0	0	0	America/New_York	2017-05-23
+		US("US-filtered.txt"), CITIES("cities15000-filtered.txt");
+
+		public String file;
+
+		private ReverseGeoLocation instance;
+
+		private Geo(String file) {
+			this.file = file;
+		}
+
+	}
 
 	public static class Location {
 
 		private String name;
 
 		private String state;
+
+		private String country;
 
 		private double latitude;
 
@@ -38,10 +53,12 @@ public class ReverseGeoLocation {
 
 		private String timezone;
 
-		public Location(String name, String state, double latitude, double longitude, int elevation, String timezone) {
+		public Location(String name, String state, String country, double latitude, double longitude, int elevation,
+				String timezone) {
 			super();
 			this.name = name;
 			this.state = state;
+			this.country = country;
 			this.latitude = latitude;
 			this.longitude = longitude;
 			this.elevation = elevation;
@@ -54,6 +71,10 @@ public class ReverseGeoLocation {
 
 		public String getState() {
 			return state;
+		}
+
+		public String getCountry() {
+			return country;
 		}
 
 		public double getLatitude() {
@@ -73,32 +94,36 @@ public class ReverseGeoLocation {
 		}
 
 		public String toString() {
-			return name + ", " + state + " (" + latitude + ", " + longitude + ", " + elevation + ") " + timezone;
+			return name + ", " + state + " " + country + " (" + latitude + ", " + longitude + ", " + elevation + ") "
+					+ timezone;
 		}
 
 		private String toLine() {
-			return name + "\t" + state + "\t" + latitude + "\t" + longitude + "\t" + elevation + "\t" + timezone;
+			return name + "\t" + state + "\t" + country + "\t" + latitude + "\t" + longitude + "\t" + elevation + "\t"
+					+ timezone;
 		}
 
 		private static Location fromLine(String line) {
 			String[] fields = line.split("\\t");
-			return new Location(fields[0], fields[1], Double.parseDouble(fields[2]), Double.parseDouble(fields[3]),
-					Integer.parseInt(fields[4]), fields[5]);
+			return new Location(fields[0], fields[1], fields[2], Double.parseDouble(fields[3]),
+					Double.parseDouble(fields[4]), Integer.parseInt(fields[5]), fields[6]);
 		}
 
 	}
 
-	private static ReverseGeoLocation instance;
-
 	private List<Location> locations;
 
 	public static synchronized ReverseGeoLocation getInstance() throws Exception {
-		if (instance == null) {
-			instance = new ReverseGeoLocation();
-			Path path = dir.resolve(US_FILTERED);
-			instance.read(path);
+		return getInstance(Geo.US);
+	}
+
+	public static synchronized ReverseGeoLocation getInstance(Geo geo) throws Exception {
+		if (geo.instance == null) {
+			geo.instance = new ReverseGeoLocation();
+			Path path = dir.resolve(geo.file);
+			geo.instance.read(path);
 		}
-		return instance;
+		return geo.instance;
 	}
 
 	public List<Location> getLocations() {
@@ -109,25 +134,26 @@ public class ReverseGeoLocation {
 		logger.info("Read");
 		long cnt = Files.lines(file).count();
 		logger.info("Filter");
-		ContiguousUS cu = new ContiguousUS();
+		// ContiguousUS cu = new ContiguousUS();
 		List<String> locations = Files.lines(file) //
 				.map(line -> line.split("\\t"))
 				// Populated place
-				.filter(fields -> fields[7].equals("PPL"))
+				.filter(fields -> fields[7].startsWith("PPL"))
 				// Population > 0
 				.filter(fields -> Integer.parseInt(fields[14]) > 0)
-				.map(fields -> new Location(fields[1], fields[10], Double.parseDouble(fields[4]),
+				.map(fields -> new Location(fields[1], fields[10], fields[8], Double.parseDouble(fields[4]),
 						Double.parseDouble(fields[5]), (fields[15].isEmpty() ? -1 : Integer.parseInt(fields[15])),
 						fields[17]))
-				.filter(x -> cu.inBounds(new Coordinate(x.getLatitude(), x.getLongitude()))).map(x -> x.toLine())
-				.toList();
+				// .filter(x -> cu.inBounds(new Coordinate(x.getLatitude(), x.getLongitude())))
+				.sorted(Comparator.comparing(Location::getCountry).thenComparing(Location::getState)
+						.thenComparing(Location::getName))
+				.map(x -> x.toLine()).toList();
 		logger.info(String.format("Filtered %,d of %,d", locations.size(), cnt));
 		Files.write(out_file, locations);
 		return locations.size();
 	}
 
 	private void read(Path file) throws Exception {
-		logger.info("Read");
 		locations = Files.lines(file).map(line -> Location.fromLine(line)).toList();
 		logger.info(String.format("Read %,d", locations.size()));
 	}
