@@ -12,8 +12,9 @@ module com.mays.tempest {
 	requires si.uom.units;
 	requires systems.uom.common;
 	requires tech.units.indriya;
-	requires esri.geometry.api;
-	requires geojson.jackson;
+	
+	requires com.esri.core.geometry;
+	requires org.geoson;
 
 	exports com.mays.tempest;
 	exports com.mays.tempest.buoys;
@@ -21,6 +22,7 @@ module com.mays.tempest {
 	exports com.mays.tempest.seasons;
 	exports com.mays.tempest.sunmoon;
 	exports com.mays.tempest.tides;
+	exports com.mays.tempest.timezone;
 	exports com.mays.tempest.weather;
 
 }

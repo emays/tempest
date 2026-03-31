@@ -132,14 +132,14 @@
 		</dependency>
 		<!-- timezone dependencies -->
 		<dependency>
-			<groupId>com.esri.geometry</groupId>
+			<groupId>io.github.emays</groupId>
 			<artifactId>esri-geometry-api</artifactId>
-			<version>2.2.4</version>
+			<version>2.3.0</version>
 		</dependency>
 		<dependency>
-			<groupId>de.grundid.opendatalab</groupId>
+			<groupId>io.github.emays</groupId>
 			<artifactId>geojson-jackson</artifactId>
-			<version>1.14</version>
+			<version>1.20.0</version>
 		</dependency>
 		<!-- tempest dependencies -->
 		<dependency>
