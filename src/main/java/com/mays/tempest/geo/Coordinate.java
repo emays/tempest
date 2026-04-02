@@ -50,11 +50,16 @@ public class Coordinate {
 	}
 
 	public static String isValidString(double latitude, double longitude) {
-		return latitude + " >= -90 & <= 90 " + longitude + " >= -180 & <= 180";
+		return "Latitude: " + latitude + " >= -90 & <= 90" + " and/or " + "Longitude: " + longitude
+				+ " >= -180 & <= 180";
 	}
 
 	public boolean isValid() {
 		return isValid(latitude, longitude);
+	}
+
+	public String isValidString() {
+		return isValidString(latitude, longitude);
 	}
 
 	public boolean inBounds(double northern, double southern, double eastern, double western) {
